@@ -1,0 +1,1236 @@
+<!doctype html>
+<html lang="en-US">
+<head><meta charset="UTF-8"><script>if(navigator.userAgent.match(/MSIE|Internet Explorer/i)||navigator.userAgent.match(/Trident\/7\..*?rv:11/i)){var href=document.location.href;if(!href.match(/[?&]nowprocket/)){if(href.indexOf("?")==-1){if(href.indexOf("#")==-1){document.location.href=href+"?nowprocket=1"}else{document.location.href=href.replace("#","?nowprocket=1#")}}else{if(href.indexOf("#")==-1){document.location.href=href+"&nowprocket=1"}else{document.location.href=href.replace("#","&nowprocket=1#")}}}}</script><script>class RocketLazyLoadScripts{constructor(){this.v="1.2.3",this.triggerEvents=["keydown","mousedown","mousemove","touchmove","touchstart","touchend","wheel"],this.userEventHandler=this._triggerListener.bind(this),this.touchStartHandler=this._onTouchStart.bind(this),this.touchMoveHandler=this._onTouchMove.bind(this),this.touchEndHandler=this._onTouchEnd.bind(this),this.clickHandler=this._onClick.bind(this),this.interceptedClicks=[],window.addEventListener("pageshow",t=>{this.persisted=t.persisted}),window.addEventListener("DOMContentLoaded",()=>{this._preconnect3rdParties()}),this.delayedScripts={normal:[],async:[],defer:[]},this.trash=[],this.allJQueries=[]}_addUserInteractionListener(t){if(document.hidden){t._triggerListener();return}this.triggerEvents.forEach(e=>window.addEventListener(e,t.userEventHandler,{passive:!0})),window.addEventListener("touchstart",t.touchStartHandler,{passive:!0}),window.addEventListener("mousedown",t.touchStartHandler),document.addEventListener("visibilitychange",t.userEventHandler)}_removeUserInteractionListener(){this.triggerEvents.forEach(t=>window.removeEventListener(t,this.userEventHandler,{passive:!0})),document.removeEventListener("visibilitychange",this.userEventHandler)}_onTouchStart(t){"HTML"!==t.target.tagName&&(window.addEventListener("touchend",this.touchEndHandler),window.addEventListener("mouseup",this.touchEndHandler),window.addEventListener("touchmove",this.touchMoveHandler,{passive:!0}),window.addEventListener("mousemove",this.touchMoveHandler),t.target.addEventListener("click",this.clickHandler),this._renameDOMAttribute(t.target,"onclick","rocket-onclick"),this._pendingClickStarted())}_onTouchMove(t){window.removeEventListener("touchend",this.touchEndHandler),window.removeEventListener("mouseup",this.touchEndHandler),window.removeEventListener("touchmove",this.touchMoveHandler,{passive:!0}),window.removeEventListener("mousemove",this.touchMoveHandler),t.target.removeEventListener("click",this.clickHandler),this._renameDOMAttribute(t.target,"rocket-onclick","onclick"),this._pendingClickFinished()}_onTouchEnd(t){window.removeEventListener("touchend",this.touchEndHandler),window.removeEventListener("mouseup",this.touchEndHandler),window.removeEventListener("touchmove",this.touchMoveHandler,{passive:!0}),window.removeEventListener("mousemove",this.touchMoveHandler)}_onClick(t){t.target.removeEventListener("click",this.clickHandler),this._renameDOMAttribute(t.target,"rocket-onclick","onclick"),this.interceptedClicks.push(t),t.preventDefault(),t.stopPropagation(),t.stopImmediatePropagation(),this._pendingClickFinished()}_replayClicks(){window.removeEventListener("touchstart",this.touchStartHandler,{passive:!0}),window.removeEventListener("mousedown",this.touchStartHandler),this.interceptedClicks.forEach(t=>{t.target.dispatchEvent(new MouseEvent("click",{view:t.view,bubbles:!0,cancelable:!0}))})}_waitForPendingClicks(){return new Promise(t=>{this._isClickPending?this._pendingClickFinished=t:t()})}_pendingClickStarted(){this._isClickPending=!0}_pendingClickFinished(){this._isClickPending=!1}_renameDOMAttribute(t,e,r){t.hasAttribute&&t.hasAttribute(e)&&(event.target.setAttribute(r,event.target.getAttribute(e)),event.target.removeAttribute(e))}_triggerListener(){this._removeUserInteractionListener(this),"loading"===document.readyState?document.addEventListener("DOMContentLoaded",this._loadEverythingNow.bind(this)):this._loadEverythingNow()}_preconnect3rdParties(){let t=[];document.querySelectorAll("script[type=rocketlazyloadscript]").forEach(e=>{if(e.hasAttribute("src")){let r=new URL(e.src).origin;r!==location.origin&&t.push({src:r,crossOrigin:e.crossOrigin||"module"===e.getAttribute("data-rocket-type")})}}),t=[...new Map(t.map(t=>[JSON.stringify(t),t])).values()],this._batchInjectResourceHints(t,"preconnect")}async _loadEverythingNow(){this.lastBreath=Date.now(),this._delayEventListeners(this),this._delayJQueryReady(this),this._handleDocumentWrite(),this._registerAllDelayedScripts(),this._preloadAllScripts(),await this._loadScriptsFromList(this.delayedScripts.normal),await this._loadScriptsFromList(this.delayedScripts.defer),await this._loadScriptsFromList(this.delayedScripts.async);try{await this._triggerDOMContentLoaded(),await this._triggerWindowLoad()}catch(t){console.error(t)}window.dispatchEvent(new Event("rocket-allScriptsLoaded")),this._waitForPendingClicks().then(()=>{this._replayClicks()}),this._emptyTrash()}_registerAllDelayedScripts(){document.querySelectorAll("script[type=rocketlazyloadscript]").forEach(t=>{t.hasAttribute("data-rocket-src")?t.hasAttribute("async")&&!1!==t.async?this.delayedScripts.async.push(t):t.hasAttribute("defer")&&!1!==t.defer||"module"===t.getAttribute("data-rocket-type")?this.delayedScripts.defer.push(t):this.delayedScripts.normal.push(t):this.delayedScripts.normal.push(t)})}async _transformScript(t){return new Promise((await this._littleBreath(),navigator.userAgent.indexOf("Firefox/")>0||""===navigator.vendor)?e=>{let r=document.createElement("script");[...t.attributes].forEach(t=>{let e=t.nodeName;"type"!==e&&("data-rocket-type"===e&&(e="type"),"data-rocket-src"===e&&(e="src"),r.setAttribute(e,t.nodeValue))}),t.text&&(r.text=t.text),r.hasAttribute("src")?(r.addEventListener("load",e),r.addEventListener("error",e)):(r.text=t.text,e());try{t.parentNode.replaceChild(r,t)}catch(i){e()}}:async e=>{function r(){t.setAttribute("data-rocket-status","failed"),e()}try{let i=t.getAttribute("data-rocket-type"),n=t.getAttribute("data-rocket-src");t.text,i?(t.type=i,t.removeAttribute("data-rocket-type")):t.removeAttribute("type"),t.addEventListener("load",function r(){t.setAttribute("data-rocket-status","executed"),e()}),t.addEventListener("error",r),n?(t.removeAttribute("data-rocket-src"),t.src=n):t.src="data:text/javascript;base64,"+window.btoa(unescape(encodeURIComponent(t.text)))}catch(s){r()}})}async _loadScriptsFromList(t){let e=t.shift();return e&&e.isConnected?(await this._transformScript(e),this._loadScriptsFromList(t)):Promise.resolve()}_preloadAllScripts(){this._batchInjectResourceHints([...this.delayedScripts.normal,...this.delayedScripts.defer,...this.delayedScripts.async],"preload")}_batchInjectResourceHints(t,e){var r=document.createDocumentFragment();t.forEach(t=>{let i=t.getAttribute&&t.getAttribute("data-rocket-src")||t.src;if(i){let n=document.createElement("link");n.href=i,n.rel=e,"preconnect"!==e&&(n.as="script"),t.getAttribute&&"module"===t.getAttribute("data-rocket-type")&&(n.crossOrigin=!0),t.crossOrigin&&(n.crossOrigin=t.crossOrigin),t.integrity&&(n.integrity=t.integrity),r.appendChild(n),this.trash.push(n)}}),document.head.appendChild(r)}_delayEventListeners(t){let e={};function r(t,r){!function t(r){!e[r]&&(e[r]={originalFunctions:{add:r.addEventListener,remove:r.removeEventListener},eventsToRewrite:[]},r.addEventListener=function(){arguments[0]=i(arguments[0]),e[r].originalFunctions.add.apply(r,arguments)},r.removeEventListener=function(){arguments[0]=i(arguments[0]),e[r].originalFunctions.remove.apply(r,arguments)});function i(t){return e[r].eventsToRewrite.indexOf(t)>=0?"rocket-"+t:t}}(t),e[t].eventsToRewrite.push(r)}function i(t,e){let r=t[e];Object.defineProperty(t,e,{get:()=>r||function(){},set(i){t["rocket"+e]=r=i}})}r(document,"DOMContentLoaded"),r(window,"DOMContentLoaded"),r(window,"load"),r(window,"pageshow"),r(document,"readystatechange"),i(document,"onreadystatechange"),i(window,"onload"),i(window,"onpageshow")}_delayJQueryReady(t){let e;function r(r){if(r&&r.fn&&!t.allJQueries.includes(r)){r.fn.ready=r.fn.init.prototype.ready=function(e){return t.domReadyFired?e.bind(document)(r):document.addEventListener("rocket-DOMContentLoaded",()=>e.bind(document)(r)),r([])};let i=r.fn.on;r.fn.on=r.fn.init.prototype.on=function(){if(this[0]===window){function t(t){return t.split(" ").map(t=>"load"===t||0===t.indexOf("load.")?"rocket-jquery-load":t).join(" ")}"string"==typeof arguments[0]||arguments[0]instanceof String?arguments[0]=t(arguments[0]):"object"==typeof arguments[0]&&Object.keys(arguments[0]).forEach(e=>{let r=arguments[0][e];delete arguments[0][e],arguments[0][t(e)]=r})}return i.apply(this,arguments),this},t.allJQueries.push(r)}e=r}r(window.jQuery),Object.defineProperty(window,"jQuery",{get:()=>e,set(t){r(t)}})}async _triggerDOMContentLoaded(){this.domReadyFired=!0,await this._littleBreath(),document.dispatchEvent(new Event("rocket-DOMContentLoaded")),await this._littleBreath(),window.dispatchEvent(new Event("rocket-DOMContentLoaded")),await this._littleBreath(),document.dispatchEvent(new Event("rocket-readystatechange")),await this._littleBreath(),document.rocketonreadystatechange&&document.rocketonreadystatechange()}async _triggerWindowLoad(){await this._littleBreath(),window.dispatchEvent(new Event("rocket-load")),await this._littleBreath(),window.rocketonload&&window.rocketonload(),await this._littleBreath(),this.allJQueries.forEach(t=>t(window).trigger("rocket-jquery-load")),await this._littleBreath();let t=new Event("rocket-pageshow");t.persisted=this.persisted,window.dispatchEvent(t),await this._littleBreath(),window.rocketonpageshow&&window.rocketonpageshow({persisted:this.persisted})}_handleDocumentWrite(){let t=new Map;document.write=document.writeln=function(e){let r=document.currentScript;r||console.error("WPRocket unable to document.write this: "+e);let i=document.createRange(),n=r.parentElement,s=t.get(r);void 0===s&&(s=r.nextSibling,t.set(r,s));let a=document.createDocumentFragment();i.setStart(a,0),a.appendChild(i.createContextualFragment(e)),n.insertBefore(a,s)}}async _littleBreath(){Date.now()-this.lastBreath>45&&(await this._requestAnimFrame(),this.lastBreath=Date.now())}async _requestAnimFrame(){return document.hidden?new Promise(t=>setTimeout(t)):new Promise(t=>requestAnimationFrame(t))}_emptyTrash(){this.trash.forEach(t=>t.remove())}static run(){let t=new RocketLazyLoadScripts;t._addUserInteractionListener(t)}}RocketLazyLoadScripts.run();</script>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="profile" href="https://gmpg.org/xfn/11">
+	<meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+	<style>img:is([sizes="auto" i], [sizes^="auto," i]) { contain-intrinsic-size: 3000px 1500px }</style>
+	<title>8K Player IPTV #1 Best Iptv Subscription in the UK | 8K IPTV VIP</title>
+	<meta name="description" content="8K Player IPTV Experience the top IPTV Subscription : Fast, and Reliable 8k IPTV Services at Competitive Prices - GET Your Subscription ." />
+	<link rel="canonical" href="https://8kplayer.net/" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="Home" />
+	<meta property="og:description" content="8K Player IPTV Experience the top IPTV Subscription : Fast, and Reliable 8k IPTV Services at Competitive Prices - GET Your Subscription ." />
+	<meta property="og:url" content="https://8kplayer.net/" />
+	<meta property="og:site_name" content="8K Player VIP" />
+	<meta property="article:modified_time" content="2025-06-11T19:27:21+00:00" />
+	<meta property="og:image" content="https://8kplayer.net/wp-content/uploads/2023/11/8k_tv_new.png" />
+	<meta property="og:image:width" content="1024" />
+	<meta property="og:image:height" content="1024" />
+	<meta property="og:image:type" content="image/png" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://8kplayer.net/","url":"https://8kplayer.net/","name":"8K Player IPTV #1 Best Iptv Subscription in the UK | 8K IPTV VIP","isPartOf":{"@id":"https://8kplayer.net/#website"},"about":{"@id":"https://8kplayer.net/#/schema/person/7329fd303d1a572c7af23fe12af5c74a"},"primaryImageOfPage":{"@id":"https://8kplayer.net/#primaryimage"},"image":{"@id":"https://8kplayer.net/#primaryimage"},"thumbnailUrl":"https://8kplayer.net/wp-content/uploads/2023/11/8k_tv_new.png","datePublished":"2022-10-15T01:35:55+00:00","dateModified":"2025-06-11T19:27:21+00:00","description":"8K Player IPTV Experience the top IPTV Subscription : Fast, and Reliable 8k IPTV Services at Competitive Prices - GET Your Subscription .","breadcrumb":{"@id":"https://8kplayer.net/#breadcrumb"},"inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["https://8kplayer.net/"]}]},{"@type":"ImageObject","inLanguage":"en-US","@id":"https://8kplayer.net/#primaryimage","url":"https://8kplayer.net/wp-content/uploads/2023/11/8k_tv_new.png","contentUrl":"https://8kplayer.net/wp-content/uploads/2023/11/8k_tv_new.png","width":1024,"height":1024,"caption":"8k vip"},{"@type":"BreadcrumbList","@id":"https://8kplayer.net/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home"}]},{"@type":"WebSite","@id":"https://8kplayer.net/#website","url":"https://8kplayer.net/","name":"8k Player","description":"8K Player VIP Experience the Best VIP IPTV Subscription : Fast, and Reliable  8K VIP IPTV Services at Best Prices - GET Your Subscription for FREE.","publisher":{"@id":"https://8kplayer.net/#/schema/person/7329fd303d1a572c7af23fe12af5c74a"},"alternateName":"8K Player IPTV #1 Best IPTV Subscription | FREE TRIAL","potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://8kplayer.net/?s={search_term_string}"},"query-input":{"@type":"PropertyValueSpecification","valueRequired":true,"valueName":"search_term_string"}}],"inLanguage":"en-US"},{"@type":["Person","Organization"],"@id":"https://8kplayer.net/#/schema/person/7329fd303d1a572c7af23fe12af5c74a","name":"Admin","image":{"@type":"ImageObject","inLanguage":"en-US","@id":"https://8kplayer.net/#/schema/person/image/","url":"https://8kplayer.net/wp-content/uploads/2022/10/8k_tv_gold_logo.png","contentUrl":"https://8kplayer.net/wp-content/uploads/2022/10/8k_tv_gold_logo.png","width":1024,"height":563,"caption":"Admin"},"logo":{"@id":"https://8kplayer.net/#/schema/person/image/"},"sameAs":["https://8kplayer.net"],"publishingPrinciples":"https://8kplayer.net/privacy-policy/","actionableFeedbackPolicy":"https://8kplayer.net/refund-policy/","correctionsPolicy":"https://8kplayer.net/team-conditions/","ethicsPolicy":"https://8kplayer.net/privacy-policy/","diversityPolicy":"https://8kplayer.net/privacy-policy/"}]}</script>
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel="alternate" type="application/rss+xml" title="8K Player VIP &raquo; Feed" href="https://8kplayer.net/feed/" />
+<link rel="alternate" type="application/rss+xml" title="8K Player VIP &raquo; Comments Feed" href="https://8kplayer.net/comments/feed/" />
+<script type="rocketlazyloadscript">
+window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/16.0.1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/16.0.1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/8kplayer.net\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.8.2"}};
+/*! This file is auto-generated */
+!function(s,n){var o,i,e;function c(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(o,JSON.stringify(t))}catch(e){}}function p(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data),a=(e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0),new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data));return t.every(function(e,t){return e===a[t]})}function u(e,t){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);for(var n=e.getImageData(16,16,1,1),a=0;a<n.data.length;a++)if(0!==n.data[a])return!1;return!0}function f(e,t,n,a){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\udde8\ud83c\uddf6","\ud83c\udde8\u200b\ud83c\uddf6")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!a(e,"\ud83e\udedf")}return!1}function g(e,t,n,a){var r="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):s.createElement("canvas"),o=r.getContext("2d",{willReadFrequently:!0}),i=(o.textBaseline="top",o.font="600 32px Arial",{});return e.forEach(function(e){i[e]=t(o,e,n,a)}),i}function t(e){var t=s.createElement("script");t.src=e,t.defer=!0,s.head.appendChild(t)}"undefined"!=typeof Promise&&(o="wpEmojiSettingsSupports",i=["flag","emoji"],n.supports={everything:!0,everythingExceptFlag:!0},e=new Promise(function(e){s.addEventListener("DOMContentLoaded",e,{once:!0})}),new Promise(function(t){var n=function(){try{var e=JSON.parse(sessionStorage.getItem(o));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+g.toString()+"("+[JSON.stringify(i),f.toString(),p.toString(),u.toString()].join(",")+"));",a=new Blob([e],{type:"text/javascript"}),r=new Worker(URL.createObjectURL(a),{name:"wpTestEmojiSupports"});return void(r.onmessage=function(e){c(n=e.data),r.terminate(),t(n)})}catch(e){}c(n=g(i,f,p,u))}t(n)}).then(function(e){for(var t in e)n.supports[t]=e[t],n.supports.everything=n.supports.everything&&n.supports[t],"flag"!==t&&(n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&n.supports[t]);n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&!n.supports.flag,n.DOMReady=!1,n.readyCallback=function(){n.DOMReady=!0}}).then(function(){return e}).then(function(){var e;n.supports.everything||(n.readyCallback(),(e=n.source||{}).concatemoji?t(e.concatemoji):e.wpemoji&&e.twemoji&&(t(e.twemoji),t(e.wpemoji)))}))}((window,document),window._wpemojiSettings);
+</script>
+<style id='wp-emoji-styles-inline-css'>
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+</style>
+<style id='classic-theme-styles-inline-css'>
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+</style>
+<link data-minify="1" rel='stylesheet' id='hostinger-affiliate-plugin-block-frontend-css' href='https://8kplayer.net/wp-content/cache/min/1/wp-content/plugins/hostinger-affiliate-plugin/assets/dist/frontend.css?ver=1749753936' media='all' />
+<style id='joinchat-button-style-inline-css'>
+.wp-block-joinchat-button{border:none!important;text-align:center}.wp-block-joinchat-button figure{display:table;margin:0 auto;padding:0}.wp-block-joinchat-button figcaption{font:normal normal 400 .6em/2em var(--wp--preset--font-family--system-font,sans-serif);margin:0;padding:0}.wp-block-joinchat-button .joinchat-button__qr{background-color:#fff;border:6px solid #25d366;border-radius:30px;box-sizing:content-box;display:block;height:200px;margin:auto;overflow:hidden;padding:10px;width:200px}.wp-block-joinchat-button .joinchat-button__qr canvas,.wp-block-joinchat-button .joinchat-button__qr img{display:block;margin:auto}.wp-block-joinchat-button .joinchat-button__link{align-items:center;background-color:#25d366;border:6px solid #25d366;border-radius:30px;display:inline-flex;flex-flow:row nowrap;justify-content:center;line-height:1.25em;margin:0 auto;text-decoration:none}.wp-block-joinchat-button .joinchat-button__link:before{background:transparent var(--joinchat-ico) no-repeat center;background-size:100%;content:"";display:block;height:1.5em;margin:-.75em .75em -.75em 0;width:1.5em}.wp-block-joinchat-button figure+.joinchat-button__link{margin-top:10px}@media (orientation:landscape)and (min-height:481px),(orientation:portrait)and (min-width:481px){.wp-block-joinchat-button.joinchat-button--qr-only figure+.joinchat-button__link{display:none}}@media (max-width:480px),(orientation:landscape)and (max-height:480px){.wp-block-joinchat-button figure{display:none}}
+</style>
+<style id='global-styles-inline-css'>
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}
+:root :where(.wp-block-pullquote){font-size: 1.5em;line-height: 1.6;}
+</style>
+<link data-minify="1" rel='stylesheet' id='contact-form-7-css' href='https://8kplayer.net/wp-content/cache/min/1/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=1749753936' media='all' />
+<link rel='stylesheet' id='nbcpf-intlTelInput-style-css' href='https://8kplayer.net/wp-content/plugins/country-phone-field-contact-form-7/assets/css/intlTelInput.min.css?ver=6.8.2' media='all' />
+<link rel='stylesheet' id='nbcpf-countryFlag-style-css' href='https://8kplayer.net/wp-content/plugins/country-phone-field-contact-form-7/assets/css/countrySelect.min.css?ver=6.8.2' media='all' />
+<link data-minify="1" rel='stylesheet' id='rt-fontawsome-css' href='https://8kplayer.net/wp-content/cache/min/1/wp-content/plugins/the-post-grid/assets/vendor/font-awesome/css/font-awesome.min.css?ver=1749753936' media='all' />
+<link rel='stylesheet' id='rt-tpg-block-css' href='https://8kplayer.net/wp-content/plugins/the-post-grid/assets/css/tpg-block.min.css?ver=7.8.2' media='all' />
+<link rel='stylesheet' id='animate-css' href='https://8kplayer.net/wp-content/plugins/zeinet-addon/assets/vendors/animate/animate.min.css?ver=1700079882' media='all' />
+<link data-minify="1" rel='stylesheet' id='custom-animate-css' href='https://8kplayer.net/wp-content/cache/min/1/wp-content/plugins/zeinet-addon/assets/vendors/animate/custom-animate.css?ver=1749753936' media='all' />
+<link rel='stylesheet' id='bootstrap-select-css' href='https://8kplayer.net/wp-content/plugins/zeinet-addon/assets/vendors/bootstrap-select/css/bootstrap-select.min.css?ver=1700079882' media='all' />
+<link data-minify="1" rel='stylesheet' id='bxslider-css' href='https://8kplayer.net/wp-content/cache/min/1/wp-content/plugins/zeinet-addon/assets/vendors/bxslider/jquery.bxslider.css?ver=1749753936' media='all' />
+<link data-minify="1" rel='stylesheet' id='jarallax-css' href='https://8kplayer.net/wp-content/cache/min/1/wp-content/plugins/zeinet-addon/assets/vendors/jarallax/jarallax.css?ver=1749753936' media='all' />
+<link data-minify="1" rel='stylesheet' id='jquery-magnific-popup-css' href='https://8kplayer.net/wp-content/cache/min/1/wp-content/plugins/zeinet-addon/assets/vendors/jquery-magnific-popup/jquery.magnific-popup.css?ver=1749753936' media='all' />
+<link rel='stylesheet' id='odometer-css' href='https://8kplayer.net/wp-content/plugins/zeinet-addon/assets/vendors/odometer/odometer.min.css?ver=1700079882' media='all' />
+<link rel='stylesheet' id='owl-carousel-css' href='https://8kplayer.net/wp-content/plugins/zeinet-addon/assets/vendors/owl-carousel/owl.carousel.min.css?ver=1700079882' media='all' />
+<link rel='stylesheet' id='owl-theme-css' href='https://8kplayer.net/wp-content/plugins/zeinet-addon/assets/vendors/owl-carousel/owl.theme.default.min.css?ver=1700079882' media='all' />
+<link data-minify="1" rel='stylesheet' id='reey-font-css' href='https://8kplayer.net/wp-content/cache/min/1/wp-content/plugins/zeinet-addon/assets/vendors/reey-font/stylesheet.css?ver=1749753936' media='all' />
+<link data-minify="1" rel='stylesheet' id='swiper-css' href='https://8kplayer.net/wp-content/cache/min/1/wp-content/plugins/elementor/assets/lib/swiper/v8/css/swiper.min.css?ver=1749753936' media='all' />
+<link data-minify="1" rel='stylesheet' id='timepicker-css' href='https://8kplayer.net/wp-content/cache/min/1/wp-content/plugins/zeinet-addon/assets/vendors/timepicker/timePicker.css?ver=1749753936' media='all' />
+<link data-minify="1" rel='stylesheet' id='roofsi-jquery-ui-css' href='https://8kplayer.net/wp-content/cache/min/1/wp-content/plugins/zeinet-addon/assets/vendors/jquery-ui/jquery-ui.css?ver=1749753936' media='all' />
+<link rel='stylesheet' id='zeinet-addon-style-css' href='https://8kplayer.net/wp-content/plugins/zeinet-addon/assets/css/zeinet-addon.css?ver=1700079882' media='all' />
+<link rel='stylesheet' id='zeinet-fonts-css' href='//fonts.googleapis.com/css?family=Manrope%3A200%2C200i%2C300%2C300i%2C400%2C400i%2C500%2C500i%2C600%2C600%21%2C700%2C700i%2C800%2C800i%26subset%3Dlatin%2Clatin-ext' media='all' />
+<link data-minify="1" rel='stylesheet' id='zeinet-icons-css' href='https://8kplayer.net/wp-content/cache/min/1/wp-content/themes/zeinet/assets/vendors/zeinet-icons/style.css?ver=1749753936' media='all' />
+<link data-minify="1" rel='stylesheet' id='flaticons-css' href='https://8kplayer.net/wp-content/cache/min/1/wp-content/themes/zeinet/assets/vendors/flaticons/css/flaticon.css?ver=1749753936' media='all' />
+<link rel='stylesheet' id='bootstrap-css' href='https://8kplayer.net/wp-content/themes/zeinet/assets/vendors/bootstrap/css/bootstrap.min.css?ver=5.0.0' media='all' />
+<link data-minify="1" rel='stylesheet' id='fontawesome-css' href='https://8kplayer.net/wp-content/cache/min/1/wp-content/themes/zeinet/assets/vendors/fontawesome/css/all.min.css?ver=1749753936' media='all' />
+<link data-minify="1" rel='stylesheet' id='zeinet-style-css' href='https://8kplayer.net/wp-content/cache/min/1/wp-content/themes/zeinet/style.css?ver=1749753938' media='all' />
+<style id='zeinet-style-inline-css'>
+:root {
+			  --zeinet-primary: #089fac;
+			  --zeinet-primary-rgb: 8, 159, 172;
+			  --zeinet-base: #fe9043;
+			  --zeinet-base-rgb: 254, 144, 67;
+			}.page-header-bg { background-image: url(https://8kplayer.net/wp-content/uploads/2023/11/one-pice.webp); } .preloader .preloader__image { background-image: url(https://8kplayer.net/wp-content/uploads/2023/11/local_icon.png); } :root {
+				--zeinet-primary: #089fac;
+				--zeinet-primary-rgb: 8, 159, 172;
+				--zeinet-base: #fe9043;
+				--zeinet-base-rgb: 254, 144, 67;
+				}.page-header-bg { background-image: url(https://8kplayer.net/wp-content/uploads/2023/11/one-pice.webp); }
+</style>
+<link data-minify="1" rel='stylesheet' id='recent-posts-widget-with-thumbnails-public-style-css' href='https://8kplayer.net/wp-content/cache/min/1/wp-content/plugins/recent-posts-widget-with-thumbnails/public.css?ver=1749753938' media='all' />
+<link rel='stylesheet' id='elementor-frontend-css' href='https://8kplayer.net/wp-content/plugins/elementor/assets/css/frontend.min.css?ver=3.29.2' media='all' />
+<link rel='stylesheet' id='elementor-post-7-css' href='https://8kplayer.net/wp-content/uploads/elementor/css/post-7.css?ver=1749753936' media='all' />
+<link rel='stylesheet' id='elementor-pro-css' href='https://8kplayer.net/wp-content/plugins/elementor-pro/assets/css/frontend.min.css?ver=3.17.1' media='all' />
+<link rel='stylesheet' id='widget-heading-css' href='https://8kplayer.net/wp-content/plugins/elementor/assets/css/widget-heading.min.css?ver=3.29.2' media='all' />
+<link rel='stylesheet' id='e-animation-grow-css' href='https://8kplayer.net/wp-content/plugins/elementor/assets/lib/animations/styles/e-animation-grow.min.css?ver=3.29.2' media='all' />
+<link rel='stylesheet' id='e-swiper-css' href='https://8kplayer.net/wp-content/plugins/elementor/assets/css/conditionals/e-swiper.min.css?ver=3.29.2' media='all' />
+<link rel='stylesheet' id='widget-image-carousel-css' href='https://8kplayer.net/wp-content/plugins/elementor/assets/css/widget-image-carousel.min.css?ver=3.29.2' media='all' />
+<link rel='stylesheet' id='e-animation-fadeInLeft-css' href='https://8kplayer.net/wp-content/plugins/elementor/assets/lib/animations/styles/fadeInLeft.min.css?ver=3.29.2' media='all' />
+<link rel='stylesheet' id='elementor-post-42-css' href='https://8kplayer.net/wp-content/uploads/elementor/css/post-42.css?ver=1749759959' media='all' />
+<link data-minify="1" rel='stylesheet' id='elementor-gf-local-roboto-css' href='https://8kplayer.net/wp-content/cache/min/1/wp-content/uploads/elementor/google-fonts/css/roboto.css?ver=1749753938' media='all' />
+<link data-minify="1" rel='stylesheet' id='elementor-gf-local-robotoslab-css' href='https://8kplayer.net/wp-content/cache/min/1/wp-content/uploads/elementor/google-fonts/css/robotoslab.css?ver=1749753939' media='all' />
+<link data-minify="1" rel='stylesheet' id='elementor-gf-local-pontanosans-css' href='https://8kplayer.net/wp-content/cache/min/1/wp-content/uploads/elementor/google-fonts/css/pontanosans.css?ver=1749759959' media='all' />
+<link data-minify="1" rel='stylesheet' id='elementor-icons-shared-0-css' href='https://8kplayer.net/wp-content/cache/min/1/wp-content/plugins/zeinet-addon/assets/vendors/zeinet-icons/style.css?ver=1749753939' media='all' />
+<script type="rocketlazyloadscript" data-rocket-src="https://8kplayer.net/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js" defer></script>
+<script type="rocketlazyloadscript" data-rocket-src="https://8kplayer.net/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1" id="jquery-migrate-js" defer></script>
+<link rel="https://api.w.org/" href="https://8kplayer.net/wp-json/" /><link rel="alternate" title="JSON" type="application/json" href="https://8kplayer.net/wp-json/wp/v2/pages/42" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://8kplayer.net/xmlrpc.php?rsd" />
+<meta name="generator" content="WordPress 6.8.2" />
+<link rel='shortlink' href='https://8kplayer.net/' />
+<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://8kplayer.net/wp-json/oembed/1.0/embed?url=https%3A%2F%2F8kplayer.net%2F" />
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="https://8kplayer.net/wp-json/oembed/1.0/embed?url=https%3A%2F%2F8kplayer.net%2F&#038;format=xml" />
+        <style>
+            :root {
+                --tpg-primary-color: #0d6efd;
+                --tpg-secondary-color: #0654c4;
+                --tpg-primary-light: #c4d0ff
+            }
+                        body .rt-tpg-container .rt-loading,
+            body #bottom-script-loader .rt-ball-clip-rotate {
+                color: #0367bf !important;
+            }
+                    </style>
+		<meta name="generator" content="Elementor 3.29.2; features: e_font_icon_svg, additional_custom_breakpoints, e_local_google_fonts; settings: css_print_method-external, google_font-enabled, font_display-swap">
+			<style>
+				.e-con.e-parent:nth-of-type(n+4):not(.e-lazyloaded):not(.e-no-lazyload),
+				.e-con.e-parent:nth-of-type(n+4):not(.e-lazyloaded):not(.e-no-lazyload) * {
+					background-image: none !important;
+				}
+				@media screen and (max-height: 1024px) {
+					.e-con.e-parent:nth-of-type(n+3):not(.e-lazyloaded):not(.e-no-lazyload),
+					.e-con.e-parent:nth-of-type(n+3):not(.e-lazyloaded):not(.e-no-lazyload) * {
+						background-image: none !important;
+					}
+				}
+				@media screen and (max-height: 640px) {
+					.e-con.e-parent:nth-of-type(n+2):not(.e-lazyloaded):not(.e-no-lazyload),
+					.e-con.e-parent:nth-of-type(n+2):not(.e-lazyloaded):not(.e-no-lazyload) * {
+						background-image: none !important;
+					}
+				}
+			</style>
+			<link rel="icon" href="https://8kplayer.net/wp-content/uploads/2023/11/8k_tv_new-150x150.png" sizes="32x32" />
+<link rel="icon" href="https://8kplayer.net/wp-content/uploads/2023/11/8k_tv_new-300x300.png" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://8kplayer.net/wp-content/uploads/2023/11/8k_tv_new-300x300.png" />
+<meta name="msapplication-TileImage" content="https://8kplayer.net/wp-content/uploads/2023/11/8k_tv_new-300x300.png" />
+	<meta name="google-site-verification" content="S2MSzuiaGqbzwwnoAUc_SMvEpvqsZOfcWW2HpsVX1aU" />
+</head>
+<body class="home wp-singular page-template page-template-elementor_header_footer page page-id-42 wp-custom-logo wp-theme-zeinet rttpg rttpg-7.8.2 radius-frontend rttpg-body-wrap zeinet-addon elementor-default elementor-template-full-width elementor-kit-7 elementor-page elementor-page-42">
+	<div id="page" class="site page-wrapper">
+		<a class="skip-link screen-reader-text" href="#primary">Skip to content</a>
+                            		<div data-elementor-type="wp-post" data-elementor-id="505" class="elementor elementor-505" data-elementor-post-type="header">
+						<header class="elementor-section elementor-top-section elementor-element elementor-element-94b5cf0 elementor-section-full_width elementor-section-height-default elementor-section-height-default" data-id="94b5cf0" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+							<div class="elementor-background-overlay"></div>
+							<div class="elementor-container elementor-column-gap-no">
+					<header class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-6988437" data-id="6988437" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-17b9610 elementor-widget elementor-widget-zeinet-header" data-id="17b9610" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;none&quot;}" data-widget_type="zeinet-header.default">
+				<div class="elementor-widget-container">
+	<header class="main-header-two">
+		<nav class="main-menu main-menu-two">
+			<div class="main-menu-two__wrapper">
+				<div class="main-menu-two__wrapper-inner clearfix">
+					<div class="main-menu-two__left">
+						<div class="main-menu-two__logo">
+							<a href="https://8kplayer.net/">
+								<img decoding="async" width="140" height="77" src="https://8kplayer.net/wp-content/uploads/2022/10/8k_tv_gold_logo-1.png" id="thm-logo" alt="8K Player VIP">
+							</a>
+						</div>
+					</div>
+					<div class="main-menu-two__right">
+						<div class="main-menu-two__right-inner">
+							<div class="main-menu-two__main-menu-box">
+								<a href="#" class="mobile-nav__toggler"><i class="fa fa-bars"></i></a>
+								<div class="menu-menu-basic-container"><ul id="menu-menu-basic" class="main-menu__list one-page-scroll-menu"><li id="menu-item-1869" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-42 current_page_item menu-item-1869"><a href="https://8kplayer.net/" aria-current="page">Home</a></li>
+<li id="menu-item-1872" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1872"><a href="https://8kplayer.net/8k-player-subscription/">Packages</a></li>
+<li id="menu-item-3156" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3156"><a href="https://8kplayer.net/iptv-reseller-panel/">IPTV Reseller</a></li>
+<li id="menu-item-1871" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1871"><a href="https://8kplayer.net/contact/">Contact</a></li>
+<li id="menu-item-1870" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1870"><a href="https://8kplayer.net/about/">About us</a></li>
+<li id="menu-item-3307" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3307"><a href="https://8kplayer.net/blog/">Blog</a></li>
+</ul></div>							</div>
+							<div class="main-menu-two__main-menu-content-box">
+								<div class="main-menu-two__search-help-line-btn-box">
+									<div class="main-menu-two__search-box">
+																													</div>
+																			<div class="main-menu-two__help-line">
+											<div class="main-menu-two__help-line-icon icon-svg-large">
+												<span aria-hidden="true" class="  icon-support"></span>											</div>
+											<div class="main-menu-two__help-line-content">
+												<p class="main-menu-two__help-line-sub-title">Whatsapp</p>
+												<h5 class="main-menu-two__help-line-number"><a href="https://wa.me/13233707159"> +1 (323) 370 7159</a></h5>
+											</div>
+										</div>
+																										</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</nav>
+	</header>
+<div class="mobile-nav__wrapper">
+	<div class="mobile-nav__overlay mobile-nav__toggler"></div>
+	<div class="mobile-nav__content">
+		<span class="mobile-nav__close mobile-nav__toggler"></span>
+		<div class="logo-box">
+			<a href="https://8kplayer.net/">
+				<img decoding="async" width="140" height="77" src="https://8kplayer.net/wp-content/uploads/2022/10/8k_tv_gold_logo.png" id="mobile-thm-logo" alt="8K Player VIP">
+			</a>
+		</div>
+		<div class="mobile-nav__container"></div>
+					</ul>
+			<div class="mobile-nav__top">
+				<div class="mobile-nav__social">
+									</div>
+			</div>
+	</div>
+</div>
+				</div>
+				</div>
+					</div>
+		</header>
+					</div>
+		</header>
+				</div>
+				<div data-elementor-type="wp-page" data-elementor-id="42" class="elementor elementor-42" data-elementor-post-type="page">
+				<div class="elementor-element elementor-element-8cbaaf8 e-con-full e-flex e-con e-parent" data-id="8cbaaf8" data-element_type="container" data-settings="{&quot;background_background&quot;:&quot;slideshow&quot;,&quot;background_slideshow_gallery&quot;:[{&quot;id&quot;:2673,&quot;url&quot;:&quot;https:\/\/8kplayer.net\/wp-content\/uploads\/2024\/03\/dund-1.webp&quot;},{&quot;id&quot;:2464,&quot;url&quot;:&quot;https:\/\/8kplayer.net\/wp-content\/uploads\/2024\/03\/FFFF.webp&quot;},{&quot;id&quot;:1559,&quot;url&quot;:&quot;https:\/\/8kplayer.net\/wp-content\/uploads\/2023\/11\/one-pice.webp&quot;}],&quot;background_slideshow_ken_burns&quot;:&quot;yes&quot;,&quot;background_slideshow_loop&quot;:&quot;yes&quot;,&quot;background_slideshow_slide_duration&quot;:5000,&quot;background_slideshow_slide_transition&quot;:&quot;fade&quot;,&quot;background_slideshow_transition_duration&quot;:500,&quot;background_slideshow_ken_burns_zoom_direction&quot;:&quot;in&quot;}">
+				<div class="elementor-element elementor-element-61f063e elementor-widget elementor-widget-heading" data-id="61f063e" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<h1 class="elementor-heading-title elementor-size-default">Best VIP IPTV Provider For  You</h1>				</div>
+				</div>
+				<div class="elementor-element elementor-element-804daa4 elementor-widget__width-initial elementor-widget-mobile__width-initial elementor-widget elementor-widget-text-editor" data-id="804daa4" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+									<p>For the past three years, 8K VIP IPTV  has been deemed the best IPTV Subscription Provider. We provide access to over 25.000+ global TV channels, including 120.000 movies and series on demand (VOD), in numerous languages. Thank fully, our 8K IPTV  will allow you to view all sports and live PPV events.</p>								</div>
+				</div>
+				<div class="elementor-element elementor-element-d46cb63 elementor-mobile-align-center elementor-widget elementor-widget-button" data-id="d46cb63" data-element_type="widget" data-widget_type="button.default">
+				<div class="elementor-widget-container">
+									<div class="elementor-button-wrapper">
+					<a class="elementor-button elementor-button-link elementor-size-sm elementor-animation-grow" href="https://8kplayer.net/iptv-free-trial/" target="_blank">
+						<span class="elementor-button-content-wrapper">
+									<span class="elementor-button-text">GET FREE TRIAL</span>
+					</span>
+					</a>
+				</div>
+								</div>
+				</div>
+				</div>
+		<div class="elementor-element elementor-element-68a1492 e-con-full e-flex e-con e-parent" data-id="68a1492" data-element_type="container">
+				</div>
+		<div class="elementor-element elementor-element-2f1d83b e-con-full e-flex e-con e-parent" data-id="2f1d83b" data-element_type="container">
+				<div class="elementor-element elementor-element-12402c5 elementor-widget__width-inherit animated-slow elementor-widget elementor-widget-image-carousel" data-id="12402c5" data-element_type="widget" data-settings="{&quot;slides_to_show&quot;:&quot;6&quot;,&quot;slides_to_show_mobile&quot;:&quot;3&quot;,&quot;slides_to_scroll&quot;:&quot;1&quot;,&quot;navigation&quot;:&quot;none&quot;,&quot;image_spacing_custom&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:30,&quot;sizes&quot;:[]},&quot;image_spacing_custom_mobile&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:21,&quot;sizes&quot;:[]},&quot;_animation&quot;:&quot;none&quot;,&quot;autoplay_speed&quot;:11,&quot;speed&quot;:6000,&quot;autoplay&quot;:&quot;yes&quot;,&quot;pause_on_hover&quot;:&quot;yes&quot;,&quot;pause_on_interaction&quot;:&quot;yes&quot;,&quot;infinite&quot;:&quot;yes&quot;,&quot;image_spacing_custom_tablet&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]}}" data-widget_type="image-carousel.default">
+				<div class="elementor-widget-container">
+							<div class="elementor-image-carousel-wrapper swiper" role="region" aria-roledescription="carousel" aria-label="Image Carousel" dir="rtl">
+			<div class="elementor-image-carousel swiper-wrapper swiper-image-stretch" aria-live="off">
+								<div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="1 of 11"><figure class="swiper-slide-inner"><img width="300" height="100" decoding="async" class="swiper-slide-image" src="https://8kplayer.net/wp-content/uploads/2023/11/your-iptv-6-300x100.webp" alt="bein sports ok iptv uk" /></figure></div><div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="2 of 11"><figure class="swiper-slide-inner"><img width="300" height="100" decoding="async" class="swiper-slide-image" src="https://8kplayer.net/wp-content/uploads/2023/11/your-iptv-3-300x100.webp" alt="iptv sport.tv" /></figure></div><div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="3 of 11"><figure class="swiper-slide-inner"><img width="648" height="354" decoding="async" class="swiper-slide-image" src="https://8kplayer.net/wp-content/uploads/2024/03/BBC_Sport.svg" alt="iptv uk bbc sport" /></figure></div><div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="4 of 11"><figure class="swiper-slide-inner"><img width="300" height="100" decoding="async" class="swiper-slide-image" src="https://8kplayer.net/wp-content/uploads/2023/11/your-iptv-2-300x100.webp" alt="iptv uk sky sport" /></figure></div><div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="5 of 11"><figure class="swiper-slide-inner"><img width="300" height="100" decoding="async" class="swiper-slide-image" src="https://8kplayer.net/wp-content/uploads/2023/11/your-iptv-7-300x100.webp" alt="bt sport iptv uk" /></figure></div><div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="6 of 11"><figure class="swiper-slide-inner"><img width="1000" height="394" decoding="async" class="swiper-slide-image" src="https://8kplayer.net/wp-content/uploads/2024/03/Dave.svg" alt="iptv uk dave" /></figure></div><div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="7 of 11"><figure class="swiper-slide-inner"><img width="300" height="100" decoding="async" class="swiper-slide-image" src="https://8kplayer.net/wp-content/uploads/2023/11/your-iptv-11-300x100.webp" alt="espi iptv uk" /></figure></div><div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="8 of 11"><figure class="swiper-slide-inner"><img width="447" height="223" decoding="async" class="swiper-slide-image" src="https://8kplayer.net/wp-content/uploads/2024/03/ITV_logo_2013.svg" alt="iptv uk itv" /></figure></div><div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="9 of 11"><figure class="swiper-slide-inner"><img width="300" height="100" decoding="async" class="swiper-slide-image" src="https://8kplayer.net/wp-content/uploads/2023/11/your-iptv-14-300x100.webp" alt="bational geographe iptv uk" /></figure></div><div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="10 of 11"><figure class="swiper-slide-inner"><img width="300" height="115" decoding="async" class="swiper-slide-image" src="https://8kplayer.net/wp-content/uploads/2023/11/BBC_News-300x115.png" alt="bbc news iptv uk" /></figure></div><div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="11 of 11"><figure class="swiper-slide-inner"><img width="300" height="94" decoding="async" class="swiper-slide-image" src="https://8kplayer.net/wp-content/uploads/2023/11/TNT_Sports_2023.svg_-300x94.png" alt="tnt sports iptv uk" /></figure></div>			</div>
+									</div>
+						</div>
+				</div>
+				</div>
+		<div class="elementor-element elementor-element-c8ddd87 e-con-full e-flex e-con e-parent" data-id="c8ddd87" data-element_type="container">
+				<div class="elementor-element elementor-element-111ff38 elementor-widget elementor-widget-heading" data-id="111ff38" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<h2 class="elementor-heading-title elementor-size-small">Featured Shows</h2>				</div>
+				</div>
+				<div class="elementor-element elementor-element-f8adfa7 elementor-widget elementor-widget-text-editor" data-id="f8adfa7" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+									<p>Take advantage of our special offers to enjoy the best in television.</p><p>Watch your favorite TV shows and movies all in one place.</p>								</div>
+				</div>
+				<div class="elementor-element elementor-element-9a7a694 animated-slow elementor-widget elementor-widget-image-carousel" data-id="9a7a694" data-element_type="widget" data-settings="{&quot;slides_to_show&quot;:&quot;4&quot;,&quot;slides_to_show_mobile&quot;:&quot;2&quot;,&quot;slides_to_scroll&quot;:&quot;1&quot;,&quot;navigation&quot;:&quot;none&quot;,&quot;image_spacing_custom&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:56,&quot;sizes&quot;:[]},&quot;image_spacing_custom_mobile&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:21,&quot;sizes&quot;:[]},&quot;_animation&quot;:&quot;none&quot;,&quot;autoplay_speed&quot;:11,&quot;speed&quot;:6000,&quot;autoplay&quot;:&quot;yes&quot;,&quot;pause_on_hover&quot;:&quot;yes&quot;,&quot;pause_on_interaction&quot;:&quot;yes&quot;,&quot;infinite&quot;:&quot;yes&quot;,&quot;image_spacing_custom_tablet&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]}}" data-widget_type="image-carousel.default">
+				<div class="elementor-widget-container">
+							<div class="elementor-image-carousel-wrapper swiper" role="region" aria-roledescription="carousel" aria-label="Image Carousel" dir="ltr">
+			<div class="elementor-image-carousel swiper-wrapper swiper-image-stretch" aria-live="off">
+								<div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="1 of 10"><figure class="swiper-slide-inner"><img width="684" height="1000" decoding="async" class="swiper-slide-image" src="https://8kplayer.net/wp-content/uploads/2023/11/Spider-Man.webp" alt="Spider-Man" /></figure></div><div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="2 of 10"><figure class="swiper-slide-inner"><img width="684" height="1000" decoding="async" class="swiper-slide-image" src="https://8kplayer.net/wp-content/uploads/2023/11/cut_.webp" alt="cut_" /></figure></div><div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="3 of 10"><figure class="swiper-slide-inner"><img width="768" height="1137" decoding="async" class="swiper-slide-image" src="https://8kplayer.net/wp-content/uploads/2023/11/one_pice1-768x1137.webp" alt="one_pice1" /></figure></div><div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="4 of 10"><figure class="swiper-slide-inner"><img width="768" height="1138" decoding="async" class="swiper-slide-image" src="https://8kplayer.net/wp-content/uploads/2023/11/1000_-768x1138.webp" alt="1000_" /></figure></div><div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="5 of 10"><figure class="swiper-slide-inner"><img width="768" height="1122" decoding="async" class="swiper-slide-image" src="https://8kplayer.net/wp-content/uploads/2022/10/unnamed-file-768x1122.jpg" alt="_" /></figure></div><div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="6 of 10"><figure class="swiper-slide-inner"><img width="768" height="1162" decoding="async" class="swiper-slide-image" src="https://8kplayer.net/wp-content/uploads/2024/03/gladiator_2-768x1162.webp" alt="IPTV UK" /></figure></div><div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="7 of 10"><figure class="swiper-slide-inner"><img width="729" height="1080" decoding="async" class="swiper-slide-image" src="https://8kplayer.net/wp-content/uploads/2024/03/beepee.webp" alt="IPTV UK" /></figure></div><div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="8 of 10"><figure class="swiper-slide-inner"><img width="768" height="1156" decoding="async" class="swiper-slide-image" src="https://8kplayer.net/wp-content/uploads/2024/03/one_piece-1-768x1156.webp" alt="IPTV UK" /></figure></div><div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="9 of 10"><figure class="swiper-slide-inner"><img width="768" height="1159" decoding="async" class="swiper-slide-image" src="https://8kplayer.net/wp-content/uploads/2024/03/NBA-1-768x1159.webp" alt="IPTV UK" /></figure></div><div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="10 of 10"><figure class="swiper-slide-inner"><img width="768" height="1152" decoding="async" class="swiper-slide-image" src="https://8kplayer.net/wp-content/uploads/2024/03/GF-768x1152.webp" alt="IPTV UK" /></figure></div>			</div>
+									</div>
+						</div>
+				</div>
+				</div>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-3dd48cf elementor-section-full_width elementor-section-height-default elementor-section-height-default" data-id="3dd48cf" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-no">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-3a420ca" data-id="3a420ca" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-3816061 elementor-widget elementor-widget-zeinet-about" data-id="3816061" data-element_type="widget" data-widget_type="zeinet-about.default">
+				<div class="elementor-widget-container">
+	<section class="save-money">
+					<div class="save-money-bg" style="background-image: url(https://bracketweb.com/zeinetwp/wp-content/uploads/2022/10/save-money-bg-1.jpg);"></div>
+									<div class="save-money-shape-two" style="background-image: url(https://bracketweb.com/zeinetwp/wp-content/uploads/2022/10/save-money-shape-1-1.png);"></div>
+							<div class="save-money-shape-three" style="background-image: url(https://bracketweb.com/zeinetwp/wp-content/uploads/2022/10/save-money-shape-2.png);"></div>
+				<div class="container">
+			<div class="row">
+				<div class="col-xl-6 col-lg-8">
+					<div class="save-money__left">
+													<div class="section-title text-left">
+																	<span class="section-title__tagline">Best 8k vip iptv subscription</span>
+																									<h2 class="section-title__title">Best 8K VIP IPTV Subscription Can Save You Money</h2>
+															</div>
+																			<p class="save-money__text">We think the level of service and support we provide at the pricing we give is the best in the 8k vip IPTV  market..</p>
+												<div class="save-money__bundal">
+							<div class="save-money__bundal-icon">
+								<span aria-hidden="true" class="  icon-tv-box"></span>							</div>
+							<div class="save-money__bundal-content">
+								<h2 class="save-money__bundal-price"><sup></sup> 24 <span>/Hours</span></h2>
+								<p class="save-money__bundal-text">IPTV High Quality</p>
+							</div>
+						</div>
+													<a   href="https://8kplayer.net/free-test/" class="thm-btn save-money__btn">Let’s get started</a>
+											</div>
+				</div>
+				<div class="col-xl-6 col-lg-4">
+					<div class="save-money__right">
+						<div class="save-money__video-link">
+							<a href="https://www.youtube.com/watch?v=GKDVpwb25B0" class="video-popup">
+								<div class="save-money__video-icon">
+									<span class="fa fa-play"></span>
+									<i class="ripple"></i>
+								</div>
+							</a>
+							<div class="save-money__video-text-box">
+								<p class="save-money__video-text">Watch the Video</p>
+																	<div class="save-money__video-arrow float-bob-y">
+										<img width="27" height="21" decoding="async" src="https://8kplayer.net/wp-content/uploads/2022/10/save-money-video-arrow.png" alt="whatch video">
+									</div>
+															</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+				</div>
+				</div>
+					</div>
+		</div>
+					</div>
+		</section>
+		<div class="elementor-element elementor-element-40c8e9b e-con-full e-flex e-con e-parent" data-id="40c8e9b" data-element_type="container">
+		<div class="elementor-element elementor-element-7d63772 e-con-full e-flex e-con e-child" data-id="7d63772" data-element_type="container">
+				<div class="elementor-element elementor-element-d15bcbd elementor-widget elementor-widget-zeinet-features" data-id="d15bcbd" data-element_type="widget" data-widget_type="zeinet-features.default">
+				<div class="elementor-widget-container">
+	<section class="why-choose-one">
+					<div class="why-choose-one-shape-1 float-bob-x">
+				<img decoding="async" src="https://bracketweb.com/zeinetwp/wp-content/uploads/2022/10/why-choose-one-shape-1.png" alt="alt">
+			</div>
+							<div class="why-choose-one-shape-2 float-bob-y">
+				<img decoding="async" src="https://bracketweb.com/zeinetwp/wp-content/uploads/2022/10/why-choose-one-shape-2.png" alt="alt">
+			</div>
+				<div class="container">
+			<div class="why-choose-one__top">
+				<div class="row">
+					<div class="col-xl-6 col-lg-6">
+						<div class="why-choose-one__left">
+							<div class="section-title text-left">
+																	<span class="section-title__tagline">our iptv benefits </span>
+																									<h2 class="section-title__title">Why you should choose  Our 8K VIP IPTV  Service?</h2>
+															</div>
+						</div>
+					</div>
+					<div class="col-xl-6 col-lg-6">
+						<div class="why-choose-one__right">
+															<p class="why-choose-one__text">With one subscription IPTV and one device, you can watch all of your favorite channels without having to pay high IPTV subscription rates. We guarantee consistency and high quality at an affordable price. </p>
+													</div>
+					</div>
+				</div>
+			</div>
+							<div class="why-choose-one__bottom">
+					<ul class="list-unstyled why-choose-one__list ml-0">
+													<li class="why-choose-one__single wow fadeInUp" data-wow-delay="100ms">
+								<div class="why-choose-one__content">
+									<div class="why-choose-one__icon icon-svg-large">
+										<span aria-hidden="true" class="   icon-scrum"></span>									</div>
+									<p class="why-choose-one__title">Cheap Plans</p>
+								</div>
+							</li>
+													<li class="why-choose-one__single wow fadeInUp" data-wow-delay="200ms">
+								<div class="why-choose-one__content">
+									<div class="why-choose-one__icon icon-svg-large">
+										<span aria-hidden="true" class="   icon-4k"></span>									</div>
+									<p class="why-choose-one__title">4k Quality</p>
+								</div>
+							</li>
+													<li class="why-choose-one__single wow fadeInUp" data-wow-delay="300ms">
+								<div class="why-choose-one__content">
+									<div class="why-choose-one__icon icon-svg-large">
+										<span aria-hidden="true" class="  icon-settings"></span>									</div>
+									<p class="why-choose-one__title">Easy to install</p>
+								</div>
+							</li>
+													<li class="why-choose-one__single wow fadeInUp" data-wow-delay="400ms">
+								<div class="why-choose-one__content">
+									<div class="why-choose-one__icon icon-svg-large">
+										<span aria-hidden="true" class="   icon-speedometer"></span>									</div>
+									<p class="why-choose-one__title">Ultra Fast</p>
+								</div>
+							</li>
+													<li class="why-choose-one__single wow fadeInUp" data-wow-delay="500ms">
+								<div class="why-choose-one__content">
+									<div class="why-choose-one__icon icon-svg-large">
+										<span aria-hidden="true" class="   icon-television"></span>									</div>
+									<p class="why-choose-one__title">Support All Device</p>
+								</div>
+							</li>
+													<li class="why-choose-one__single wow fadeInUp" data-wow-delay="600ms">
+								<div class="why-choose-one__content">
+									<div class="why-choose-one__icon icon-svg-large">
+										<span aria-hidden="true" class="   icon-support-1"></span>									</div>
+									<p class="why-choose-one__title">24/7 Support</p>
+								</div>
+							</li>
+											</ul>
+				</div>
+					</div>
+	</section>
+				</div>
+				</div>
+				</div>
+				</div>
+		<div class="elementor-element elementor-element-acaeb3f e-con-full e-flex e-con e-parent" data-id="acaeb3f" data-element_type="container">
+				<div class="elementor-element elementor-element-0a188ed elementor-widget__width-inherit animated-slow elementor-widget elementor-widget-image-carousel" data-id="0a188ed" data-element_type="widget" data-settings="{&quot;slides_to_show&quot;:&quot;6&quot;,&quot;slides_to_show_mobile&quot;:&quot;3&quot;,&quot;slides_to_scroll&quot;:&quot;1&quot;,&quot;navigation&quot;:&quot;none&quot;,&quot;_animation&quot;:&quot;none&quot;,&quot;autoplay_speed&quot;:11,&quot;speed&quot;:6000,&quot;autoplay&quot;:&quot;yes&quot;,&quot;pause_on_hover&quot;:&quot;yes&quot;,&quot;pause_on_interaction&quot;:&quot;yes&quot;,&quot;infinite&quot;:&quot;yes&quot;}" data-widget_type="image-carousel.default">
+				<div class="elementor-widget-container">
+							<div class="elementor-image-carousel-wrapper swiper" role="region" aria-roledescription="carousel" aria-label="Image Carousel" dir="rtl">
+			<div class="elementor-image-carousel swiper-wrapper swiper-image-stretch" aria-live="off">
+								<div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="1 of 7"><figure class="swiper-slide-inner"><img width="300" height="100" decoding="async" class="swiper-slide-image" src="https://8kplayer.net/wp-content/uploads/2023/11/your-iptv-6-300x100.webp" alt="bein sports ok iptv uk" /></figure></div><div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="2 of 7"><figure class="swiper-slide-inner"><img width="300" height="99" decoding="async" class="swiper-slide-image" src="https://8kplayer.net/wp-content/uploads/2023/11/Hulu@2x-300x99.webp" alt="Free Trial" /></figure></div><div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="3 of 7"><figure class="swiper-slide-inner"><img width="300" height="100" decoding="async" class="swiper-slide-image" src="https://8kplayer.net/wp-content/uploads/2023/11/ezgif.com-gif-maker-27-300x100.webp" alt="net-flix Free Trial" /></figure></div><div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="4 of 7"><figure class="swiper-slide-inner"><img width="300" height="100" decoding="async" class="swiper-slide-image" src="https://8kplayer.net/wp-content/uploads/2023/11/ezgif.com-gif-maker-25-300x100.webp" alt="hbo-IPTV Trial" /></figure></div><div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="5 of 7"><figure class="swiper-slide-inner"><img width="300" height="169" decoding="async" class="swiper-slide-image" src="https://8kplayer.net/wp-content/uploads/2023/11/07EMZy0mk05ABjFzwCJoiJF-1-300x169.webp" alt="para-moint IPTV Free" /></figure></div><div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="6 of 7"><figure class="swiper-slide-inner"><img width="300" height="100" decoding="async" class="swiper-slide-image" src="https://8kplayer.net/wp-content/uploads/2023/11/ezgif.com-gif-maker-26-300x100.webp" alt="prime_IPTV Trial" /></figure></div><div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="7 of 7"><figure class="swiper-slide-inner"><img width="300" height="87" decoding="async" class="swiper-slide-image" src="https://8kplayer.net/wp-content/uploads/2023/11/ezgif.com-resize-2-300x87.webp" alt="disne+IPTV Free Trial" /></figure></div>			</div>
+									</div>
+						</div>
+				</div>
+				</div>
+		<div class="elementor-element elementor-element-325359b bg-blend-luminosity e-con-full e-flex e-con e-parent" data-id="325359b" data-element_type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+		<div class="elementor-element elementor-element-bebceee e-con-full e-flex e-con e-child" data-id="bebceee" data-element_type="container">
+				<div class="elementor-element elementor-element-68265dc elementor-widget elementor-widget-zeinet-section-header" data-id="68265dc" data-element_type="widget" data-widget_type="zeinet-section-header.default">
+				<div class="elementor-widget-container">
+					    <div class="section-title text-center custom">
+                    <span class="section-title__tagline"> iptv  subscription PLANs</span>
+                            <h2 class="section-title__title">Choose the Best IPTV Subscription <br>  Your Needs</h2>
+            </div>
+				</div>
+				</div>
+		<div class="elementor-element elementor-element-72504f4 e-con-full e-flex e-con e-child" data-id="72504f4" data-element_type="container">
+		<div class="elementor-element elementor-element-b965049 e-con-full e-flex elementor-invisible e-con e-child" data-id="b965049" data-element_type="container" data-settings="{&quot;animation&quot;:&quot;fadeInLeft&quot;}">
+				<div class="elementor-element elementor-element-e734353 elementor-widget__width-initial elementor-widget elementor-widget-zeinet-price" data-id="e734353" data-element_type="widget" data-widget_type="zeinet-price.default">
+				<div class="elementor-widget-container">
+	<div class="plans-one__single">
+		<div class="plans-one__top">
+							<p class="plans-one__sub-title">SUBSCRIPTION</p>
+										<h4 class="plans-one__title"> 1 Months</h4>
+					</div>
+		<div class="plans-one__bottom">
+							<ul class="list-unstyled plans-one__list ml-0">
+											<li>
+							<div class="icon icon-svg">
+								<i aria-hidden="true" class="  fa fa-check"></i>							</div>
+							<div class="text">
+								<p>+25.000 channels</p>
+							</div>
+						</li>
+											<li>
+							<div class="icon icon-svg">
+								<i aria-hidden="true" class="  fa fa-check"></i>							</div>
+							<div class="text">
+								<p>+120.000 VODs</p>
+							</div>
+						</li>
+											<li>
+							<div class="icon icon-svg">
+								<i aria-hidden="true" class="  fa fa-check"></i>							</div>
+							<div class="text">
+								<p>Fast &amp; Stable</p>
+							</div>
+						</li>
+											<li>
+							<div class="icon icon-svg">
+								<i aria-hidden="true" class="  fa fa-check"></i>							</div>
+							<div class="text">
+								<p>Support All Devices</p>
+							</div>
+						</li>
+											<li>
+							<div class="icon icon-svg">
+								<i aria-hidden="true" class="  fa fa-check"></i>							</div>
+							<div class="text">
+								<p>4K &amp; UHD &amp; FHD &amp; HD</p>
+							</div>
+						</li>
+											<li>
+							<div class="icon icon-svg">
+								<i aria-hidden="true" class="  fa fa-check"></i>							</div>
+							<div class="text">
+								<p>24/7 Support</p>
+							</div>
+						</li>
+									</ul>
+						<div class="plans-one__price-box">
+				<div class="plans-one__price-inner">
+					<h2 class="plans-one__price"> <sup class="plans-one__price-dolar">£</sup> 11						<sup class="plans-one__price-last-text">.99</sup>
+					</h2>
+					<p class="plans-one__price-time">/ month</p>
+				</div>
+									<div class="plans-one__btn-box">
+						<a   href="https://tinyurl.com/belnder-1-m" class="thm-btn plans-one__btn">BUY NOW</a>
+					</div>
+							</div>
+							<div class="plans-one__icon-box">
+											<i aria-hidden="true" class="  icon-wifi"></i>											<i aria-hidden="true" class="   icon-tv"></i>											<i aria-hidden="true" class="   icon-hand-phone"></i>									</div>
+					</div>
+	</div>
+				</div>
+				</div>
+				</div>
+		<div class="elementor-element elementor-element-afa8a6c e-con-full e-flex elementor-invisible e-con e-child" data-id="afa8a6c" data-element_type="container" data-settings="{&quot;animation&quot;:&quot;fadeInLeft&quot;}">
+				<div class="elementor-element elementor-element-bf6390f elementor-widget__width-initial elementor-widget elementor-widget-zeinet-price" data-id="bf6390f" data-element_type="widget" data-widget_type="zeinet-price.default">
+				<div class="elementor-widget-container">
+	<div class="plans-one__single">
+		<div class="plans-one__top">
+							<p class="plans-one__sub-title">SUBSCRIPTION</p>
+										<h4 class="plans-one__title"> 3 Months</h4>
+					</div>
+		<div class="plans-one__bottom">
+							<ul class="list-unstyled plans-one__list ml-0">
+											<li>
+							<div class="icon icon-svg">
+								<i aria-hidden="true" class="  fa fa-check"></i>							</div>
+							<div class="text">
+								<p>+25.000 channels</p>
+							</div>
+						</li>
+											<li>
+							<div class="icon icon-svg">
+								<i aria-hidden="true" class="  fa fa-check"></i>							</div>
+							<div class="text">
+								<p>+120.000 VODs</p>
+							</div>
+						</li>
+											<li>
+							<div class="icon icon-svg">
+								<i aria-hidden="true" class="  fa fa-check"></i>							</div>
+							<div class="text">
+								<p>Fast &amp; Stable</p>
+							</div>
+						</li>
+											<li>
+							<div class="icon icon-svg">
+								<i aria-hidden="true" class="  fa fa-check"></i>							</div>
+							<div class="text">
+								<p>Support All Devices</p>
+							</div>
+						</li>
+											<li>
+							<div class="icon icon-svg">
+								<i aria-hidden="true" class="  fa fa-check"></i>							</div>
+							<div class="text">
+								<p>4K &amp; UHD &amp; FHD &amp; HD</p>
+							</div>
+						</li>
+											<li>
+							<div class="icon icon-svg">
+								<i aria-hidden="true" class="  fa fa-check"></i>							</div>
+							<div class="text">
+								<p>24/7 Support</p>
+							</div>
+						</li>
+									</ul>
+						<div class="plans-one__price-box">
+				<div class="plans-one__price-inner">
+					<h2 class="plans-one__price"> <sup class="plans-one__price-dolar">£</sup> 15						<sup class="plans-one__price-last-text">.99</sup>
+					</h2>
+					<p class="plans-one__price-time">/ month</p>
+				</div>
+									<div class="plans-one__btn-box">
+						<a   href="https://tinyurl.com/belnder-3-m" class="thm-btn plans-one__btn">BUY NOW</a>
+					</div>
+							</div>
+							<div class="plans-one__icon-box">
+											<i aria-hidden="true" class="  icon-wifi"></i>											<i aria-hidden="true" class="   icon-tv"></i>											<i aria-hidden="true" class="   icon-hand-phone"></i>									</div>
+					</div>
+	</div>
+				</div>
+				</div>
+				</div>
+		<div class="elementor-element elementor-element-1e43f00 e-con-full e-flex elementor-invisible e-con e-child" data-id="1e43f00" data-element_type="container" data-settings="{&quot;animation&quot;:&quot;fadeInLeft&quot;}">
+				<div class="elementor-element elementor-element-1fb805b elementor-widget__width-initial elementor-widget elementor-widget-zeinet-price" data-id="1fb805b" data-element_type="widget" data-widget_type="zeinet-price.default">
+				<div class="elementor-widget-container">
+	<div class="plans-one__single">
+		<div class="plans-one__top">
+							<p class="plans-one__sub-title">SUBSCRIPTION</p>
+										<h4 class="plans-one__title"> 6 Months</h4>
+					</div>
+		<div class="plans-one__bottom">
+							<ul class="list-unstyled plans-one__list ml-0">
+											<li>
+							<div class="icon icon-svg">
+								<i aria-hidden="true" class="  fa fa-check"></i>							</div>
+							<div class="text">
+								<p>+25.000 channels</p>
+							</div>
+						</li>
+											<li>
+							<div class="icon icon-svg">
+								<i aria-hidden="true" class="  fa fa-check"></i>							</div>
+							<div class="text">
+								<p>+120.000 VODs</p>
+							</div>
+						</li>
+											<li>
+							<div class="icon icon-svg">
+								<i aria-hidden="true" class="  fa fa-check"></i>							</div>
+							<div class="text">
+								<p>Fast &amp; Stable</p>
+							</div>
+						</li>
+											<li>
+							<div class="icon icon-svg">
+								<i aria-hidden="true" class="  fa fa-check"></i>							</div>
+							<div class="text">
+								<p>Support All Devices</p>
+							</div>
+						</li>
+											<li>
+							<div class="icon icon-svg">
+								<i aria-hidden="true" class="  fa fa-check"></i>							</div>
+							<div class="text">
+								<p>4K &amp; UHD &amp; FHD &amp; HD</p>
+							</div>
+						</li>
+											<li>
+							<div class="icon icon-svg">
+								<i aria-hidden="true" class="  fa fa-check"></i>							</div>
+							<div class="text">
+								<p>24/7 Support</p>
+							</div>
+						</li>
+									</ul>
+						<div class="plans-one__price-box">
+				<div class="plans-one__price-inner">
+					<h2 class="plans-one__price"> <sup class="plans-one__price-dolar">£</sup> 32						<sup class="plans-one__price-last-text">.99</sup>
+					</h2>
+					<p class="plans-one__price-time">/ month</p>
+				</div>
+									<div class="plans-one__btn-box">
+						<a   href="https://tinyurl.com/belnder-6-m" class="thm-btn plans-one__btn">BUY NOW</a>
+					</div>
+							</div>
+							<div class="plans-one__icon-box">
+											<i aria-hidden="true" class="  icon-wifi"></i>											<i aria-hidden="true" class="   icon-tv"></i>											<i aria-hidden="true" class="   icon-hand-phone"></i>									</div>
+					</div>
+	</div>
+				</div>
+				</div>
+				</div>
+		<div class="elementor-element elementor-element-3ebda5f e-con-full e-flex elementor-invisible e-con e-child" data-id="3ebda5f" data-element_type="container" data-settings="{&quot;animation&quot;:&quot;fadeInLeft&quot;}">
+				<div class="elementor-element elementor-element-a26d36a elementor-widget__width-initial elementor-widget elementor-widget-zeinet-price" data-id="a26d36a" data-element_type="widget" data-widget_type="zeinet-price.default">
+				<div class="elementor-widget-container">
+	<div class="plans-one__single">
+		<div class="plans-one__top">
+							<p class="plans-one__sub-title">SUBSCRIPTION</p>
+										<h4 class="plans-one__title"> 12 Months</h4>
+					</div>
+		<div class="plans-one__bottom">
+							<ul class="list-unstyled plans-one__list ml-0">
+											<li>
+							<div class="icon icon-svg">
+								<i aria-hidden="true" class="  fa fa-check"></i>							</div>
+							<div class="text">
+								<p>+25.000 channels</p>
+							</div>
+						</li>
+											<li>
+							<div class="icon icon-svg">
+								<i aria-hidden="true" class="  fa fa-check"></i>							</div>
+							<div class="text">
+								<p>+120.000 VODs</p>
+							</div>
+						</li>
+											<li>
+							<div class="icon icon-svg">
+								<i aria-hidden="true" class="  fa fa-check"></i>							</div>
+							<div class="text">
+								<p>Fast &amp; Stable</p>
+							</div>
+						</li>
+											<li>
+							<div class="icon icon-svg">
+								<i aria-hidden="true" class="  fa fa-check"></i>							</div>
+							<div class="text">
+								<p>Support All Devices</p>
+							</div>
+						</li>
+											<li>
+							<div class="icon icon-svg">
+								<i aria-hidden="true" class="  fa fa-check"></i>							</div>
+							<div class="text">
+								<p>4K &amp; UHD &amp; FHD &amp; HD</p>
+							</div>
+						</li>
+											<li>
+							<div class="icon icon-svg">
+								<i aria-hidden="true" class="  fa fa-check"></i>							</div>
+							<div class="text">
+								<p>24/7 Support</p>
+							</div>
+						</li>
+									</ul>
+						<div class="plans-one__price-box">
+				<div class="plans-one__price-inner">
+					<h2 class="plans-one__price"> <sup class="plans-one__price-dolar">£</sup> 47						<sup class="plans-one__price-last-text">.99</sup>
+					</h2>
+					<p class="plans-one__price-time">/ month</p>
+				</div>
+									<div class="plans-one__btn-box">
+						<a   href="https://tinyurl.com/belnder-12-m" class="thm-btn plans-one__btn">BUY NOW</a>
+					</div>
+							</div>
+							<div class="plans-one__icon-box">
+											<i aria-hidden="true" class="  icon-wifi"></i>											<i aria-hidden="true" class="   icon-tv"></i>											<i aria-hidden="true" class="   icon-hand-phone"></i>									</div>
+					</div>
+	</div>
+				</div>
+				</div>
+				</div>
+				</div>
+				</div>
+				</div>
+		<div class="elementor-element elementor-element-a978721 e-con-full e-flex e-con e-parent" data-id="a978721" data-element_type="container">
+				<div class="elementor-element elementor-element-19dd0ed elementor-widget elementor-widget-zeinet-section-header" data-id="19dd0ed" data-element_type="widget" data-widget_type="zeinet-section-header.default">
+				<div class="elementor-widget-container">
+					    <div class="section-title text-center custom">
+                    <span class="section-title__tagline">Supported devices</span>
+                            <h2 class="section-title__title">8K Player IPTV  supports all  devices </h2>
+            </div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-18eaa9c elementor-widget__width-inherit animated-slow elementor-widget elementor-widget-image-carousel" data-id="18eaa9c" data-element_type="widget" data-settings="{&quot;slides_to_show&quot;:&quot;10&quot;,&quot;slides_to_show_mobile&quot;:&quot;3&quot;,&quot;slides_to_scroll&quot;:&quot;1&quot;,&quot;navigation&quot;:&quot;none&quot;,&quot;_animation&quot;:&quot;none&quot;,&quot;autoplay_speed&quot;:11,&quot;speed&quot;:6000,&quot;_animation_delay&quot;:2100,&quot;autoplay&quot;:&quot;yes&quot;,&quot;pause_on_hover&quot;:&quot;yes&quot;,&quot;pause_on_interaction&quot;:&quot;yes&quot;,&quot;infinite&quot;:&quot;yes&quot;}" data-widget_type="image-carousel.default">
+				<div class="elementor-widget-container">
+							<div class="elementor-image-carousel-wrapper swiper" role="region" aria-roledescription="carousel" aria-label="Image Carousel" dir="rtl">
+			<div class="elementor-image-carousel swiper-wrapper" aria-live="off">
+								<div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="1 of 11"><a data-elementor-open-lightbox="yes" data-elementor-lightbox-slideshow="18eaa9c" data-elementor-lightbox-title="download (10)" data-e-action-hash="#elementor-action%3Aaction%3Dlightbox%26settings%3DeyJpZCI6Mjk2NSwidXJsIjoiaHR0cHM6XC9cLzhrcGxheWVyLm5ldFwvd3AtY29udGVudFwvdXBsb2Fkc1wvMjAyNFwvMDRcL2Rvd25sb2FkLTEwLmpwZWciLCJzbGlkZXNob3ciOiIxOGVhYTljIn0%3D" href="https://8kplayer.net/download-8k-player-vip/" target="_blank"><figure class="swiper-slide-inner"><img width="150" height="150" decoding="async" class="swiper-slide-image" src="https://8kplayer.net/wp-content/uploads/2024/04/download-10-150x150.jpeg" alt="windows iptv uk" /></figure></a></div><div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="2 of 11"><a data-elementor-open-lightbox="yes" data-elementor-lightbox-slideshow="18eaa9c" data-elementor-lightbox-title="download (9)" data-e-action-hash="#elementor-action%3Aaction%3Dlightbox%26settings%3DeyJpZCI6Mjk2NiwidXJsIjoiaHR0cHM6XC9cLzhrcGxheWVyLm5ldFwvd3AtY29udGVudFwvdXBsb2Fkc1wvMjAyNFwvMDRcL2Rvd25sb2FkLTkuanBlZyIsInNsaWRlc2hvdyI6IjE4ZWFhOWMifQ%3D%3D" href="https://8kplayer.net/download-8k-player-vip/" target="_blank"><figure class="swiper-slide-inner"><img width="150" height="150" decoding="async" class="swiper-slide-image" src="https://8kplayer.net/wp-content/uploads/2024/04/download-9-150x150.jpeg" alt="Perfect Player IPTV uk" /></figure></a></div><div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="3 of 11"><a data-elementor-open-lightbox="yes" data-elementor-lightbox-slideshow="18eaa9c" data-elementor-lightbox-title="download (8)" data-e-action-hash="#elementor-action%3Aaction%3Dlightbox%26settings%3DeyJpZCI6Mjk2OCwidXJsIjoiaHR0cHM6XC9cLzhrcGxheWVyLm5ldFwvd3AtY29udGVudFwvdXBsb2Fkc1wvMjAyNFwvMDRcL2Rvd25sb2FkLTguanBlZyIsInNsaWRlc2hvdyI6IjE4ZWFhOWMifQ%3D%3D" href="https://8kplayer.net/download-8k-player-vip/" target="_blank"><figure class="swiper-slide-inner"><img width="150" height="150" decoding="async" class="swiper-slide-image" src="https://8kplayer.net/wp-content/uploads/2024/04/download-8-150x150.jpeg" alt="linux iptv uk" /></figure></a></div><div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="4 of 11"><a data-elementor-open-lightbox="yes" data-elementor-lightbox-slideshow="18eaa9c" data-elementor-lightbox-title="download (7)" data-e-action-hash="#elementor-action%3Aaction%3Dlightbox%26settings%3DeyJpZCI6Mjk2OSwidXJsIjoiaHR0cHM6XC9cLzhrcGxheWVyLm5ldFwvd3AtY29udGVudFwvdXBsb2Fkc1wvMjAyNFwvMDRcL2Rvd25sb2FkLTcuanBlZyIsInNsaWRlc2hvdyI6IjE4ZWFhOWMifQ%3D%3D" href="https://8kplayer.net/download-8k-player-vip/" target="_blank"><figure class="swiper-slide-inner"><img width="150" height="150" decoding="async" class="swiper-slide-image" src="https://8kplayer.net/wp-content/uploads/2024/04/download-7-150x150.jpeg" alt="engma iptv uk" /></figure></a></div><div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="5 of 11"><a data-elementor-open-lightbox="yes" data-elementor-lightbox-slideshow="18eaa9c" data-elementor-lightbox-title="download (6)" data-e-action-hash="#elementor-action%3Aaction%3Dlightbox%26settings%3DeyJpZCI6Mjk3MCwidXJsIjoiaHR0cHM6XC9cLzhrcGxheWVyLm5ldFwvd3AtY29udGVudFwvdXBsb2Fkc1wvMjAyNFwvMDRcL2Rvd25sb2FkLTYuanBlZyIsInNsaWRlc2hvdyI6IjE4ZWFhOWMifQ%3D%3D" href="https://8kplayer.net/download-8k-player-vip/" target="_blank"><figure class="swiper-slide-inner"><img width="150" height="150" decoding="async" class="swiper-slide-image" src="https://8kplayer.net/wp-content/uploads/2024/04/download-6-150x150.jpeg" alt="mag iptv uk" /></figure></a></div><div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="6 of 11"><a data-elementor-open-lightbox="yes" data-elementor-lightbox-slideshow="18eaa9c" data-elementor-lightbox-title="download (5)" data-e-action-hash="#elementor-action%3Aaction%3Dlightbox%26settings%3DeyJpZCI6Mjk3MSwidXJsIjoiaHR0cHM6XC9cLzhrcGxheWVyLm5ldFwvd3AtY29udGVudFwvdXBsb2Fkc1wvMjAyNFwvMDRcL2Rvd25sb2FkLTUuanBlZyIsInNsaWRlc2hvdyI6IjE4ZWFhOWMifQ%3D%3D" href="https://8kplayer.net/download-8k-player-vip/" target="_blank"><figure class="swiper-slide-inner"><img width="150" height="150" decoding="async" class="swiper-slide-image" src="https://8kplayer.net/wp-content/uploads/2024/04/download-5-150x150.jpeg" alt="kodi iptv" /></figure></a></div><div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="7 of 11"><a data-elementor-open-lightbox="yes" data-elementor-lightbox-slideshow="18eaa9c" data-elementor-lightbox-title="download (4)" data-e-action-hash="#elementor-action%3Aaction%3Dlightbox%26settings%3DeyJpZCI6Mjk3MiwidXJsIjoiaHR0cHM6XC9cLzhrcGxheWVyLm5ldFwvd3AtY29udGVudFwvdXBsb2Fkc1wvMjAyNFwvMDRcL2Rvd25sb2FkLTQuanBlZyIsInNsaWRlc2hvdyI6IjE4ZWFhOWMifQ%3D%3D" href="https://8kplayer.net/download-8k-player-vip/" target="_blank"><figure class="swiper-slide-inner"><img width="150" height="150" decoding="async" class="swiper-slide-image" src="https://8kplayer.net/wp-content/uploads/2024/04/download-4-150x150.jpeg" alt="roku iptv uk" /></figure></a></div><div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="8 of 11"><a data-elementor-open-lightbox="yes" data-elementor-lightbox-slideshow="18eaa9c" data-elementor-lightbox-title="download (3)" data-e-action-hash="#elementor-action%3Aaction%3Dlightbox%26settings%3DeyJpZCI6Mjk3MywidXJsIjoiaHR0cHM6XC9cLzhrcGxheWVyLm5ldFwvd3AtY29udGVudFwvdXBsb2Fkc1wvMjAyNFwvMDRcL2Rvd25sb2FkLTMuanBlZyIsInNsaWRlc2hvdyI6IjE4ZWFhOWMifQ%3D%3D" href="https://8kplayer.net/download-8k-player-vip/" target="_blank"><figure class="swiper-slide-inner"><img width="150" height="150" decoding="async" class="swiper-slide-image" src="https://8kplayer.net/wp-content/uploads/2024/04/download-3-150x150.jpeg" alt="vlc iptv uk" /></figure></a></div><div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="9 of 11"><a data-elementor-open-lightbox="yes" data-elementor-lightbox-slideshow="18eaa9c" data-elementor-lightbox-title="download (2)" data-e-action-hash="#elementor-action%3Aaction%3Dlightbox%26settings%3DeyJpZCI6Mjk3NCwidXJsIjoiaHR0cHM6XC9cLzhrcGxheWVyLm5ldFwvd3AtY29udGVudFwvdXBsb2Fkc1wvMjAyNFwvMDRcL2Rvd25sb2FkLTIuanBlZyIsInNsaWRlc2hvdyI6IjE4ZWFhOWMifQ%3D%3D" href="https://8kplayer.net/download-8k-player-vip/" target="_blank"><figure class="swiper-slide-inner"><img width="150" height="150" decoding="async" class="swiper-slide-image" src="https://8kplayer.net/wp-content/uploads/2024/04/download-2-150x150.jpeg" alt="android iptv uk" /></figure></a></div><div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="10 of 11"><a data-elementor-open-lightbox="yes" data-elementor-lightbox-slideshow="18eaa9c" data-elementor-lightbox-title="download (1)" data-e-action-hash="#elementor-action%3Aaction%3Dlightbox%26settings%3DeyJpZCI6Mjk3NSwidXJsIjoiaHR0cHM6XC9cLzhrcGxheWVyLm5ldFwvd3AtY29udGVudFwvdXBsb2Fkc1wvMjAyNFwvMDRcL2Rvd25sb2FkLTEuanBlZyIsInNsaWRlc2hvdyI6IjE4ZWFhOWMifQ%3D%3D" href="https://8kplayer.net/download-8k-player-vip/" target="_blank"><figure class="swiper-slide-inner"><img width="150" height="150" decoding="async" class="swiper-slide-image" src="https://8kplayer.net/wp-content/uploads/2024/04/download-1-150x150.jpeg" alt="apple iptv uk" /></figure></a></div><div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="11 of 11"><a data-elementor-open-lightbox="yes" data-elementor-lightbox-slideshow="18eaa9c" data-elementor-lightbox-title="download" data-e-action-hash="#elementor-action%3Aaction%3Dlightbox%26settings%3DeyJpZCI6Mjk3NiwidXJsIjoiaHR0cHM6XC9cLzhrcGxheWVyLm5ldFwvd3AtY29udGVudFwvdXBsb2Fkc1wvMjAyNFwvMDRcL2Rvd25sb2FkLmpwZWciLCJzbGlkZXNob3ciOiIxOGVhYTljIn0%3D" href="https://8kplayer.net/download-8k-player-vip/" target="_blank"><figure class="swiper-slide-inner"><img width="150" height="150" decoding="async" class="swiper-slide-image" src="https://8kplayer.net/wp-content/uploads/2024/04/download-150x150.jpeg" alt="smart tv iptv uk" /></figure></a></div>			</div>
+									</div>
+						</div>
+				</div>
+				</div>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-931d17d elementor-section-full_width elementor-section-height-default elementor-section-height-default" data-id="931d17d" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-no">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-23b902b" data-id="23b902b" data-element_type="column">
+			<div class="elementor-widget-wrap">
+							</div>
+		</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-a05c280 elementor-section-full_width elementor-section-height-default elementor-section-height-default" data-id="a05c280" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-no">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-348b2d8" data-id="348b2d8" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-2b59d15 elementor-widget elementor-widget-zeinet-about" data-id="2b59d15" data-element_type="widget" data-widget_type="zeinet-about.default">
+				<div class="elementor-widget-container">
+	<section class="live-sports">
+					<div class="live-sports-shape-1 float-bob-x">
+				<img decoding="async" src="https://bracketweb.com/zeinetwp/wp-content/uploads/2022/10/live-sports-shape-1.png" alt="iptv backgrund">
+			</div>
+				<div class="live-sports__wrap">
+			<div class="live-sports__left">
+													<div class="live-sports__bg" style="background-image: url(https://8kplayer.net/wp-content/uploads/2024/03/chap_l-1.webp);"></div>
+											</div>
+			<div class="live-sports__right">
+				<div class="live-sports__content">
+											<div class="section-title text-left">
+															<span class="section-title__tagline">what you get</span>
+																						<h2 class="section-title__title">Live sports &amp; TV shows</h2>
+													</div>
+																<p class="live-sports__text">Follow your favorite TV shows and series so that you don't miss sports events and live matches</p>
+																<div class="live-sports__bottom">
+							<ul class="list-unstyled live-sports__points ml-0">
+																	<li>
+										<div class="icon">
+											<span aria-hidden="true" class="  icon-4k-1"></span>										</div>
+										<div class="content">
+											<h4>4K FHD UHD Quality</h4>
+											<p>Watch your favorite channels, series, movies and TV programs in the highest quality without freezing</p>
+										</div>
+									</li>
+																	<li>
+										<div class="icon">
+											<span aria-hidden="true" class="   icon-smart-tv"></span>										</div>
+										<div class="content">
+											<h4>30 000+ Channels</h4>
+											<p>We provide you with a wide range of international, local and paid channels for you to enjoy watching
+</p>
+										</div>
+									</li>
+															</ul>
+						</div>
+									</div>
+			</div>
+		</div>
+	</section>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-1e0fcd8 elementor-widget elementor-widget-zeinet-about" data-id="1e0fcd8" data-element_type="widget" data-widget_type="zeinet-about.default">
+				<div class="elementor-widget-container">
+	<section class="about-one">
+					<div class="about-one__bg" style="background-image: url(https://bracketweb.com/zeinetwp/wp-content/uploads/2022/10/about-1-bg-1.jpg);"></div>
+				<div class="container">
+			<div class="row">
+				<div class="col-xl-6">
+					<div class="about-one__left">
+						<div class="about-one__img-box wow slideInLeft" data-wow-delay="100ms" data-wow-duration="2500ms">
+																						<div class="about-one__img-1">
+									<img decoding="async" src="https://bracketweb.com/zeinetwp/wp-content/uploads/2022/10/about-1.1.jpg" alt="alt">
+								</div>
+																						<div class="about-one__img-2">
+									<img decoding="async" src="https://bracketweb.com/zeinetwp/wp-content/uploads/2022/10/about-1.2.jpg" alt="alt">
+								</div>
+														<div class="about-one-shape"></div>
+															<div class="about-one__count wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="300ms">
+																			<h4 class="about-one__count__number count-box">
+											<span class="count-text" data-stop="30000" data-speed="1500"></span>
+										</h4>
+																												<p class="about-one__count__text">Online Channels</p>
+								</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-xl-6">
+					<div class="about-one__right">
+													<div class="section-title text-left">
+																	<span class="section-title__tagline">about us</span>
+																									<h2 class="section-title__title">Providing Live IPTV   Services With Stability</h2>
+															</div>
+																			<p class="about-one__text-1">We offer you the best 8k VIP IPTV  subscription.</p>
+																			<p class="about-one__text-2">There is no need to worry about stability and quality when using our list of best 8K VIP  IPTV. We select the top servers so you can enjoy the highest quality service.</p>
+																			<ul class="about-one__points list-unstyled ml-0">
+																	<li>
+										<div class="icon icon-svg">
+											<i aria-hidden="true" class="  fa fa-arrow-right"></i>										</div>
+										<div class="text">
+											<p>Top quality iptv services with reasonable price</p>
+										</div>
+									</li>
+																	<li>
+										<div class="icon icon-svg">
+											<i aria-hidden="true" class="  fa fa-arrow-right"></i>										</div>
+										<div class="text">
+											<p> Live sports and TV shows with ultra fast speed</p>
+										</div>
+									</li>
+																	<li>
+										<div class="icon icon-svg">
+											<i aria-hidden="true" class="  fa fa-arrow-right"></i>										</div>
+										<div class="text">
+											<p>The latest movies, series and anime in high quality</p>
+										</div>
+									</li>
+															</ul>
+																			<div class="about-one__btn-box">
+								<a   href="https://8kplayer.net/about/" class="thm-btn about-one__btn">Discover more</a>
+																	<div class="about-one__btn-shape float-bob-y">
+										<img decoding="async" src="https://bracketweb.com/zeinetwp/wp-content/uploads/2022/10/about-1-btn-shape-1.png" alt="">
+									</div>
+															</div>
+											</div>
+				</div>
+			</div>
+		</div>
+	</section>
+				</div>
+				</div>
+					</div>
+		</div>
+					</div>
+		</section>
+				</div>
+                            		<div data-elementor-type="wp-post" data-elementor-id="515" class="elementor elementor-515" data-elementor-post-type="footer">
+						<footer class="elementor-section elementor-top-section elementor-element elementor-element-3d312c8 elementor-section-full_width site-footer elementor-section-height-default elementor-section-height-default" data-id="3d312c8" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-no">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-fa516a8" data-id="fa516a8" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-da23f04 elementor-widget elementor-widget-zeinet-shape" data-id="da23f04" data-element_type="widget" data-widget_type="zeinet-shape.default">
+				<div class="elementor-widget-container">
+										</div>
+				</div>
+				<footer class="elementor-section elementor-inner-section elementor-element elementor-element-fb3421b site-footer__top  elementor-section-full_width elementor-section-height-default elementor-section-height-default" data-id="fb3421b" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-25 elementor-inner-column elementor-element elementor-element-333dc48" data-id="333dc48" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-84140a1 elementor-widget__width-initial elementor-widget elementor-widget-footer-about" data-id="84140a1" data-element_type="widget" data-widget_type="footer-about.default">
+				<div class="elementor-widget-container">
+						<div class="footer-widget__column footer-widget__about">
+		<div class="footer-widget__about-text-box">
+							<p class="footer-widget__about-text">Social Media</p>
+					</div>
+					<div class="site-footer__social">
+									<a href="https://www.facebook.com/profile.php?viewas=100000686899395&#038;id=61557983821453" target=_blank>
+						<svg xmlns="http://www.w3.org/2000/svg" fill="#089fac" width="800px" height="800px" viewBox="0 0 32 32"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><title>facebook</title><path d="M30.996 16.091c-0.001-8.281-6.714-14.994-14.996-14.994s-14.996 6.714-14.996 14.996c0 7.455 5.44 13.639 12.566 14.8l0.086 0.012v-10.478h-3.808v-4.336h3.808v-3.302c-0.019-0.167-0.029-0.361-0.029-0.557 0-2.923 2.37-5.293 5.293-5.293 0.141 0 0.281 0.006 0.42 0.016l-0.018-0.001c1.199 0.017 2.359 0.123 3.491 0.312l-0.134-0.019v3.69h-1.892c-0.086-0.012-0.185-0.019-0.285-0.019-1.197 0-2.168 0.97-2.168 2.168 0 0.068 0.003 0.135 0.009 0.202l-0.001-0.009v2.812h4.159l-0.665 4.336h-3.494v10.478c7.213-1.174 12.653-7.359 12.654-14.814v-0z"></path></g></svg>					</a>
+									<a href="https://www.pinterest.co.uk/Iptv_uk/" target=_blank>
+						<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#089fac" height="800px" width="800px" id="Layer_1" viewBox="-143 145 512 512" xml:space="preserve" stroke="#089fac"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M113,145c-141.4,0-256,114.6-256,256s114.6,256,256,256s256-114.6,256-256S254.4,145,113,145z M113,528.3 c-12.6,0-24.8-1.9-36.3-5.3c4.9-7.7,10.2-17.6,12.9-27.4c1.6-5.7,9-35.2,9-35.2c4.4,8.5,17.4,15.9,31.3,15.9 c41.2,0,69.1-37.5,69.1-87.7c0-38-32.2-73.3-81-73.3c-60.8,0-91.5,43.6-91.5,80c0,22,8.3,41.6,26.2,48.9c2.9,1.2,5.5,0,6.4-3.2 c0.6-2.2,2-7.9,2.6-10.3c0.9-3.2,0.5-4.3-1.8-7.1c-5.1-6.1-8.4-13.9-8.4-25.1c0-32.3,24.2-61.3,63-61.3c34.4,0,53.3,21,53.3,49 c0,36.9-16.3,68-40.6,68c-13.4,0-23.4-11.1-20.2-24.6c3.8-16.2,11.3-33.7,11.3-45.4c0-10.5-5.6-19.2-17.3-19.2 c-13.7,0-24.7,14.2-24.7,33.1c0,12.1,4.1,20.2,4.1,20.2s-14,59.4-16.5,69.7c-2.3,9.7-2.6,20.5-2.2,29.4 C16.5,497.8-15,452.7-15,400.3c0-70.7,57.3-128,128-128s128,57.3,128,128S183.7,528.3,113,528.3z"></path> </g></svg>					</a>
+									<a href="https://twitter.com/OK_IPTV_UK" target=_blank>
+						<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="800px" width="800px" id="_x32_" viewBox="0 0 512 512" xml:space="preserve" fill="#089fac" stroke="#089fac"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <style type="text/css"> .st0{fill:089fac;} </style> <g> <path class="st0" d="M256,0C114.615,0,0,114.615,0,256s114.615,256,256,256s256-114.615,256-256S397.385,0,256,0z M260.926,217.391 c0.084,0.004,0.164,0.021,0.25,0.025c-0.875-3.752-1.328-7.664-1.328-11.682c0-28.307,22.951-51.258,51.262-51.258 c14.742,0,28.063,6.225,37.414,16.188c9.6-1.89,18.684-5.174,27.129-9.523c1.781-0.864,3.566-1.723,5.32-2.674 c-3.039,9.334-8.744,17.412-16.141,23.532c-2.004,1.576-4.062,3.098-6.326,4.344c0.154-0.018,0.304-0.052,0.457-0.071 c-0.15,0.093-0.275,0.22-0.428,0.312c8.402-1.005,16.459-3.051,24.111-5.942c1.715-0.592,3.428-1.191,5.127-1.852 c-6.842,10.159-15.453,19.095-25.375,26.259c0.098,2.197,0.148,4.406,0.148,6.631c0,67.736-51.558,145.842-145.844,145.842 c-28.947,0-55.891-8.484-78.576-23.028c4.01,0.473,8.092,0.715,12.229,0.715c19.136,0,37.014-5.269,52.383-14.34 c3.871-2.23,7.658-4.639,11.273-7.365c-0.098-0.002-0.187-0.026-0.285-0.028c0.094-0.073,0.196-0.136,0.289-0.209 c-19.422-0.358-36.184-11.539-44.574-27.747c-1.25-2.489-2.32-5.096-3.164-7.831c3.086,0.58,6.246,0.898,9.5,0.898 c3.391,0,6.666-0.436,9.871-1.063c1.197-0.168,2.406-0.308,3.586-0.502c-0.156-0.032-0.293-0.1-0.449-0.133 c0.162-0.042,0.336-0.056,0.496-0.1c-23.449-4.709-41.119-25.428-41.119-50.262c0-0.196,0.002-0.387,0.004-0.58l0.024-0.055 c5.521,3.064,11.693,5.092,18.23,5.94c1.609,0.269,3.221,0.516,4.832,0.657c-0.11-0.074-0.205-0.164-0.314-0.238 c0.152,0.006,0.297,0.036,0.447,0.041c-13.754-9.191-22.803-24.883-22.803-42.666c0-8.142,1.988-15.787,5.367-22.623 c0.539-1.028,1.018-2.078,1.637-3.074c22.711,27.822,55.516,46.971,92.801,52.15c4.16,0.605,8.332,1.144,12.553,1.388 C260.934,217.443,260.932,217.416,260.926,217.391z"></path> </g> </g></svg>					</a>
+									<a href="https://youtube.com/@iptv_uk?si=JIfO8k9Ikx-fRtoB" target=_blank>
+						<svg xmlns="http://www.w3.org/2000/svg" fill="#089fac" width="800px" height="800px" viewBox="0 0 32 32"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><title>youtube</title><path d="M12.932 20.459v-8.917l7.839 4.459zM30.368 8.735c-0.354-1.301-1.354-2.307-2.625-2.663l-0.027-0.006c-3.193-0.406-6.886-0.638-10.634-0.638-0.381 0-0.761 0.002-1.14 0.007l0.058-0.001c-0.322-0.004-0.701-0.007-1.082-0.007-3.748 0-7.443 0.232-11.070 0.681l0.434-0.044c-1.297 0.363-2.297 1.368-2.644 2.643l-0.006 0.026c-0.4 2.109-0.628 4.536-0.628 7.016 0 0.088 0 0.176 0.001 0.263l-0-0.014c-0 0.074-0.001 0.162-0.001 0.25 0 2.48 0.229 4.906 0.666 7.259l-0.038-0.244c0.354 1.301 1.354 2.307 2.625 2.663l0.027 0.006c3.193 0.406 6.886 0.638 10.634 0.638 0.38 0 0.76-0.002 1.14-0.007l-0.058 0.001c0.322 0.004 0.702 0.007 1.082 0.007 3.749 0 7.443-0.232 11.070-0.681l-0.434 0.044c1.298-0.362 2.298-1.368 2.646-2.643l0.006-0.026c0.399-2.109 0.627-4.536 0.627-7.015 0-0.088-0-0.176-0.001-0.263l0 0.013c0-0.074 0.001-0.162 0.001-0.25 0-2.48-0.229-4.906-0.666-7.259l0.038 0.244z"></path></g></svg>					</a>
+							</div>
+			</div>
+				</div>
+				</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-25 elementor-inner-column elementor-element elementor-element-aaf4fb6" data-id="aaf4fb6" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-71f8953 elementor-widget__width-initial elementor-widget elementor-widget-footer-nav-menu" data-id="71f8953" data-element_type="widget" data-widget_type="footer-nav-menu.default">
+				<div class="elementor-widget-container">
+					<div class="footer-widget__column footer-widget__links clearfix">
+			<h3 class="footer-widget__title">Links</h3>
+			<ul id="menu-footer-links" class="footer-widget__links-list list-unstyled clearfix ml-0"><li id="menu-item-1868" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-42 current_page_item menu-item-1868"><a href="https://8kplayer.net/" aria-current="page">Home</a></li>
+<li id="menu-item-524" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-524"><a href="https://8kplayer.net/about/">About Us</a></li>
+<li id="menu-item-525" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-525"><a href="https://8kplayer.net/contact/">Contact</a></li>
+</ul>	</div>				</div>
+				</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-25 elementor-inner-column elementor-element elementor-element-99cb49d" data-id="99cb49d" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-870b814 elementor-widget__width-initial elementor-widget elementor-widget-footer-nav-menu" data-id="870b814" data-element_type="widget" data-widget_type="footer-nav-menu.default">
+				<div class="elementor-widget-container">
+					<div class="footer-widget__column footer-widget__links clearfix">
+			<h3 class="footer-widget__title">Policy</h3>
+			<ul id="menu-policy" class="footer-widget__links-list list-unstyled clearfix ml-0"><li id="menu-item-1969" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy menu-item-1969"><a rel="privacy-policy" href="https://8kplayer.net/privacy-policy/">Privacy Policy</a></li>
+<li id="menu-item-1967" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1967"><a href="https://8kplayer.net/refund-policy/">Refund Policy</a></li>
+<li id="menu-item-1980" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1980"><a href="https://8kplayer.net/team-conditions/">Terms &#038; Conditions</a></li>
+<li id="menu-item-1968" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1968"><a href="https://8kplayer.net/faq/">FAQ</a></li>
+</ul>	</div>				</div>
+				</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-25 elementor-inner-column elementor-element elementor-element-9a4dd85" data-id="9a4dd85" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-4858b14 elementor-widget elementor-widget-footer-contact" data-id="4858b14" data-element_type="widget" data-widget_type="footer-contact.default">
+				<div class="elementor-widget-container">
+					<div class="footer-widget__column footer-widget__contact">
+			<h3 class="footer-widget__title">Contact</h3>
+				<ul class="list-unstyled footer-widget__contact-list ml-0">
+							<li>
+					<div class="text">
+						<p><a href="mailto:support@8kplayer.net">Email :  Support@8kplayer.net</a></p>
+					</div>
+				</li>
+							<li>
+					<div class="text">
+						<p><a href="https://wa.me/13233707159"> Whatsapp : +1 (323) 3707 159</a></p>
+					</div>
+				</li>
+							<li>
+					<div class="text">
+						<p><a href="https://t.me/okiptvuk"> Telegram : @iptv_8kplayer </a></p>
+					</div>
+				</li>
+					</ul>
+	</div>				</div>
+				</div>
+					</div>
+		</div>
+					</div>
+		</footer>
+					</div>
+		</div>
+					</div>
+		</footer>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-cf8ae54 elementor-section-full_width elementor-section-height-default elementor-section-height-default" data-id="cf8ae54" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-no">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-a199707" data-id="a199707" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-8da659b elementor-widget elementor-widget-footer-copyright" data-id="8da659b" data-element_type="widget" data-widget_type="footer-copyright.default">
+				<div class="elementor-widget-container">
+					<div class="site-footer__bottom">
+	<div class="container">
+		<div class="row">
+			<div class="col-xl-12">
+				<div class="site-footer__bottom-inner">
+											<p class="site-footer__bottom-text">Copyright © 2025 8KPLAYER.NET ,All rights reserved</p>
+									</div>
+			</div>
+		</div>
+	</div>
+</div>				</div>
+				</div>
+					</div>
+		</div>
+					</div>
+		</section>
+				</div>
+</div>
+<script type="speculationrules">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"\/*"},{"not":{"href_matches":["\/wp-*.php","\/wp-admin\/*","\/wp-content\/uploads\/*","\/wp-content\/*","\/wp-content\/plugins\/*","\/wp-content\/themes\/zeinet\/*","\/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+</script>
+<div class="gtranslate_wrapper" id="gt-wrapper-82431628"></div>		
+		<script>
+<div class="joinchat joinchat--right" data-settings='{"telephone":"13233707159","mobile_only":false,"button_delay":3,"whatsapp_web":false,"qr":false,"message_views":2,"message_delay":10,"message_badge":true,"message_send":"Hi , How are You","message_hash":"3e00a321"}' hidden aria-hidden="false">
+	<div class="joinchat__button" role="button" tabindex="0">
+							</div>
+			<div class="joinchat__badge">1</div>
+					<div class="joinchat__chatbox" role="dialog" aria-labelledby="joinchat__label" aria-modal="true">
+			<div class="joinchat__header">
+				<div id="joinchat__label">
+											<svg class="joinchat__wa" width="120" height="28" viewBox="0 0 120 28"><title>WhatsApp</title><path d="M117.2 17c0 .4-.2.7-.4 1-.1.3-.4.5-.7.7l-1 .2c-.5 0-.9 0-1.2-.2l-.7-.7a3 3 0 0 1-.4-1 5.4 5.4 0 0 1 0-2.3c0-.4.2-.7.4-1l.7-.7a2 2 0 0 1 1.1-.3 2 2 0 0 1 1.8 1l.4 1a5.3 5.3 0 0 1 0 2.3m2.5-3c-.1-.7-.4-1.3-.8-1.7a4 4 0 0 0-1.3-1.2c-.6-.3-1.3-.4-2-.4-.6 0-1.2.1-1.7.4a3 3 0 0 0-1.2 1.1V11H110v13h2.7v-4.5c.4.4.8.8 1.3 1 .5.3 1 .4 1.6.4a4 4 0 0 0 3.2-1.5c.4-.5.7-1 .8-1.6.2-.6.3-1.2.3-1.9s0-1.3-.3-2zm-13.1 3c0 .4-.2.7-.4 1l-.7.7-1.1.2c-.4 0-.8 0-1-.2-.4-.2-.6-.4-.8-.7a3 3 0 0 1-.4-1 5.4 5.4 0 0 1 0-2.3c0-.4.2-.7.4-1 .1-.3.4-.5.7-.7a2 2 0 0 1 1-.3 2 2 0 0 1 1.9 1l.4 1a5.4 5.4 0 0 1 0 2.3m1.7-4.7a4 4 0 0 0-3.3-1.6c-.6 0-1.2.1-1.7.4a3 3 0 0 0-1.2 1.1V11h-2.6v13h2.7v-4.5c.3.4.7.8 1.2 1 .6.3 1.1.4 1.7.4a4 4 0 0 0 3.2-1.5c.4-.5.6-1 .8-1.6s.3-1.2.3-1.9-.1-1.3-.3-2c-.2-.6-.4-1.2-.8-1.6m-17.5 3.2 1.7-5 1.7 5zm.2-8.2-5 13.4h3l1-3h5l1 3h3L94 7.3zm-5.3 9.1-.6-.8-1-.5a11.6 11.6 0 0 0-2.3-.5l-1-.3a2 2 0 0 1-.6-.3.7.7 0 0 1-.3-.6c0-.2 0-.4.2-.5l.3-.3h.5l.5-.1c.5 0 .9 0 1.2.3.4.1.6.5.6 1h2.5c0-.6-.2-1.1-.4-1.5a3 3 0 0 0-1-1 4 4 0 0 0-1.3-.5 7.7 7.7 0 0 0-3 0c-.6.1-1 .3-1.4.5l-1 1a3 3 0 0 0-.4 1.5 2 2 0 0 0 1 1.8l1 .5 1.1.3 2.2.6c.6.2.8.5.8 1l-.1.5-.4.4a2 2 0 0 1-.6.2 2.8 2.8 0 0 1-1.4 0 2 2 0 0 1-.6-.3l-.5-.5-.2-.8H77c0 .7.2 1.2.5 1.6.2.5.6.8 1 1 .4.3.9.5 1.4.6a8 8 0 0 0 3.3 0c.5 0 1-.2 1.4-.5a3 3 0 0 0 1-1c.3-.5.4-1 .4-1.6 0-.5 0-.9-.3-1.2M74.7 8h-2.6v3h-1.7v1.7h1.7v5.8c0 .5 0 .9.2 1.2l.7.7 1 .3a7.8 7.8 0 0 0 2 0h.7v-2.1a3.4 3.4 0 0 1-.8 0l-1-.1-.2-1v-4.8h2V11h-2zm-7.6 9v.5l-.3.8-.7.6c-.2.2-.7.2-1.2.2h-.6l-.5-.2a1 1 0 0 1-.4-.4l-.1-.6.1-.6.4-.4.5-.3a4.8 4.8 0 0 1 1.2-.2 8 8 0 0 0 1.2-.2l.4-.3v1zm2.6 1.5v-5c0-.6 0-1.1-.3-1.5l-1-.8-1.4-.4a10.9 10.9 0 0 0-3.1 0l-1.5.6c-.4.2-.7.6-1 1a3 3 0 0 0-.5 1.5h2.7c0-.5.2-.9.5-1a2 2 0 0 1 1.3-.4h.6l.6.2.3.4.2.7c0 .3 0 .5-.3.6-.1.2-.4.3-.7.4l-1 .1a22 22 0 0 0-2.4.4l-1 .5c-.3.2-.6.5-.8.9-.2.3-.3.8-.3 1.3s.1 1 .3 1.3c.1.4.4.7.7 1l1 .4c.4.2.9.2 1.3.2a6 6 0 0 0 1.8-.2c.6-.2 1-.5 1.5-1a4 4 0 0 0 .2 1H70l-.3-1zm-11-6.7c-.2-.4-.6-.6-1-.8-.5-.2-1-.3-1.8-.3-.5 0-1 .1-1.5.4a3 3 0 0 0-1.3 1.2v-5h-2.7v13.4H53v-5.1c0-1 .2-1.7.5-2.2.3-.4.9-.6 1.6-.6.6 0 1 .2 1.3.6s.4 1 .4 1.8v5.5h2.7v-6c0-.6 0-1.2-.2-1.6 0-.5-.3-1-.5-1.3zm-14 4.7-2.3-9.2h-2.8l-2.3 9-2.2-9h-3l3.6 13.4h3l2.2-9.2 2.3 9.2h3l3.6-13.4h-3zm-24.5.2L18 15.6c-.3-.1-.6-.2-.8.2A20 20 0 0 1 16 17c-.2.2-.4.3-.7.1-.4-.2-1.5-.5-2.8-1.7-1-1-1.7-2-2-2.4-.1-.4 0-.5.2-.7l.5-.6.4-.6v-.6L10.4 8c-.3-.6-.6-.5-.8-.6H9c-.2 0-.6.1-.9.5C7.8 8.2 7 9 7 10.7s1.3 3.4 1.4 3.6c.2.3 2.5 3.7 6 5.2l1.9.8c.8.2 1.6.2 2.2.1s2-.8 2.3-1.6c.3-.9.3-1.5.2-1.7l-.7-.4zM14 25.3c-2 0-4-.5-5.8-1.6l-.4-.2-4.4 1.1 1.2-4.2-.3-.5A11.5 11.5 0 0 1 22.1 5.7 11.5 11.5 0 0 1 14 25.3M14 0A13.8 13.8 0 0 0 2 20.7L0 28l7.3-2A13.8 13.8 0 1 0 14 0"/></svg>
+									</div>
+				<div class="joinchat__close" role="button" tabindex="0" aria-label="Close"></div>
+			</div>
+			<div class="joinchat__scroll">
+				<div class="joinchat__content">
+					<div class="joinchat__chat"><div class="joinchat__bubble">Hello 👋 How we Can help you?</div></div>
+					<div class="joinchat__open" role="button" tabindex="0">
+													<div class="joinchat__open__text">Open chat</div>
+												<svg class="joinchat__open__icon" width="60" height="60" viewbox="0 0 400 400">
+							<path class="joinchat__pa" d="M168.83 200.504H79.218L33.04 44.284a1 1 0 0 1 1.386-1.188L365.083 199.04a1 1 0 0 1 .003 1.808L34.432 357.903a1 1 0 0 1-1.388-1.187l29.42-99.427"/>
+							<path class="joinchat__pb" d="M318.087 318.087c-52.982 52.982-132.708 62.922-195.725 29.82l-80.449 10.18 10.358-80.112C18.956 214.905 28.836 134.99 81.913 81.913c65.218-65.217 170.956-65.217 236.174 0 42.661 42.661 57.416 102.661 44.265 157.316"/>
+						</svg>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+			<script type="rocketlazyloadscript">
+				const lazyloadRunObserver = () => {
+					const lazyloadBackgrounds = document.querySelectorAll( `.e-con.e-parent:not(.e-lazyloaded)` );
+					const lazyloadBackgroundObserver = new IntersectionObserver( ( entries ) => {
+						entries.forEach( ( entry ) => {
+							if ( entry.isIntersecting ) {
+								let lazyloadBackground = entry.target;
+								if( lazyloadBackground ) {
+									lazyloadBackground.classList.add( 'e-lazyloaded' );
+								}
+								lazyloadBackgroundObserver.unobserve( entry.target );
+							}
+						});
+					}, { rootMargin: '200px 0px 200px 0px' } );
+					lazyloadBackgrounds.forEach( ( lazyloadBackground ) => {
+						lazyloadBackgroundObserver.observe( lazyloadBackground );
+					} );
+				};
+				const events = [
+					'DOMContentLoaded',
+					'elementor/lazyload/observe',
+				];
+				events.forEach( ( event ) => {
+					document.addEventListener( event, lazyloadRunObserver );
+				} );
+			</script>
+			<link rel='stylesheet' id='elementor-post-505-css' href='https://8kplayer.net/wp-content/uploads/elementor/css/post-505.css?ver=1749753936' media='all' />
+<link rel='stylesheet' id='elementor-post-515-css' href='https://8kplayer.net/wp-content/uploads/elementor/css/post-515.css?ver=1749753936' media='all' />
+<link rel='stylesheet' id='joinchat-css' href='https://8kplayer.net/wp-content/plugins/creame-whatsapp-me/public/css/joinchat.min.css?ver=6.0.6' media='all' />
+<style id='joinchat-inline-css'>
+.joinchat{--ch:142;--cs:70%;--cl:49%;--bw:1}
+</style>
+<script type="rocketlazyloadscript" data-rocket-src="https://8kplayer.net/wp-includes/js/dist/hooks.min.js?ver=4d63a3d491d11ffd8ac6" id="wp-hooks-js"></script>
+<script type="rocketlazyloadscript" data-rocket-src="https://8kplayer.net/wp-includes/js/dist/i18n.min.js?ver=5e580eb46a90c2b997e6" id="wp-i18n-js"></script>
+<script type="rocketlazyloadscript" id="wp-i18n-js-after">
+wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
+</script>
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-src="https://8kplayer.net/wp-content/cache/min/1/wp-content/plugins/contact-form-7/includes/swv/js/index.js?ver=1748540239" id="swv-js" defer></script>
+<script type="rocketlazyloadscript" id="contact-form-7-js-before">
+var wpcf7 = {
+    "api": {
+        "root": "https:\/\/8kplayer.net\/wp-json\/",
+        "namespace": "contact-form-7\/v1"
+    },
+    "cached": 1
+};
+</script>
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-src="https://8kplayer.net/wp-content/cache/min/1/wp-content/plugins/contact-form-7/includes/js/index.js?ver=1748540239" id="contact-form-7-js" defer></script>
+<script type="rocketlazyloadscript" data-rocket-src="https://8kplayer.net/wp-content/plugins/country-phone-field-contact-form-7/assets/js/intlTelInput.min.js?ver=6.8.2" id="nbcpf-intlTelInput-script-js" defer></script>
+<script id="nbcpf-countryFlag-script-js-extra">
+var nbcpf = {"ajaxurl":"https:\/\/8kplayer.net\/wp-admin\/admin-ajax.php"};
+</script>
+<script type="rocketlazyloadscript" data-rocket-src="https://8kplayer.net/wp-content/plugins/country-phone-field-contact-form-7/assets/js/countrySelect.min.js?ver=6.8.2" id="nbcpf-countryFlag-script-js" defer></script>
+<script type="rocketlazyloadscript" id="nbcpf-countryFlag-script-js-after">window.addEventListener('DOMContentLoaded', function() {
+		(function($) {
+			$(function() {
+				function render_country_flags(){
+					$(".wpcf7-countrytext").countrySelect({
+					});
+					$(".wpcf7-phonetext").intlTelInput({
+						autoHideDialCode: true,
+						autoPlaceholder: true,
+						nationalMode: false,
+						separateDialCode: true,
+						hiddenInput: "full_number",
+						initialCountry: "gb",onlyCountries: ["sl","sg","sx","sk","si","sb","so","za","gs","ss","es","lk","sd","sr","sj","sz","se","ch","sy","tw","tj","tz","th","tl","tg","tk","to","tt","tn","tr","tm","tc","tv","ug","ua","ae","gb","us","um","uy","uz","vu","ve","vn","vg","vi","wf","eh","ye","zm","zw"],	
+					});
+					$(".wpcf7-phonetext").each(function () {
+						var dial_code = $(this).siblings(".flag-container").find(".selected-flag .selected-dial-code").text();
+						var hiddenInput = $(this).attr('name');
+						//console.log(hiddenInput);
+						$("input[name="+hiddenInput+"-country-code]").val(dial_code);
+					});
+					$(".wpcf7-phonetext").on("countrychange", function() {
+						// do something with iti.getSelectedCountryData()
+						//console.log(this.value);
+						var dial_code = $(this).siblings(".flag-container").find(".selected-flag .selected-dial-code").text();
+						var hiddenInput = $(this).attr("name");
+						$("input[name="+hiddenInput+"-country-code]").val(dial_code);
+					});
+						$(".wpcf7-phonetext").on("keyup", function() {
+							var dial_code = $(this).siblings(".flag-container").find(".selected-flag .selected-dial-code").text();
+							var value   = $(this).val();
+							//console.log(dial_code, value);
+							if(value == "+")
+								$(this).val("");
+							else if(value.indexOf("+") == "-1")
+								$(this).val(dial_code + value);
+							else if(value.indexOf("+") > 0)
+								$(this).val(dial_code + value.substring(dial_code.length));
+						});
+						$(".wpcf7-countrytext").on("keyup", function() {
+						var country_name = $(this).siblings(".flag-dropdown").find(".country-list li.active span.country-name").text();
+						if(country_name == "")
+						var country_name = $(this).siblings(".flag-dropdown").find(".country-list li.highlight span.country-name").text();
+						var value   = $(this).val();
+						//console.log(country_name, value);
+						$(this).val(country_name + value.substring(country_name.length));
+					});
+				}
+				var ip_address = "";
+				jQuery.ajax({
+					url: "https://ipapi.co/json/",
+					//url: "https://reallyfreegeoip.org/json/",
+					success: function(response){
+						//console.log(response);
+						//var location = JSON.parse(response);
+						console.log(response.country_code);
+						if( response.country_code !== undefined){
+							//console.log("here");
+							$(".wpcf7-countrytext").countrySelect({defaultCountry: response.country_code.toLowerCase(),
+							});
+							$(".wpcf7-phonetext").intlTelInput({
+								autoHideDialCode: true,
+								autoPlaceholder: true,
+								nationalMode: false,
+								separateDialCode: true,
+								hiddenInput: "full_number",initialCountry: response.country_code.toLowerCase(),onlyCountries: ["sl","sg","sx","sk","si","sb","so","za","gs","ss","es","lk","sd","sr","sj","sz","se","ch","sy","tw","tj","tz","th","tl","tg","tk","to","tt","tn","tr","tm","tc","tv","ug","ua","ae","gb","us","um","uy","uz","vu","ve","vn","vg","vi","wf","eh","ye","zm","zw"],	
+							});
+							$(".wpcf7-phonetext").each(function () {
+								var hiddenInput = $(this).attr('name');
+								//console.log(hiddenInput);
+								var dial_code = $(this).siblings(".flag-container").find(".selected-flag .selected-dial-code").text();
+								$("input[name="+hiddenInput+"-country-code]").val(dial_code);
+							});
+							$(".wpcf7-phonetext").on("countrychange", function() {
+								// do something with iti.getSelectedCountryData()
+								//console.log(this.value);
+								var dial_code = $(this).siblings(".flag-container").find(".selected-flag .selected-dial-code").text();
+								var hiddenInput = $(this).attr("name");
+								$("input[name="+hiddenInput+"-country-code]").val(dial_code);
+							});
+								$(".wpcf7-phonetext").on("keyup", function() {
+									var dial_code = $(this).siblings(".flag-container").find(".selected-flag .selected-dial-code").text();
+									var value   = $(this).val();
+									if(value == "+")
+										$(this).val("");
+									else if(value.indexOf("+") == "-1")
+										$(this).val(dial_code + value);
+									else if(value.indexOf("+") > 0)
+										$(this).val(dial_code + value.substring(dial_code.length));
+								});$(".wpcf7-countrytext").on("keyup", function() {
+								var country_name = $(this).siblings(".flag-dropdown").find(".country-list li.active span.country-name").text();
+								if(country_name == "")
+								var country_name = $(this).siblings(".flag-dropdown").find(".country-list li.highlight span.country-name").text();
+								var value   = $(this).val();
+								//console.log(country_name, value);
+								$(this).val(country_name + value.substring(country_name.length));
+							});
+						} else {
+							render_country_flags();
+						}
+					},
+					error: function(){
+						render_country_flags();
+					}
+				});
+			});
+		})(jQuery);
+});</script>
+<script type="rocketlazyloadscript" id="rocket-browser-checker-js-after">
+"use strict";var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||!1,descriptor.configurable=!0,"value"in descriptor&&(descriptor.writable=!0),Object.defineProperty(target,descriptor.key,descriptor)}}return function(Constructor,protoProps,staticProps){return protoProps&&defineProperties(Constructor.prototype,protoProps),staticProps&&defineProperties(Constructor,staticProps),Constructor}}();function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor))throw new TypeError("Cannot call a class as a function")}var RocketBrowserCompatibilityChecker=function(){function RocketBrowserCompatibilityChecker(options){_classCallCheck(this,RocketBrowserCompatibilityChecker),this.passiveSupported=!1,this._checkPassiveOption(this),this.options=!!this.passiveSupported&&options}return _createClass(RocketBrowserCompatibilityChecker,[{key:"_checkPassiveOption",value:function(self){try{var options={get passive(){return!(self.passiveSupported=!0)}};window.addEventListener("test",null,options),window.removeEventListener("test",null,options)}catch(err){self.passiveSupported=!1}}},{key:"initRequestIdleCallback",value:function(){!1 in window&&(window.requestIdleCallback=function(cb){var start=Date.now();return setTimeout(function(){cb({didTimeout:!1,timeRemaining:function(){return Math.max(0,50-(Date.now()-start))}})},1)}),!1 in window&&(window.cancelIdleCallback=function(id){return clearTimeout(id)})}},{key:"isDataSaverModeOn",value:function(){return"connection"in navigator&&!0===navigator.connection.saveData}},{key:"supportsLinkPrefetch",value:function(){var elem=document.createElement("link");return elem.relList&&elem.relList.supports&&elem.relList.supports("prefetch")&&window.IntersectionObserver&&"isIntersecting"in IntersectionObserverEntry.prototype}},{key:"isSlowConnection",value:function(){return"connection"in navigator&&"effectiveType"in navigator.connection&&("2g"===navigator.connection.effectiveType||"slow-2g"===navigator.connection.effectiveType)}}]),RocketBrowserCompatibilityChecker}();
+</script>
+<script id="rocket-preload-links-js-extra">
+var RocketPreloadLinksConfig = {"excludeUris":"\/(?:.+\/)?feed(?:\/(?:.+\/?)?)?$|\/(?:.+\/)?embed\/|\/(index.php\/)?(.*)wp-json(\/.*|$)|\/refer\/|\/go\/|\/recommend\/|\/recommends\/","usesTrailingSlash":"1","imageExt":"jpg|jpeg|gif|png|tiff|bmp|webp|avif|pdf|doc|docx|xls|xlsx|php","fileExt":"jpg|jpeg|gif|png|tiff|bmp|webp|avif|pdf|doc|docx|xls|xlsx|php|html|htm","siteUrl":"https:\/\/8kplayer.net","onHoverDelay":"100","rateThrottle":"3"};
+</script>
+<script type="rocketlazyloadscript" id="rocket-preload-links-js-after">
+(function() {
+"use strict";var r="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e},e=function(){function i(e,t){for(var n=0;n<t.length;n++){var i=t[n];i.enumerable=i.enumerable||!1,i.configurable=!0,"value"in i&&(i.writable=!0),Object.defineProperty(e,i.key,i)}}return function(e,t,n){return t&&i(e.prototype,t),n&&i(e,n),e}}();function i(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}var t=function(){function n(e,t){i(this,n),this.browser=e,this.config=t,this.options=this.browser.options,this.prefetched=new Set,this.eventTime=null,this.threshold=1111,this.numOnHover=0}return e(n,[{key:"init",value:function(){!this.browser.supportsLinkPrefetch()||this.browser.isDataSaverModeOn()||this.browser.isSlowConnection()||(this.regex={excludeUris:RegExp(this.config.excludeUris,"i"),images:RegExp(".("+this.config.imageExt+")$","i"),fileExt:RegExp(".("+this.config.fileExt+")$","i")},this._initListeners(this))}},{key:"_initListeners",value:function(e){-1<this.config.onHoverDelay&&document.addEventListener("mouseover",e.listener.bind(e),e.listenerOptions),document.addEventListener("mousedown",e.listener.bind(e),e.listenerOptions),document.addEventListener("touchstart",e.listener.bind(e),e.listenerOptions)}},{key:"listener",value:function(e){var t=e.target.closest("a"),n=this._prepareUrl(t);if(null!==n)switch(e.type){case"mousedown":case"touchstart":this._addPrefetchLink(n);break;case"mouseover":this._earlyPrefetch(t,n,"mouseout")}}},{key:"_earlyPrefetch",value:function(t,e,n){var i=this,r=setTimeout(function(){if(r=null,0===i.numOnHover)setTimeout(function(){return i.numOnHover=0},1e3);else if(i.numOnHover>i.config.rateThrottle)return;i.numOnHover++,i._addPrefetchLink(e)},this.config.onHoverDelay);t.addEventListener(n,function e(){t.removeEventListener(n,e,{passive:!0}),null!==r&&(clearTimeout(r),r=null)},{passive:!0})}},{key:"_addPrefetchLink",value:function(i){return this.prefetched.add(i.href),new Promise(function(e,t){var n=document.createElement("link");n.rel="prefetch",n.href=i.href,n.onload=e,n.onerror=t,document.head.appendChild(n)}).catch(function(){})}},{key:"_prepareUrl",value:function(e){if(null===e||"object"!==(void 0===e?"undefined":r(e))||!1 in e||-1===["http:","https:"].indexOf(e.protocol))return null;var t=e.href.substring(0,this.config.siteUrl.length),n=this._getPathname(e.href,t),i={original:e.href,protocol:e.protocol,origin:t,pathname:n,href:t+n};return this._isLinkOk(i)?i:null}},{key:"_getPathname",value:function(e,t){var n=t?e.substring(this.config.siteUrl.length):e;return n.startsWith("/")||(n="/"+n),this._shouldAddTrailingSlash(n)?n+"/":n}},{key:"_shouldAddTrailingSlash",value:function(e){return this.config.usesTrailingSlash&&!e.endsWith("/")&&!this.regex.fileExt.test(e)}},{key:"_isLinkOk",value:function(e){return null!==e&&"object"===(void 0===e?"undefined":r(e))&&(!this.prefetched.has(e.href)&&e.origin===this.config.siteUrl&&-1===e.href.indexOf("?")&&-1===e.href.indexOf("#")&&!this.regex.excludeUris.test(e.href)&&!this.regex.images.test(e.href))}}],[{key:"run",value:function(){"undefined"!=typeof RocketPreloadLinksConfig&&new n(new RocketBrowserCompatibilityChecker({capture:!0,passive:!0}),RocketPreloadLinksConfig).init()}}]),n}();t.run();
+}());
+</script>
+<script type="rocketlazyloadscript" data-rocket-src="https://8kplayer.net/wp-includes/js/jquery/ui/core.min.js?ver=1.13.3" id="jquery-ui-core-js" defer></script>
+<script type="rocketlazyloadscript" data-rocket-src="https://8kplayer.net/wp-includes/js/jquery/ui/datepicker.min.js?ver=1.13.3" id="jquery-ui-datepicker-js" defer></script>
+<script type="rocketlazyloadscript" id="jquery-ui-datepicker-js-after">window.addEventListener('DOMContentLoaded', function() {
+jQuery(function(jQuery){jQuery.datepicker.setDefaults({"closeText":"Close","currentText":"Today","monthNames":["January","February","March","April","May","June","July","August","September","October","November","December"],"monthNamesShort":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"nextText":"Next","prevText":"Previous","dayNames":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"dayNamesShort":["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],"dayNamesMin":["S","M","T","W","T","F","S"],"dateFormat":"MM d, yy","firstDay":1,"isRTL":false});});
+});</script>
+<script type="rocketlazyloadscript" data-rocket-src="https://8kplayer.net/wp-content/themes/zeinet/assets/vendors/bootstrap/js/bootstrap.min.js?ver=5.0.0" id="bootstrap-js" defer></script>
+<script type="rocketlazyloadscript" data-rocket-src="https://8kplayer.net/wp-content/plugins/zeinet-addon/assets/vendors/bootstrap-select/js/bootstrap-select.min.js?ver=1700079882" id="bootstrap-select-js" defer></script>
+<script type="rocketlazyloadscript" data-rocket-src="https://8kplayer.net/wp-content/plugins/zeinet-addon/assets/vendors/bxslider/jquery.bxslider.min.js?ver=1700079882" id="jquery-bxslider-js" defer></script>
+<script type="rocketlazyloadscript" data-rocket-src="https://8kplayer.net/wp-content/plugins/zeinet-addon/assets/vendors/countdown/countdown.min.js?ver=1700079882" id="countdown-js" defer></script>
+<script type="rocketlazyloadscript" data-rocket-src="https://8kplayer.net/wp-includes/js/imagesloaded.min.js?ver=5.0.0" id="imagesloaded-js" defer></script>
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-src="https://8kplayer.net/wp-content/cache/min/1/wp-content/plugins/zeinet-addon/assets/vendors/isotope/isotope.js?ver=1748540239" id="isotope-js" defer></script>
+<script type="rocketlazyloadscript" data-rocket-src="https://8kplayer.net/wp-content/plugins/zeinet-addon/assets/vendors/jarallax/jarallax.min.js?ver=1700079882" id="jarallax-js" defer></script>
+<script type="rocketlazyloadscript" data-rocket-src="https://8kplayer.net/wp-content/plugins/zeinet-addon/assets/vendors/jquery-ajaxchimp/jquery.ajaxchimp.min.js?ver=1700079882" id="jquery-ajaxchimp-js" defer></script>
+<script type="rocketlazyloadscript" data-rocket-src="https://8kplayer.net/wp-content/plugins/zeinet-addon/assets/vendors/jquery-appear/jquery.appear.min.js?ver=1700079882" id="jquery-appear-js" defer></script>
+<script type="rocketlazyloadscript" data-rocket-src="https://8kplayer.net/wp-content/plugins/zeinet-addon/assets/vendors/jquery-easing/jquery.easing.min.js?ver=1700079882" id="jquery-easing-js" defer></script>
+<script type="rocketlazyloadscript" data-rocket-src="https://8kplayer.net/wp-content/plugins/zeinet-addon/assets/vendors/jquery-magnific-popup/jquery.magnific-popup.min.js?ver=1700079882" id="jquery-magnific-popup-js" defer></script>
+<script type="rocketlazyloadscript" data-rocket-src="https://8kplayer.net/wp-content/plugins/zeinet-addon/assets/vendors/jquery-circle-progress/jquery.circle-progress.min.js?ver=1700079882" id="jquery-circle-progress-js" defer></script>
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-src="https://8kplayer.net/wp-content/cache/min/1/wp-content/plugins/zeinet-addon/assets/vendors/circleType/jquery.circleType.js?ver=1748540239" id="jquery-circletype-js" defer></script>
+<script type="rocketlazyloadscript" data-rocket-src="https://8kplayer.net/wp-content/plugins/zeinet-addon/assets/vendors/circleType/jquery.lettering.min.js?ver=1700079882" id="jquery-lettering-js" defer></script>
+<script type="rocketlazyloadscript" data-rocket-src="https://8kplayer.net/wp-content/plugins/zeinet-addon/assets/vendors/odometer/odometer.min.js?ver=1700079882" id="odometer-js" defer></script>
+<script type="rocketlazyloadscript" data-rocket-src="https://8kplayer.net/wp-content/plugins/zeinet-addon/assets/vendors/owl-carousel/owl.carousel.min.js?ver=1700079882" id="owl-carousel-js" defer></script>
+<script type="rocketlazyloadscript" data-rocket-src="https://8kplayer.net/wp-content/plugins/elementor/assets/lib/swiper/v8/swiper.min.js?ver=8.4.5" id="swiper-js" defer></script>
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-src="https://8kplayer.net/wp-content/cache/min/1/wp-content/plugins/zeinet-addon/assets/vendors/wow/wow.js?ver=1748540239" id="wow-js" defer></script>
+<script type="rocketlazyloadscript" data-rocket-src="https://8kplayer.net/wp-content/plugins/zeinet-addon/assets/vendors/sharer/sharer.min.js?ver=1700079882" id="sharer-js" defer></script>
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-src="https://8kplayer.net/wp-content/cache/min/1/wp-content/plugins/zeinet-addon/assets/vendors/timepicker/timePicker.js?ver=1748540239" id="timepicker-js" defer></script>
+<script type="rocketlazyloadscript" data-rocket-src="https://8kplayer.net/wp-content/plugins/zeinet-addon/assets/vendors/jquery-validate/jquery.validate.min.js?ver=1700079882" id="jquery-validate-js" defer></script>
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-src="https://8kplayer.net/wp-content/cache/min/1/wp-content/plugins/zeinet-addon/assets/js/zeinet-addon.js?ver=1748540239" id="zeinet-addon-script-js" defer></script>
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-src="https://8kplayer.net/wp-content/cache/min/1/wp-content/themes/zeinet/assets/js/zeinet-theme.js?ver=1748540239" id="zeinet-theme-js" defer></script>
+<script type="rocketlazyloadscript" data-rocket-src="https://8kplayer.net/wp-content/plugins/creame-whatsapp-me/public/js/joinchat.min.js?ver=6.0.6" id="joinchat-js" defer data-wp-strategy="defer"></script>
+<script type="rocketlazyloadscript" data-rocket-src="https://8kplayer.net/wp-content/plugins/elementor/assets/js/webpack.runtime.min.js?ver=3.29.2" id="elementor-webpack-runtime-js" defer></script>
+<script type="rocketlazyloadscript" data-rocket-src="https://8kplayer.net/wp-content/plugins/elementor/assets/js/frontend-modules.min.js?ver=3.29.2" id="elementor-frontend-modules-js" defer></script>
+<script type="rocketlazyloadscript" id="elementor-frontend-js-before">
+var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false,"isScriptDebug":false},"i18n":{"shareOnFacebook":"Share on Facebook","shareOnTwitter":"Share on Twitter","pinIt":"Pin it","download":"Download","downloadImage":"Download image","fullscreen":"Fullscreen","zoom":"Zoom","share":"Share","playVideo":"Play Video","previous":"Previous","next":"Next","close":"Close","a11yCarouselPrevSlideMessage":"Previous slide","a11yCarouselNextSlideMessage":"Next slide","a11yCarouselFirstSlideMessage":"This is the first slide","a11yCarouselLastSlideMessage":"This is the last slide","a11yCarouselPaginationBulletMessage":"Go to slide"},"is_rtl":false,"breakpoints":{"xs":0,"sm":480,"md":768,"lg":1025,"xl":1440,"xxl":1600},"responsive":{"breakpoints":{"mobile":{"label":"Mobile Portrait","value":767,"default_value":767,"direction":"max","is_enabled":true},"mobile_extra":{"label":"Mobile Landscape","value":880,"default_value":880,"direction":"max","is_enabled":false},"tablet":{"label":"Tablet Portrait","value":1024,"default_value":1024,"direction":"max","is_enabled":true},"tablet_extra":{"label":"Tablet Landscape","value":1200,"default_value":1200,"direction":"max","is_enabled":false},"laptop":{"label":"Laptop","value":1366,"default_value":1366,"direction":"max","is_enabled":false},"widescreen":{"label":"Widescreen","value":2400,"default_value":2400,"direction":"min","is_enabled":false}},"hasCustomBreakpoints":false},"version":"3.29.2","is_static":false,"experimentalFeatures":{"e_font_icon_svg":true,"additional_custom_breakpoints":true,"container":true,"e_local_google_fonts":true,"theme_builder_v2":true,"nested-elements":true,"editor_v2":true,"home_screen":true,"cloud-library":true,"e_opt_in_v4_page":true,"page-transitions":true,"notes":true,"form-submissions":true,"e_scroll_snap":true},"urls":{"assets":"https:\/\/8kplayer.net\/wp-content\/plugins\/elementor\/assets\/","ajaxurl":"https:\/\/8kplayer.net\/wp-admin\/admin-ajax.php","uploadUrl":"https:\/\/8kplayer.net\/wp-content\/uploads"},"nonces":{"floatingButtonsClickTracking":"bcb74ef359"},"swiperClass":"swiper","settings":{"page":[],"editorPreferences":[]},"kit":{"active_breakpoints":["viewport_mobile","viewport_tablet"],"global_image_lightbox":"yes","lightbox_enable_counter":"yes","lightbox_enable_fullscreen":"yes","lightbox_enable_zoom":"yes","lightbox_enable_share":"yes","lightbox_title_src":"title","lightbox_description_src":"description"},"post":{"id":42,"title":"8K%20Player%20IPTV%20%231%20Best%20Iptv%20Subscription%20in%20the%20UK%20%7C%208K%20IPTV%20VIP","excerpt":"","featuredImage":"https:\/\/8kplayer.net\/wp-content\/uploads\/2023\/11\/8k_tv_new.png"}};
+</script>
+<script type="rocketlazyloadscript" data-rocket-src="https://8kplayer.net/wp-content/plugins/elementor/assets/js/frontend.min.js?ver=3.29.2" id="elementor-frontend-js" defer></script>
+<script type="rocketlazyloadscript" id="gt_widget_script_82431628-js-before">
+window.gtranslateSettings = /* document.write */ window.gtranslateSettings || {};window.gtranslateSettings['82431628'] = {"default_language":"en","languages":["ar","nl","en","fr","de","ga","it","pt","ru","es","tr"],"url_structure":"none","flag_style":"2d","wrapper_selector":"#gt-wrapper-82431628","alt_flags":[],"float_switcher_open_direction":"top","switcher_horizontal_position":"left","switcher_vertical_position":"bottom","flags_location":"\/wp-content\/plugins\/gtranslate\/flags\/"};
+</script><script type="rocketlazyloadscript" data-rocket-src="https://8kplayer.net/wp-content/plugins/gtranslate/js/float.js?ver=6.8.2" data-no-optimize="1" data-no-minify="1" data-gt-orig-url="/" data-gt-orig-domain="8kplayer.net" data-gt-widget-id="82431628" defer></script><script type="rocketlazyloadscript" data-rocket-src="https://8kplayer.net/wp-content/plugins/elementor-pro/assets/js/webpack-pro.runtime.min.js?ver=3.17.1" id="elementor-pro-webpack-runtime-js" defer></script>
+<script type="rocketlazyloadscript" id="elementor-pro-frontend-js-before">
+var ElementorProFrontendConfig = {"ajaxurl":"https:\/\/8kplayer.net\/wp-admin\/admin-ajax.php","nonce":"8906ecf62e","urls":{"assets":"https:\/\/8kplayer.net\/wp-content\/plugins\/elementor-pro\/assets\/","rest":"https:\/\/8kplayer.net\/wp-json\/"},"shareButtonsNetworks":{"facebook":{"title":"Facebook","has_counter":true},"twitter":{"title":"Twitter"},"linkedin":{"title":"LinkedIn","has_counter":true},"pinterest":{"title":"Pinterest","has_counter":true},"reddit":{"title":"Reddit","has_counter":true},"vk":{"title":"VK","has_counter":true},"odnoklassniki":{"title":"OK","has_counter":true},"tumblr":{"title":"Tumblr"},"digg":{"title":"Digg"},"skype":{"title":"Skype"},"stumbleupon":{"title":"StumbleUpon","has_counter":true},"mix":{"title":"Mix"},"telegram":{"title":"Telegram"},"pocket":{"title":"Pocket","has_counter":true},"xing":{"title":"XING","has_counter":true},"whatsapp":{"title":"WhatsApp"},"email":{"title":"Email"},"print":{"title":"Print"}},"facebook_sdk":{"lang":"en_US","app_id":""},"lottie":{"defaultAnimationUrl":"https:\/\/8kplayer.net\/wp-content\/plugins\/elementor-pro\/modules\/lottie\/assets\/animations\/default.json"}};
+</script>
+<script type="rocketlazyloadscript" data-rocket-src="https://8kplayer.net/wp-content/plugins/elementor-pro/assets/js/frontend.min.js?ver=3.17.1" id="elementor-pro-frontend-js" defer></script>
+<script type="rocketlazyloadscript" data-rocket-src="https://8kplayer.net/wp-content/plugins/elementor-pro/assets/js/preloaded-elements-handlers.min.js?ver=3.17.1" id="pro-preloaded-elements-handlers-js" defer></script>
+<script>class RocketElementorAnimation{constructor(){this.deviceMode=document.createElement("span"),this.deviceMode.id="elementor-device-mode-wpr",this.deviceMode.setAttribute("class","elementor-screen-only"),document.body.appendChild(this.deviceMode)}_detectAnimations(){let t=getComputedStyle(this.deviceMode,":after").content.replace(/"/g,"");this.animationSettingKeys=this._listAnimationSettingsKeys(t),document.querySelectorAll(".elementor-invisible[data-settings]").forEach(t=>{const e=t.getBoundingClientRect();if(e.bottom>=0&&e.top<=window.innerHeight)try{this._animateElement(t)}catch(t){}})}_animateElement(t){const e=JSON.parse(t.dataset.settings),i=e._animation_delay||e.animation_delay||0,n=e[this.animationSettingKeys.find(t=>e[t])];if("none"===n)return void t.classList.remove("elementor-invisible");t.classList.remove(n),this.currentAnimation&&t.classList.remove(this.currentAnimation),this.currentAnimation=n;let s=setTimeout(()=>{t.classList.remove("elementor-invisible"),t.classList.add("animated",n),this._removeAnimationSettings(t,e)},i);window.addEventListener("rocket-startLoading",function(){clearTimeout(s)})}_listAnimationSettingsKeys(t="mobile"){const e=[""];switch(t){case"mobile":e.unshift("_mobile");case"tablet":e.unshift("_tablet");case"desktop":e.unshift("_desktop")}const i=[];return["animation","_animation"].forEach(t=>{e.forEach(e=>{i.push(t+e)})}),i}_removeAnimationSettings(t,e){this._listAnimationSettingsKeys().forEach(t=>delete e[t]),t.dataset.settings=JSON.stringify(e)}static run(){const t=new RocketElementorAnimation;requestAnimationFrame(t._detectAnimations.bind(t))}}document.addEventListener("DOMContentLoaded",RocketElementorAnimation.run);</script></body>
+</html>
