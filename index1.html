@@ -1,0 +1,992 @@
+<!DOCTYPE html>
+<!-- saved from url=(0079)https://8kplayer.net/how-to-install-and-set-up-8k-vip-app-on-firestick-android/ -->
+<html lang="en-US"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script>if(navigator.userAgent.match(/MSIE|Internet Explorer/i)||navigator.userAgent.match(/Trident\/7\..*?rv:11/i)){var href=document.location.href;if(!href.match(/[?&]nowprocket/)){if(href.indexOf("?")==-1){if(href.indexOf("#")==-1){document.location.href=href+"?nowprocket=1"}else{document.location.href=href.replace("#","?nowprocket=1#")}}else{if(href.indexOf("#")==-1){document.location.href=href+"&nowprocket=1"}else{document.location.href=href.replace("#","&nowprocket=1#")}}}}</script><script>class RocketLazyLoadScripts{constructor(){this.v="1.2.3",this.triggerEvents=["keydown","mousedown","mousemove","touchmove","touchstart","touchend","wheel"],this.userEventHandler=this._triggerListener.bind(this),this.touchStartHandler=this._onTouchStart.bind(this),this.touchMoveHandler=this._onTouchMove.bind(this),this.touchEndHandler=this._onTouchEnd.bind(this),this.clickHandler=this._onClick.bind(this),this.interceptedClicks=[],window.addEventListener("pageshow",t=>{this.persisted=t.persisted}),window.addEventListener("DOMContentLoaded",()=>{this._preconnect3rdParties()}),this.delayedScripts={normal:[],async:[],defer:[]},this.trash=[],this.allJQueries=[]}_addUserInteractionListener(t){if(document.hidden){t._triggerListener();return}this.triggerEvents.forEach(e=>window.addEventListener(e,t.userEventHandler,{passive:!0})),window.addEventListener("touchstart",t.touchStartHandler,{passive:!0}),window.addEventListener("mousedown",t.touchStartHandler),document.addEventListener("visibilitychange",t.userEventHandler)}_removeUserInteractionListener(){this.triggerEvents.forEach(t=>window.removeEventListener(t,this.userEventHandler,{passive:!0})),document.removeEventListener("visibilitychange",this.userEventHandler)}_onTouchStart(t){"HTML"!==t.target.tagName&&(window.addEventListener("touchend",this.touchEndHandler),window.addEventListener("mouseup",this.touchEndHandler),window.addEventListener("touchmove",this.touchMoveHandler,{passive:!0}),window.addEventListener("mousemove",this.touchMoveHandler),t.target.addEventListener("click",this.clickHandler),this._renameDOMAttribute(t.target,"onclick","rocket-onclick"),this._pendingClickStarted())}_onTouchMove(t){window.removeEventListener("touchend",this.touchEndHandler),window.removeEventListener("mouseup",this.touchEndHandler),window.removeEventListener("touchmove",this.touchMoveHandler,{passive:!0}),window.removeEventListener("mousemove",this.touchMoveHandler),t.target.removeEventListener("click",this.clickHandler),this._renameDOMAttribute(t.target,"rocket-onclick","onclick"),this._pendingClickFinished()}_onTouchEnd(t){window.removeEventListener("touchend",this.touchEndHandler),window.removeEventListener("mouseup",this.touchEndHandler),window.removeEventListener("touchmove",this.touchMoveHandler,{passive:!0}),window.removeEventListener("mousemove",this.touchMoveHandler)}_onClick(t){t.target.removeEventListener("click",this.clickHandler),this._renameDOMAttribute(t.target,"rocket-onclick","onclick"),this.interceptedClicks.push(t),t.preventDefault(),t.stopPropagation(),t.stopImmediatePropagation(),this._pendingClickFinished()}_replayClicks(){window.removeEventListener("touchstart",this.touchStartHandler,{passive:!0}),window.removeEventListener("mousedown",this.touchStartHandler),this.interceptedClicks.forEach(t=>{t.target.dispatchEvent(new MouseEvent("click",{view:t.view,bubbles:!0,cancelable:!0}))})}_waitForPendingClicks(){return new Promise(t=>{this._isClickPending?this._pendingClickFinished=t:t()})}_pendingClickStarted(){this._isClickPending=!0}_pendingClickFinished(){this._isClickPending=!1}_renameDOMAttribute(t,e,r){t.hasAttribute&&t.hasAttribute(e)&&(event.target.setAttribute(r,event.target.getAttribute(e)),event.target.removeAttribute(e))}_triggerListener(){this._removeUserInteractionListener(this),"loading"===document.readyState?document.addEventListener("DOMContentLoaded",this._loadEverythingNow.bind(this)):this._loadEverythingNow()}_preconnect3rdParties(){let t=[];document.querySelectorAll("script[type=rocketlazyloadscript]").forEach(e=>{if(e.hasAttribute("src")){let r=new URL(e.src).origin;r!==location.origin&&t.push({src:r,crossOrigin:e.crossOrigin||"module"===e.getAttribute("data-rocket-type")})}}),t=[...new Map(t.map(t=>[JSON.stringify(t),t])).values()],this._batchInjectResourceHints(t,"preconnect")}async _loadEverythingNow(){this.lastBreath=Date.now(),this._delayEventListeners(this),this._delayJQueryReady(this),this._handleDocumentWrite(),this._registerAllDelayedScripts(),this._preloadAllScripts(),await this._loadScriptsFromList(this.delayedScripts.normal),await this._loadScriptsFromList(this.delayedScripts.defer),await this._loadScriptsFromList(this.delayedScripts.async);try{await this._triggerDOMContentLoaded(),await this._triggerWindowLoad()}catch(t){console.error(t)}window.dispatchEvent(new Event("rocket-allScriptsLoaded")),this._waitForPendingClicks().then(()=>{this._replayClicks()}),this._emptyTrash()}_registerAllDelayedScripts(){document.querySelectorAll("script[type=rocketlazyloadscript]").forEach(t=>{t.hasAttribute("data-rocket-src")?t.hasAttribute("async")&&!1!==t.async?this.delayedScripts.async.push(t):t.hasAttribute("defer")&&!1!==t.defer||"module"===t.getAttribute("data-rocket-type")?this.delayedScripts.defer.push(t):this.delayedScripts.normal.push(t):this.delayedScripts.normal.push(t)})}async _transformScript(t){return new Promise((await this._littleBreath(),navigator.userAgent.indexOf("Firefox/")>0||""===navigator.vendor)?e=>{let r=document.createElement("script");[...t.attributes].forEach(t=>{let e=t.nodeName;"type"!==e&&("data-rocket-type"===e&&(e="type"),"data-rocket-src"===e&&(e="src"),r.setAttribute(e,t.nodeValue))}),t.text&&(r.text=t.text),r.hasAttribute("src")?(r.addEventListener("load",e),r.addEventListener("error",e)):(r.text=t.text,e());try{t.parentNode.replaceChild(r,t)}catch(i){e()}}:async e=>{function r(){t.setAttribute("data-rocket-status","failed"),e()}try{let i=t.getAttribute("data-rocket-type"),n=t.getAttribute("data-rocket-src");t.text,i?(t.type=i,t.removeAttribute("data-rocket-type")):t.removeAttribute("type"),t.addEventListener("load",function r(){t.setAttribute("data-rocket-status","executed"),e()}),t.addEventListener("error",r),n?(t.removeAttribute("data-rocket-src"),t.src=n):t.src="data:text/javascript;base64,"+window.btoa(unescape(encodeURIComponent(t.text)))}catch(s){r()}})}async _loadScriptsFromList(t){let e=t.shift();return e&&e.isConnected?(await this._transformScript(e),this._loadScriptsFromList(t)):Promise.resolve()}_preloadAllScripts(){this._batchInjectResourceHints([...this.delayedScripts.normal,...this.delayedScripts.defer,...this.delayedScripts.async],"preload")}_batchInjectResourceHints(t,e){var r=document.createDocumentFragment();t.forEach(t=>{let i=t.getAttribute&&t.getAttribute("data-rocket-src")||t.src;if(i){let n=document.createElement("link");n.href=i,n.rel=e,"preconnect"!==e&&(n.as="script"),t.getAttribute&&"module"===t.getAttribute("data-rocket-type")&&(n.crossOrigin=!0),t.crossOrigin&&(n.crossOrigin=t.crossOrigin),t.integrity&&(n.integrity=t.integrity),r.appendChild(n),this.trash.push(n)}}),document.head.appendChild(r)}_delayEventListeners(t){let e={};function r(t,r){!function t(r){!e[r]&&(e[r]={originalFunctions:{add:r.addEventListener,remove:r.removeEventListener},eventsToRewrite:[]},r.addEventListener=function(){arguments[0]=i(arguments[0]),e[r].originalFunctions.add.apply(r,arguments)},r.removeEventListener=function(){arguments[0]=i(arguments[0]),e[r].originalFunctions.remove.apply(r,arguments)});function i(t){return e[r].eventsToRewrite.indexOf(t)>=0?"rocket-"+t:t}}(t),e[t].eventsToRewrite.push(r)}function i(t,e){let r=t[e];Object.defineProperty(t,e,{get:()=>r||function(){},set(i){t["rocket"+e]=r=i}})}r(document,"DOMContentLoaded"),r(window,"DOMContentLoaded"),r(window,"load"),r(window,"pageshow"),r(document,"readystatechange"),i(document,"onreadystatechange"),i(window,"onload"),i(window,"onpageshow")}_delayJQueryReady(t){let e;function r(r){if(r&&r.fn&&!t.allJQueries.includes(r)){r.fn.ready=r.fn.init.prototype.ready=function(e){return t.domReadyFired?e.bind(document)(r):document.addEventListener("rocket-DOMContentLoaded",()=>e.bind(document)(r)),r([])};let i=r.fn.on;r.fn.on=r.fn.init.prototype.on=function(){if(this[0]===window){function t(t){return t.split(" ").map(t=>"load"===t||0===t.indexOf("load.")?"rocket-jquery-load":t).join(" ")}"string"==typeof arguments[0]||arguments[0]instanceof String?arguments[0]=t(arguments[0]):"object"==typeof arguments[0]&&Object.keys(arguments[0]).forEach(e=>{let r=arguments[0][e];delete arguments[0][e],arguments[0][t(e)]=r})}return i.apply(this,arguments),this},t.allJQueries.push(r)}e=r}r(window.jQuery),Object.defineProperty(window,"jQuery",{get:()=>e,set(t){r(t)}})}async _triggerDOMContentLoaded(){this.domReadyFired=!0,await this._littleBreath(),document.dispatchEvent(new Event("rocket-DOMContentLoaded")),await this._littleBreath(),window.dispatchEvent(new Event("rocket-DOMContentLoaded")),await this._littleBreath(),document.dispatchEvent(new Event("rocket-readystatechange")),await this._littleBreath(),document.rocketonreadystatechange&&document.rocketonreadystatechange()}async _triggerWindowLoad(){await this._littleBreath(),window.dispatchEvent(new Event("rocket-load")),await this._littleBreath(),window.rocketonload&&window.rocketonload(),await this._littleBreath(),this.allJQueries.forEach(t=>t(window).trigger("rocket-jquery-load")),await this._littleBreath();let t=new Event("rocket-pageshow");t.persisted=this.persisted,window.dispatchEvent(t),await this._littleBreath(),window.rocketonpageshow&&window.rocketonpageshow({persisted:this.persisted})}_handleDocumentWrite(){let t=new Map;document.write=document.writeln=function(e){let r=document.currentScript;r||console.error("WPRocket unable to document.write this: "+e);let i=document.createRange(),n=r.parentElement,s=t.get(r);void 0===s&&(s=r.nextSibling,t.set(r,s));let a=document.createDocumentFragment();i.setStart(a,0),a.appendChild(i.createContextualFragment(e)),n.insertBefore(a,s)}}async _littleBreath(){Date.now()-this.lastBreath>45&&(await this._requestAnimFrame(),this.lastBreath=Date.now())}async _requestAnimFrame(){return document.hidden?new Promise(t=>setTimeout(t)):new Promise(t=>requestAnimationFrame(t))}_emptyTrash(){this.trash.forEach(t=>t.remove())}static run(){let t=new RocketLazyLoadScripts;t._addUserInteractionListener(t)}}RocketLazyLoadScripts.run();</script>
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="profile" href="https://gmpg.org/xfn/11">
+
+	<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+	<style>img:is([sizes="auto" i], [sizes^="auto," i]) { contain-intrinsic-size: 3000px 1500px }</style>
+	
+	<!-- This site is optimized with the Yoast SEO Premium plugin v22.1 (Yoast SEO v24.9) - https://yoast.com/wordpress/plugins/seo/ -->
+	<title>Install and Set up 8K VIP App IPTV on FireStick &amp; Android 2025</title>
+	<meta name="description" content="8K VIP app ( 8K player) , serves as an IPTV player allowing users to access IPTV channels and programs provided by IPTV service providers.">
+	<link rel="canonical" href="https://8kplayer.net/how-to-install-and-set-up-8k-vip-app-on-firestick-android/">
+	<meta property="og:locale" content="en_US">
+	<meta property="og:type" content="article">
+	<meta property="og:title" content="8K VIP IPTV #1 Best IP-TV Subscription in the UK | FREE TEST">
+	<meta property="og:description" content="8K IPTV UK Experience the Best IPTV Subscription in the UK: Fast, and Reliable IPTV Services at Best Prices - GET Your Subscription for New">
+	<meta property="og:url" content="https://8kplayer.net/how-to-install-and-set-up-8k-vip-app-on-firestick-android/">
+	<meta property="og:site_name" content="8K Player VIP">
+	<meta property="article:published_time" content="2024-04-28T19:53:05+00:00">
+	<meta property="article:modified_time" content="2025-05-18T11:53:40+00:00">
+	<meta property="og:image" content="https://8kplayer.net/wp-content/uploads/2024/04/4K_VIP_5.jpg">
+	<meta property="og:image:width" content="1600">
+	<meta property="og:image:height" content="720">
+	<meta property="og:image:type" content="image/jpeg">
+	<meta name="author" content="Admin">
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:label1" content="Written by">
+	<meta name="twitter:data1" content="Admin">
+	<meta name="twitter:label2" content="Est. reading time">
+	<meta name="twitter:data2" content="4 minutes">
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":["Article","BlogPosting"],"@id":"https://8kplayer.net/how-to-install-and-set-up-8k-vip-app-on-firestick-android/#article","isPartOf":{"@id":"https://8kplayer.net/how-to-install-and-set-up-8k-vip-app-on-firestick-android/"},"author":{"name":"Admin","@id":"https://8kplayer.net/#/schema/person/7329fd303d1a572c7af23fe12af5c74a"},"headline":"How to Install and Set Up 8K Player VIP App on FireStick &amp; Android (2025)","datePublished":"2024-04-28T19:53:05+00:00","dateModified":"2025-05-18T11:53:40+00:00","mainEntityOfPage":{"@id":"https://8kplayer.net/how-to-install-and-set-up-8k-vip-app-on-firestick-android/"},"wordCount":513,"commentCount":7,"publisher":{"@id":"https://8kplayer.net/#/schema/person/7329fd303d1a572c7af23fe12af5c74a"},"image":{"@id":"https://8kplayer.net/how-to-install-and-set-up-8k-vip-app-on-firestick-android/#primaryimage"},"thumbnailUrl":"https://8kplayer.net/wp-content/uploads/2024/04/4K_VIP_5.jpg","articleSection":["8K Player IPTV"],"inLanguage":"en-US","potentialAction":[{"@type":"CommentAction","name":"Comment","target":["https://8kplayer.net/how-to-install-and-set-up-8k-vip-app-on-firestick-android/#respond"]}],"accessibilityFeature":["tableOfContents"]},{"@type":["WebPage","SearchResultsPage"],"@id":"https://8kplayer.net/how-to-install-and-set-up-8k-vip-app-on-firestick-android/","url":"https://8kplayer.net/how-to-install-and-set-up-8k-vip-app-on-firestick-android/","name":"Install and Set up 8K VIP App IPTV on FireStick & Android 2025","isPartOf":{"@id":"https://8kplayer.net/#website"},"primaryImageOfPage":{"@id":"https://8kplayer.net/how-to-install-and-set-up-8k-vip-app-on-firestick-android/#primaryimage"},"image":{"@id":"https://8kplayer.net/how-to-install-and-set-up-8k-vip-app-on-firestick-android/#primaryimage"},"thumbnailUrl":"https://8kplayer.net/wp-content/uploads/2024/04/4K_VIP_5.jpg","datePublished":"2024-04-28T19:53:05+00:00","dateModified":"2025-05-18T11:53:40+00:00","description":"8K VIP app ( 8K player) , serves as an IPTV player allowing users to access IPTV channels and programs provided by IPTV service providers.","breadcrumb":{"@id":"https://8kplayer.net/how-to-install-and-set-up-8k-vip-app-on-firestick-android/#breadcrumb"},"inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["https://8kplayer.net/how-to-install-and-set-up-8k-vip-app-on-firestick-android/"]}]},{"@type":"ImageObject","inLanguage":"en-US","@id":"https://8kplayer.net/how-to-install-and-set-up-8k-vip-app-on-firestick-android/#primaryimage","url":"https://8kplayer.net/wp-content/uploads/2024/04/4K_VIP_5.jpg","contentUrl":"https://8kplayer.net/wp-content/uploads/2024/04/4K_VIP_5.jpg","width":1600,"height":720,"caption":"8K VIP player iptv"},{"@type":"BreadcrumbList","@id":"https://8kplayer.net/how-to-install-and-set-up-8k-vip-app-on-firestick-android/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://8kplayer.net/"},{"@type":"ListItem","position":2,"name":"How to Install and Set Up 8K Player VIP App on FireStick &amp; Android (2025)"}]},{"@type":"WebSite","@id":"https://8kplayer.net/#website","url":"https://8kplayer.net/","name":"8k Player","description":"8K Player VIP Experience the Best VIP IPTV Subscription : Fast, and Reliable  8K VIP IPTV Services at Best Prices - GET Your Subscription for FREE.","publisher":{"@id":"https://8kplayer.net/#/schema/person/7329fd303d1a572c7af23fe12af5c74a"},"alternateName":"8K Player IPTV #1 Best IPTV Subscription | FREE TRIAL","potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://8kplayer.net/?s={search_term_string}"},"query-input":{"@type":"PropertyValueSpecification","valueRequired":true,"valueName":"search_term_string"}}],"inLanguage":"en-US"},{"@type":["Person","Organization"],"@id":"https://8kplayer.net/#/schema/person/7329fd303d1a572c7af23fe12af5c74a","name":"Admin","image":{"@type":"ImageObject","inLanguage":"en-US","@id":"https://8kplayer.net/#/schema/person/image/","url":"https://8kplayer.net/wp-content/uploads/2022/10/8k_tv_gold_logo.png","contentUrl":"https://8kplayer.net/wp-content/uploads/2022/10/8k_tv_gold_logo.png","width":1024,"height":563,"caption":"Admin"},"logo":{"@id":"https://8kplayer.net/#/schema/person/image/"},"sameAs":["https://8kplayer.net"],"publishingPrinciples":"https://8kplayer.net/privacy-policy/","actionableFeedbackPolicy":"https://8kplayer.net/refund-policy/","correctionsPolicy":"https://8kplayer.net/team-conditions/","ethicsPolicy":"https://8kplayer.net/privacy-policy/","diversityPolicy":"https://8kplayer.net/privacy-policy/"}]}</script>
+	<!-- / Yoast SEO Premium plugin. -->
+
+
+<link rel="dns-prefetch" href="https://fonts.googleapis.com/">
+<link rel="alternate" type="application/rss+xml" title="8K Player VIP » Feed" href="https://8kplayer.net/feed/">
+<link rel="alternate" type="application/rss+xml" title="8K Player VIP » Comments Feed" href="https://8kplayer.net/comments/feed/">
+<link rel="alternate" type="application/rss+xml" title="8K Player VIP » How to Install and Set Up 8K Player VIP App on FireStick &amp; Android (2025) Comments Feed" href="https://8kplayer.net/how-to-install-and-set-up-8k-vip-app-on-firestick-android/feed/">
+<script src="data:text/javascript;base64,CndpbmRvdy5fd3BlbW9qaVNldHRpbmdzID0geyJiYXNlVXJsIjoiaHR0cHM6XC9cL3Mudy5vcmdcL2ltYWdlc1wvY29yZVwvZW1vamlcLzE1LjEuMFwvNzJ4NzJcLyIsImV4dCI6Ii5wbmciLCJzdmdVcmwiOiJodHRwczpcL1wvcy53Lm9yZ1wvaW1hZ2VzXC9jb3JlXC9lbW9qaVwvMTUuMS4wXC9zdmdcLyIsInN2Z0V4dCI6Ii5zdmciLCJzb3VyY2UiOnsiY29uY2F0ZW1vamkiOiJodHRwczpcL1wvOGtwbGF5ZXIubmV0XC93cC1pbmNsdWRlc1wvanNcL3dwLWVtb2ppLXJlbGVhc2UubWluLmpzP3Zlcj02LjguMSJ9fTsKLyohIFRoaXMgZmlsZSBpcyBhdXRvLWdlbmVyYXRlZCAqLwohZnVuY3Rpb24oaSxuKXt2YXIgbyxzLGU7ZnVuY3Rpb24gYyhlKXt0cnl7dmFyIHQ9e3N1cHBvcnRUZXN0czplLHRpbWVzdGFtcDoobmV3IERhdGUpLnZhbHVlT2YoKX07c2Vzc2lvblN0b3JhZ2Uuc2V0SXRlbShvLEpTT04uc3RyaW5naWZ5KHQpKX1jYXRjaChlKXt9fWZ1bmN0aW9uIHAoZSx0LG4pe2UuY2xlYXJSZWN0KDAsMCxlLmNhbnZhcy53aWR0aCxlLmNhbnZhcy5oZWlnaHQpLGUuZmlsbFRleHQodCwwLDApO3ZhciB0PW5ldyBVaW50MzJBcnJheShlLmdldEltYWdlRGF0YSgwLDAsZS5jYW52YXMud2lkdGgsZS5jYW52YXMuaGVpZ2h0KS5kYXRhKSxyPShlLmNsZWFyUmVjdCgwLDAsZS5jYW52YXMud2lkdGgsZS5jYW52YXMuaGVpZ2h0KSxlLmZpbGxUZXh0KG4sMCwwKSxuZXcgVWludDMyQXJyYXkoZS5nZXRJbWFnZURhdGEoMCwwLGUuY2FudmFzLndpZHRoLGUuY2FudmFzLmhlaWdodCkuZGF0YSkpO3JldHVybiB0LmV2ZXJ5KGZ1bmN0aW9uKGUsdCl7cmV0dXJuIGU9PT1yW3RdfSl9ZnVuY3Rpb24gdShlLHQsbil7c3dpdGNoKHQpe2Nhc2UiZmxhZyI6cmV0dXJuIG4oZSwiXHVkODNjXHVkZmYzXHVmZTBmXHUyMDBkXHUyNmE3XHVmZTBmIiwiXHVkODNjXHVkZmYzXHVmZTBmXHUyMDBiXHUyNmE3XHVmZTBmIik/ITE6IW4oZSwiXHVkODNjXHVkZGZhXHVkODNjXHVkZGYzIiwiXHVkODNjXHVkZGZhXHUyMDBiXHVkODNjXHVkZGYzIikmJiFuKGUsIlx1ZDgzY1x1ZGZmNFx1ZGI0MFx1ZGM2N1x1ZGI0MFx1ZGM2Mlx1ZGI0MFx1ZGM2NVx1ZGI0MFx1ZGM2ZVx1ZGI0MFx1ZGM2N1x1ZGI0MFx1ZGM3ZiIsIlx1ZDgzY1x1ZGZmNFx1MjAwYlx1ZGI0MFx1ZGM2N1x1MjAwYlx1ZGI0MFx1ZGM2Mlx1MjAwYlx1ZGI0MFx1ZGM2NVx1MjAwYlx1ZGI0MFx1ZGM2ZVx1MjAwYlx1ZGI0MFx1ZGM2N1x1MjAwYlx1ZGI0MFx1ZGM3ZiIpO2Nhc2UiZW1vamkiOnJldHVybiFuKGUsIlx1ZDgzZFx1ZGMyNlx1MjAwZFx1ZDgzZFx1ZGQyNSIsIlx1ZDgzZFx1ZGMyNlx1MjAwYlx1ZDgzZFx1ZGQyNSIpfXJldHVybiExfWZ1bmN0aW9uIGYoZSx0LG4pe3ZhciByPSJ1bmRlZmluZWQiIT10eXBlb2YgV29ya2VyR2xvYmFsU2NvcGUmJnNlbGYgaW5zdGFuY2VvZiBXb3JrZXJHbG9iYWxTY29wZT9uZXcgT2Zmc2NyZWVuQ2FudmFzKDMwMCwxNTApOmkuY3JlYXRlRWxlbWVudCgiY2FudmFzIiksYT1yLmdldENvbnRleHQoIjJkIix7d2lsbFJlYWRGcmVxdWVudGx5OiEwfSksbz0oYS50ZXh0QmFzZWxpbmU9InRvcCIsYS5mb250PSI2MDAgMzJweCBBcmlhbCIse30pO3JldHVybiBlLmZvckVhY2goZnVuY3Rpb24oZSl7b1tlXT10KGEsZSxuKX0pLG99ZnVuY3Rpb24gdChlKXt2YXIgdD1pLmNyZWF0ZUVsZW1lbnQoInNjcmlwdCIpO3Quc3JjPWUsdC5kZWZlcj0hMCxpLmhlYWQuYXBwZW5kQ2hpbGQodCl9InVuZGVmaW5lZCIhPXR5cGVvZiBQcm9taXNlJiYobz0id3BFbW9qaVNldHRpbmdzU3VwcG9ydHMiLHM9WyJmbGFnIiwiZW1vamkiXSxuLnN1cHBvcnRzPXtldmVyeXRoaW5nOiEwLGV2ZXJ5dGhpbmdFeGNlcHRGbGFnOiEwfSxlPW5ldyBQcm9taXNlKGZ1bmN0aW9uKGUpe2kuYWRkRXZlbnRMaXN0ZW5lcigiRE9NQ29udGVudExvYWRlZCIsZSx7b25jZTohMH0pfSksbmV3IFByb21pc2UoZnVuY3Rpb24odCl7dmFyIG49ZnVuY3Rpb24oKXt0cnl7dmFyIGU9SlNPTi5wYXJzZShzZXNzaW9uU3RvcmFnZS5nZXRJdGVtKG8pKTtpZigib2JqZWN0Ij09dHlwZW9mIGUmJiJudW1iZXIiPT10eXBlb2YgZS50aW1lc3RhbXAmJihuZXcgRGF0ZSkudmFsdWVPZigpPGUudGltZXN0YW1wKzYwNDgwMCYmIm9iamVjdCI9PXR5cGVvZiBlLnN1cHBvcnRUZXN0cylyZXR1cm4gZS5zdXBwb3J0VGVzdHN9Y2F0Y2goZSl7fXJldHVybiBudWxsfSgpO2lmKCFuKXtpZigidW5kZWZpbmVkIiE9dHlwZW9mIFdvcmtlciYmInVuZGVmaW5lZCIhPXR5cGVvZiBPZmZzY3JlZW5DYW52YXMmJiJ1bmRlZmluZWQiIT10eXBlb2YgVVJMJiZVUkwuY3JlYXRlT2JqZWN0VVJMJiYidW5kZWZpbmVkIiE9dHlwZW9mIEJsb2IpdHJ5e3ZhciBlPSJwb3N0TWVzc2FnZSgiK2YudG9TdHJpbmcoKSsiKCIrW0pTT04uc3RyaW5naWZ5KHMpLHUudG9TdHJpbmcoKSxwLnRvU3RyaW5nKCldLmpvaW4oIiwiKSsiKSk7IixyPW5ldyBCbG9iKFtlXSx7dHlwZToidGV4dC9qYXZhc2NyaXB0In0pLGE9bmV3IFdvcmtlcihVUkwuY3JlYXRlT2JqZWN0VVJMKHIpLHtuYW1lOiJ3cFRlc3RFbW9qaVN1cHBvcnRzIn0pO3JldHVybiB2b2lkKGEub25tZXNzYWdlPWZ1bmN0aW9uKGUpe2Mobj1lLmRhdGEpLGEudGVybWluYXRlKCksdChuKX0pfWNhdGNoKGUpe31jKG49ZihzLHUscCkpfXQobil9KS50aGVuKGZ1bmN0aW9uKGUpe2Zvcih2YXIgdCBpbiBlKW4uc3VwcG9ydHNbdF09ZVt0XSxuLnN1cHBvcnRzLmV2ZXJ5dGhpbmc9bi5zdXBwb3J0cy5ldmVyeXRoaW5nJiZuLnN1cHBvcnRzW3RdLCJmbGFnIiE9PXQmJihuLnN1cHBvcnRzLmV2ZXJ5dGhpbmdFeGNlcHRGbGFnPW4uc3VwcG9ydHMuZXZlcnl0aGluZ0V4Y2VwdEZsYWcmJm4uc3VwcG9ydHNbdF0pO24uc3VwcG9ydHMuZXZlcnl0aGluZ0V4Y2VwdEZsYWc9bi5zdXBwb3J0cy5ldmVyeXRoaW5nRXhjZXB0RmxhZyYmIW4uc3VwcG9ydHMuZmxhZyxuLkRPTVJlYWR5PSExLG4ucmVhZHlDYWxsYmFjaz1mdW5jdGlvbigpe24uRE9NUmVhZHk9ITB9fSkudGhlbihmdW5jdGlvbigpe3JldHVybiBlfSkudGhlbihmdW5jdGlvbigpe3ZhciBlO24uc3VwcG9ydHMuZXZlcnl0aGluZ3x8KG4ucmVhZHlDYWxsYmFjaygpLChlPW4uc291cmNlfHx7fSkuY29uY2F0ZW1vamk/dChlLmNvbmNhdGVtb2ppKTplLndwZW1vamkmJmUudHdlbW9qaSYmKHQoZS50d2Vtb2ppKSx0KGUud3BlbW9qaSkpKX0pKX0oKHdpbmRvdyxkb2N1bWVudCksd2luZG93Ll93cGVtb2ppU2V0dGluZ3MpOwo=" data-rocket-status="executed">
+window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15.1.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15.1.0\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/8kplayer.net\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.8.1"}};
+/*! This file is auto-generated */
+!function(i,n){var o,s,e;function c(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(o,JSON.stringify(t))}catch(e){}}function p(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data),r=(e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0),new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data));return t.every(function(e,t){return e===r[t]})}function u(e,t,n){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\uddfa\ud83c\uddf3","\ud83c\uddfa\u200b\ud83c\uddf3")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!n(e,"\ud83d\udc26\u200d\ud83d\udd25","\ud83d\udc26\u200b\ud83d\udd25")}return!1}function f(e,t,n){var r="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):i.createElement("canvas"),a=r.getContext("2d",{willReadFrequently:!0}),o=(a.textBaseline="top",a.font="600 32px Arial",{});return e.forEach(function(e){o[e]=t(a,e,n)}),o}function t(e){var t=i.createElement("script");t.src=e,t.defer=!0,i.head.appendChild(t)}"undefined"!=typeof Promise&&(o="wpEmojiSettingsSupports",s=["flag","emoji"],n.supports={everything:!0,everythingExceptFlag:!0},e=new Promise(function(e){i.addEventListener("DOMContentLoaded",e,{once:!0})}),new Promise(function(t){var n=function(){try{var e=JSON.parse(sessionStorage.getItem(o));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(s),u.toString(),p.toString()].join(",")+"));",r=new Blob([e],{type:"text/javascript"}),a=new Worker(URL.createObjectURL(r),{name:"wpTestEmojiSupports"});return void(a.onmessage=function(e){c(n=e.data),a.terminate(),t(n)})}catch(e){}c(n=f(s,u,p))}t(n)}).then(function(e){for(var t in e)n.supports[t]=e[t],n.supports.everything=n.supports.everything&&n.supports[t],"flag"!==t&&(n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&n.supports[t]);n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&!n.supports.flag,n.DOMReady=!1,n.readyCallback=function(){n.DOMReady=!0}}).then(function(){return e}).then(function(){var e;n.supports.everything||(n.readyCallback(),(e=n.source||{}).concatemoji?t(e.concatemoji):e.wpemoji&&e.twemoji&&(t(e.twemoji),t(e.wpemoji)))}))}((window,document),window._wpemojiSettings);
+</script>
+<style id="wp-emoji-styles-inline-css">
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+</style>
+<link rel="stylesheet" id="wp-block-library-css" href="./Install and Set up 8K VIP App IPTV on FireStick &amp; Android 2025_files/style.min.css" media="all">
+<style id="classic-theme-styles-inline-css">
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+</style>
+<link data-minify="1" rel="stylesheet" id="hostinger-affiliate-plugin-block-frontend-css" href="./Install and Set up 8K VIP App IPTV on FireStick &amp; Android 2025_files/frontend.css" media="all">
+<style id="joinchat-button-style-inline-css">
+.wp-block-joinchat-button{border:none!important;text-align:center}.wp-block-joinchat-button figure{display:table;margin:0 auto;padding:0}.wp-block-joinchat-button figcaption{font:normal normal 400 .6em/2em var(--wp--preset--font-family--system-font,sans-serif);margin:0;padding:0}.wp-block-joinchat-button .joinchat-button__qr{background-color:#fff;border:6px solid #25d366;border-radius:30px;box-sizing:content-box;display:block;height:200px;margin:auto;overflow:hidden;padding:10px;width:200px}.wp-block-joinchat-button .joinchat-button__qr canvas,.wp-block-joinchat-button .joinchat-button__qr img{display:block;margin:auto}.wp-block-joinchat-button .joinchat-button__link{align-items:center;background-color:#25d366;border:6px solid #25d366;border-radius:30px;display:inline-flex;flex-flow:row nowrap;justify-content:center;line-height:1.25em;margin:0 auto;text-decoration:none}.wp-block-joinchat-button .joinchat-button__link:before{background:transparent var(--joinchat-ico) no-repeat center;background-size:100%;content:"";display:block;height:1.5em;margin:-.75em .75em -.75em 0;width:1.5em}.wp-block-joinchat-button figure+.joinchat-button__link{margin-top:10px}@media (orientation:landscape)and (min-height:481px),(orientation:portrait)and (min-width:481px){.wp-block-joinchat-button.joinchat-button--qr-only figure+.joinchat-button__link{display:none}}@media (max-width:480px),(orientation:landscape)and (max-height:480px){.wp-block-joinchat-button figure{display:none}}
+
+</style>
+<style id="global-styles-inline-css">
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}
+:root :where(.wp-block-pullquote){font-size: 1.5em;line-height: 1.6;}
+</style>
+<link data-minify="1" rel="stylesheet" id="contact-form-7-css" href="./Install and Set up 8K VIP App IPTV on FireStick &amp; Android 2025_files/styles.css" media="all">
+<link rel="stylesheet" id="nbcpf-intlTelInput-style-css" href="./Install and Set up 8K VIP App IPTV on FireStick &amp; Android 2025_files/intlTelInput.min.css" media="all">
+<link rel="stylesheet" id="nbcpf-countryFlag-style-css" href="./Install and Set up 8K VIP App IPTV on FireStick &amp; Android 2025_files/countrySelect.min.css" media="all">
+<link data-minify="1" rel="stylesheet" id="rt-fontawsome-css" href="./Install and Set up 8K VIP App IPTV on FireStick &amp; Android 2025_files/font-awesome.min.css" media="all">
+<link rel="stylesheet" id="rt-tpg-block-css" href="./Install and Set up 8K VIP App IPTV on FireStick &amp; Android 2025_files/tpg-block.min.css" media="all">
+<link rel="stylesheet" id="animate-css" href="./Install and Set up 8K VIP App IPTV on FireStick &amp; Android 2025_files/animate.min.css" media="all">
+<link data-minify="1" rel="stylesheet" id="custom-animate-css" href="./Install and Set up 8K VIP App IPTV on FireStick &amp; Android 2025_files/custom-animate.css" media="all">
+<link rel="stylesheet" id="bootstrap-select-css" href="./Install and Set up 8K VIP App IPTV on FireStick &amp; Android 2025_files/bootstrap-select.min.css" media="all">
+<link data-minify="1" rel="stylesheet" id="bxslider-css" href="./Install and Set up 8K VIP App IPTV on FireStick &amp; Android 2025_files/jquery.bxslider.css" media="all">
+<link data-minify="1" rel="stylesheet" id="jarallax-css" href="./Install and Set up 8K VIP App IPTV on FireStick &amp; Android 2025_files/jarallax.css" media="all">
+<link data-minify="1" rel="stylesheet" id="jquery-magnific-popup-css" href="./Install and Set up 8K VIP App IPTV on FireStick &amp; Android 2025_files/jquery.magnific-popup.css" media="all">
+<link rel="stylesheet" id="odometer-css" href="./Install and Set up 8K VIP App IPTV on FireStick &amp; Android 2025_files/odometer.min.css" media="all">
+<link rel="stylesheet" id="owl-carousel-css" href="./Install and Set up 8K VIP App IPTV on FireStick &amp; Android 2025_files/owl.carousel.min.css" media="all">
+<link rel="stylesheet" id="owl-theme-css" href="./Install and Set up 8K VIP App IPTV on FireStick &amp; Android 2025_files/owl.theme.default.min.css" media="all">
+<link data-minify="1" rel="stylesheet" id="reey-font-css" href="./Install and Set up 8K VIP App IPTV on FireStick &amp; Android 2025_files/stylesheet.css" media="all">
+<link data-minify="1" rel="stylesheet" id="swiper-css" href="./Install and Set up 8K VIP App IPTV on FireStick &amp; Android 2025_files/swiper.min.css" media="all">
+<link data-minify="1" rel="stylesheet" id="timepicker-css" href="./Install and Set up 8K VIP App IPTV on FireStick &amp; Android 2025_files/timePicker.css" media="all">
+<link data-minify="1" rel="stylesheet" id="roofsi-jquery-ui-css" href="./Install and Set up 8K VIP App IPTV on FireStick &amp; Android 2025_files/jquery-ui.css" media="all">
+<link rel="stylesheet" id="zeinet-addon-style-css" href="./Install and Set up 8K VIP App IPTV on FireStick &amp; Android 2025_files/zeinet-addon.css" media="all">
+<link rel="stylesheet" id="zeinet-fonts-css" href="./Install and Set up 8K VIP App IPTV on FireStick &amp; Android 2025_files/css" media="all">
+<link data-minify="1" rel="stylesheet" id="zeinet-icons-css" href="./Install and Set up 8K VIP App IPTV on FireStick &amp; Android 2025_files/style.css" media="all">
+<link data-minify="1" rel="stylesheet" id="flaticons-css" href="./Install and Set up 8K VIP App IPTV on FireStick &amp; Android 2025_files/flaticon.css" media="all">
+<link rel="stylesheet" id="bootstrap-css" href="./Install and Set up 8K VIP App IPTV on FireStick &amp; Android 2025_files/bootstrap.min.css" media="all">
+<link data-minify="1" rel="stylesheet" id="fontawesome-css" href="./Install and Set up 8K VIP App IPTV on FireStick &amp; Android 2025_files/all.min.css" media="all">
+<link data-minify="1" rel="stylesheet" id="zeinet-style-css" href="./Install and Set up 8K VIP App IPTV on FireStick &amp; Android 2025_files/style(1).css" media="all">
+<style id="zeinet-style-inline-css">
+:root {
+			  --zeinet-primary: #089fac;
+			  --zeinet-primary-rgb: 8, 159, 172;
+			  --zeinet-base: #fe9043;
+			  --zeinet-base-rgb: 254, 144, 67;
+
+			}.page-header-bg { background-image: url(https://8kplayer.net/wp-content/uploads/2023/11/one-pice.webp); } .preloader .preloader__image { background-image: url(https://8kplayer.net/wp-content/uploads/2023/11/local_icon.png); } .page-header-bg  { background-image: url(https://8kplayer.net/wp-content/uploads/2023/11/one-pice.webp); }
+</style>
+<link data-minify="1" rel="stylesheet" id="recent-posts-widget-with-thumbnails-public-style-css" href="./Install and Set up 8K VIP App IPTV on FireStick &amp; Android 2025_files/public.css" media="all">
+<script id="jquery-core-js" defer="" src="./Install and Set up 8K VIP App IPTV on FireStick &amp; Android 2025_files/jquery.min.js" data-rocket-status="executed"></script>
+<script id="jquery-migrate-js" defer="" src="./Install and Set up 8K VIP App IPTV on FireStick &amp; Android 2025_files/jquery-migrate.min.js" data-rocket-status="executed"></script>
+<link rel="https://api.w.org/" href="https://8kplayer.net/wp-json/"><link rel="alternate" title="JSON" type="application/json" href="https://8kplayer.net/wp-json/wp/v2/posts/3079"><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://8kplayer.net/xmlrpc.php?rsd">
+<meta name="generator" content="WordPress 6.8.1">
+<link rel="shortlink" href="https://8kplayer.net/?p=3079">
+<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://8kplayer.net/wp-json/oembed/1.0/embed?url=https%3A%2F%2F8kplayer.net%2Fhow-to-install-and-set-up-8k-vip-app-on-firestick-android%2F">
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="https://8kplayer.net/wp-json/oembed/1.0/embed?url=https%3A%2F%2F8kplayer.net%2Fhow-to-install-and-set-up-8k-vip-app-on-firestick-android%2F&amp;format=xml">
+		<script type="text/javascript" src="data:text/javascript;base64,CgkJCXZhciBfc3RhdGNvdW50ZXIgPSBfc3RhdGNvdW50ZXIgfHwgW107CgkJCV9zdGF0Y291bnRlci5wdXNoKHsidGFncyI6IHsiYXV0aG9yIjogIkFkbWluIn19KTsKCQk=" data-rocket-status="executed">
+			var _statcounter = _statcounter || [];
+			_statcounter.push({"tags": {"author": "Admin"}});
+		</script>
+		        <style>
+            :root {
+                --tpg-primary-color: #0d6efd;
+                --tpg-secondary-color: #0654c4;
+                --tpg-primary-light: #c4d0ff
+            }
+
+                        body .rt-tpg-container .rt-loading,
+            body #bottom-script-loader .rt-ball-clip-rotate {
+                color: #0367bf !important;
+            }
+
+                    </style>
+		<link rel="pingback" href="https://8kplayer.net/xmlrpc.php"><meta name="generator" content="Elementor 3.29.2; features: e_font_icon_svg, additional_custom_breakpoints, e_local_google_fonts; settings: css_print_method-external, google_font-enabled, font_display-swap">
+			<style>
+				.e-con.e-parent:nth-of-type(n+4):not(.e-lazyloaded):not(.e-no-lazyload),
+				.e-con.e-parent:nth-of-type(n+4):not(.e-lazyloaded):not(.e-no-lazyload) * {
+					background-image: none !important;
+				}
+				@media screen and (max-height: 1024px) {
+					.e-con.e-parent:nth-of-type(n+3):not(.e-lazyloaded):not(.e-no-lazyload),
+					.e-con.e-parent:nth-of-type(n+3):not(.e-lazyloaded):not(.e-no-lazyload) * {
+						background-image: none !important;
+					}
+				}
+				@media screen and (max-height: 640px) {
+					.e-con.e-parent:nth-of-type(n+2):not(.e-lazyloaded):not(.e-no-lazyload),
+					.e-con.e-parent:nth-of-type(n+2):not(.e-lazyloaded):not(.e-no-lazyload) * {
+						background-image: none !important;
+					}
+				}
+			</style>
+			<link rel="icon" href="https://8kplayer.net/wp-content/uploads/2023/11/8k_tv_new-150x150.png" sizes="32x32">
+<link rel="icon" href="https://8kplayer.net/wp-content/uploads/2023/11/8k_tv_new-300x300.png" sizes="192x192">
+<link rel="apple-touch-icon" href="https://8kplayer.net/wp-content/uploads/2023/11/8k_tv_new-300x300.png">
+<meta name="msapplication-TileImage" content="https://8kplayer.net/wp-content/uploads/2023/11/8k_tv_new-300x300.png">
+	<meta name="google-site-verification" content="S2MSzuiaGqbzwwnoAUc_SMvEpvqsZOfcWW2HpsVX1aU">
+	
+<style class="gtranslate_css">div.skiptranslate,#google_translate_element2{display:none!important}body{top:0!important}font font{background-color:transparent!important;box-shadow:none!important;position:initial!important}.gt_float_switcher{font-family:Arial;font-size:20px;border-radius:2px;color:#555;display:inline-block;line-height:20px;box-shadow:rgba(0,0,0,0.15) 0 5px 15px;background:#fff;overflow:hidden;transition:all .5s cubic-bezier(0.4, 0, 1, 1)}.gt_float_switcher img{vertical-align:middle;display:inline-block;width:33px;height:auto;margin:0 5px 0 0;border-radius:3px}.gt_float_switcher .gt_options{position:relative;z-index:777;max-height:250px;overflow-y:auto;transform:translateY(-30px);opacity:0;cursor:pointer;transition:all .8s cubic-bezier(.3,1.1,.4,1.1)}.gt_float_switcher .gt_options a{display:block;text-decoration:none;padding:10px 15px;color:#444;transition:color .4s linear}.gt_float_switcher .gt-selected{position:relative;z-index:888;background-color:#fff;cursor:pointer;text-transform:uppercase;overflow:hidden;text-align:left}.gt_float_switcher .gt_options.gt-open{opacity:1;transform:translateX(0px)}.gt_float_switcher .gt_options::-webkit-scrollbar-track{background-color:#f5f5f5}.gt_float_switcher .gt_options::-webkit-scrollbar{width:5px}.gt_float_switcher .gt_options::-webkit-scrollbar-thumb{background-color:#888}.gt_float_switcher .gt_options a:hover{background:#6070a0;color:#fff}.gt_float_switcher .gt_options a.gt-current{display:none}.gt_float_switcher .gt-selected .gt-current-lang{padding:10px 15px;color:#333;font-weight:bold}.gt_float_switcher .gt-selected .gt-current-lang span.gt-lang-code{position:relative;top:2px}.gt_float_switcher .gt-selected .gt-current-lang span.gt_float_switcher-arrow{display:inline-block;height:24px;width:15px;vertical-align:middle;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 285 285'><path d='M282 76.5l-14.2-14.3a9 9 0 0 0-13.1 0L142.5 174.4 30.3 62.2a9 9 0 0 0-13.2 0L3 76.5a9 9 0 0 0 0 13.1l133 133a9 9 0 0 0 13.1 0l133-133a9 9 0 0 0 0-13z' style='fill:%23666'/></svg>");background-position:50%;background-size:11px;background-repeat:no-repeat;transition:all .3s;transform:rotate(-180deg)}.gt_float_switcher .gt-selected .gt-current-lang span.gt_float_switcher-arrow.gt_arrow_rotate{transform:rotate(0deg)}</style></head>
+
+<body class="wp-singular post-template-default single single-post postid-3079 single-format-standard wp-custom-logo wp-theme-zeinet rttpg rttpg-7.8.1 radius-frontend rttpg-body-wrap zeinet-addon elementor-default elementor-kit-7 e--ua-blink e--ua-chrome e--ua-webkit" data-elementor-device-mode="desktop">
+	
+		
+	<div id="page" class="site page-wrapper">
+		<a class="skip-link screen-reader-text" href="https://8kplayer.net/how-to-install-and-set-up-8k-vip-app-on-firestick-android/#primary">Skip to content</a>
+
+		
+	
+                    <!-- the loop -->
+                            		<div data-elementor-type="wp-post" data-elementor-id="505" class="elementor elementor-505" data-elementor-post-type="header">
+						<header class="elementor-section elementor-top-section elementor-element elementor-element-94b5cf0 elementor-section-full_width elementor-section-height-default elementor-section-height-default" data-id="94b5cf0" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+							<div class="elementor-background-overlay"></div>
+							<div class="elementor-container elementor-column-gap-no">
+					<header class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-6988437" data-id="6988437" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-17b9610 elementor-widget elementor-widget-zeinet-header" data-id="17b9610" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;none&quot;}" data-widget_type="zeinet-header.default">
+				<div class="elementor-widget-container">
+					
+
+
+	<header class="main-header-two">
+		<nav class="main-menu main-menu-two">
+			<div class="main-menu-two__wrapper">
+				<div class="main-menu-two__wrapper-inner clearfix">
+					<div class="main-menu-two__left">
+						<div class="main-menu-two__logo">
+							<a href="https://8kplayer.net/">
+								<img decoding="async" width="140" height="77" src="./Install and Set up 8K VIP App IPTV on FireStick &amp; Android 2025_files/8k_tv_gold_logo-1.png" id="thm-logo" alt="8K Player VIP">
+							</a>
+						</div>
+					</div>
+					<div class="main-menu-two__right">
+						<div class="main-menu-two__right-inner">
+							<div class="main-menu-two__main-menu-box">
+								<a href="https://8kplayer.net/how-to-install-and-set-up-8k-vip-app-on-firestick-android/#" class="mobile-nav__toggler"><i class="fa fa-bars"></i></a>
+								<div class="menu-menu-basic-container"><ul id="menu-menu-basic" class="main-menu__list one-page-scroll-menu"><li id="menu-item-1869" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-1869"><a href="https://8kplayer.net/">Home</a></li>
+<li id="menu-item-1872" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1872"><a href="https://8kplayer.net/8k-player-subscription/">Packages</a></li>
+<li id="menu-item-3156" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3156"><a href="https://8kplayer.net/iptv-reseller-panel/">IPTV Reseller</a></li>
+<li id="menu-item-1871" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1871"><a href="https://8kplayer.net/contact/">Contact</a></li>
+<li id="menu-item-1870" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1870"><a href="https://8kplayer.net/about/">About us</a></li>
+<li id="menu-item-3307" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3307"><a href="https://8kplayer.net/blog/">Blog</a></li>
+</ul></div>							</div>
+							<div class="main-menu-two__main-menu-content-box">
+								<div class="main-menu-two__search-help-line-btn-box">
+									<div class="main-menu-two__search-box">
+																													</div>
+																			<div class="main-menu-two__help-line">
+											<div class="main-menu-two__help-line-icon icon-svg-large">
+												<span aria-hidden="true" class="  icon-support"></span>											</div>
+											<div class="main-menu-two__help-line-content">
+
+												<p class="main-menu-two__help-line-sub-title">Whatsapp</p>
+
+												<h5 class="main-menu-two__help-line-number"><a href="https://wa.me/13233707159"> +1 (323) 370 7159</a></h5>
+
+											</div>
+										</div>
+																										</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</nav>
+	</header>
+	
+
+
+
+<div class="mobile-nav__wrapper">
+	<div class="mobile-nav__overlay mobile-nav__toggler"></div>
+	<!-- /.mobile-nav__overlay -->
+	<div class="mobile-nav__content">
+		<span class="mobile-nav__close mobile-nav__toggler"></span>
+
+		<div class="logo-box">
+			<a href="https://8kplayer.net/">
+				<img decoding="async" width="140" height="77" src="./Install and Set up 8K VIP App IPTV on FireStick &amp; Android 2025_files/8k_tv_gold_logo.png" id="mobile-thm-logo" alt="8K Player VIP">
+			</a>
+		</div>
+		<!-- /.logo-box -->
+		<div class="mobile-nav__container"><ul id="menu-menu-basic" class="main-menu__list one-page-scroll-menu"><li id="menu-item-1869" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-1869"><a href="https://8kplayer.net/">Home</a></li>
+<li id="menu-item-1872" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1872"><a href="https://8kplayer.net/8k-player-subscription/">Packages</a></li>
+<li id="menu-item-3156" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3156"><a href="https://8kplayer.net/iptv-reseller-panel/">IPTV Reseller</a></li>
+<li id="menu-item-1871" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1871"><a href="https://8kplayer.net/contact/">Contact</a></li>
+<li id="menu-item-1870" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1870"><a href="https://8kplayer.net/about/">About us</a></li>
+<li id="menu-item-3307" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3307"><a href="https://8kplayer.net/blog/">Blog</a></li>
+</ul></div>
+		<!-- /.mobile-nav__container -->
+					<!-- /.mobile-nav__contact -->
+			<div class="mobile-nav__top">
+				<div class="mobile-nav__social">
+									</div><!-- /.mobile-nav__social -->
+			</div><!-- /.mobile-nav__top -->
+	</div>
+	<!-- /.mobile-nav__content -->
+</div>
+
+
+
+
+				</div>
+				</div>
+					</div>
+		</header>
+					</div>
+		</header>
+				</div>
+		                        <!-- end of the loop -->
+
+            
+        
+		
+					<!--Page Header Start-->
+<section class="page-header">
+	<div class="page-header-bg"></div>
+	<div class="main-slider-border"></div>
+	<div class="main-slider-border main-slider-border-two"></div>
+	<div class="main-slider-border main-slider-border-three"></div>
+	<div class="main-slider-border main-slider-border-four"></div>
+	<div class="main-slider-border main-slider-border-five"></div>
+	<div class="main-slider-border main-slider-border-six"></div>
+	<div class="container">
+		<div class="page-header__inner">
+												<h2>
+									How to Install and Set Up 8K Player VIP App on FireStick &amp; Android (2025)							</h2>
+		</div>
+	</div>
+</section>
+<!--Page Header End-->		
+<!--Blog Sidebar Start-->
+<section class="news-details">
+	<div class="container">
+		<div class="row">
+						<div class="col-xl-8 col-lg-7">
+				<div class="news-details__left">
+					<div id="primary" class="site-main">
+
+						
+<article id="post-3079" class="post-3079 post type-post status-publish format-standard has-post-thumbnail hentry category-8k-iptv-uk">
+
+	
+            <div class="post-thumbnail blog-single__content-img news-details__img">
+                <img width="770" height="410" src="./Install and Set up 8K VIP App IPTV on FireStick &amp; Android 2025_files/4K_VIP_5-770x410.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="8K VIP player iptv" decoding="async">                <div class="news-details__date">
+                    <p><span class="posted-on">  <a href="https://8kplayer.net/how-to-install-and-set-up-8k-vip-app-on-firestick-android/" rel="bookmark"><time class="entry-date published" datetime="2024-04-28T19:53:05+00:00">April 28, 2024</time><time class="updated" datetime="2025-05-18T11:53:40+00:00">May 18, 2025</time></a></span></p>
+                </div>
+            </div><!-- .post-thumbnail -->
+
+        
+	<div class="news-details__content blog-details__content clearfix">
+					<ul class="list-unstyled news-details__meta ml-0">
+				<li><span class="byline"><i class="fas fa-user-circle"></i> by <span class="author vcard"><a class="url fn n" href="https://8kplayer.net/author/rachid/">Admin</a></span></span></li>
+				<li><span class="comments-link"><i class="fas fa-comments"></i> <a href="https://8kplayer.net/how-to-install-and-set-up-8k-vip-app-on-firestick-android/#comments">7 Comments<span class="screen-reader-text"> on How to Install and Set Up 8K Player VIP App on FireStick &amp; Android (2025)</span></a></span></li>
+			</ul>
+				<div class="wp-block-yoast-seo-table-of-contents yoast-table-of-contents">
+<h2>Table of contents</h2>
+<ul>
+<li><a href="https://8kplayer.net/how-to-install-and-set-up-8k-vip-app-on-firestick-android/#h-what-is-8k-player-vip-app" data-level="1">What is 8K Player VIP App ?</a>
+<ul>
+<li><a href="https://8kplayer.net/how-to-install-and-set-up-8k-vip-app-on-firestick-android/#h-how-to-install-8k-player-vip-on-firestick" data-level="2">How To Install 8K Player VIP On FireStick?</a>
+<ul>
+<li><a href="https://8kplayer.net/how-to-install-and-set-up-8k-vip-app-on-firestick-android/#h-preparation-steps-for-sideloading-on-fire-tv" data-level="3">Preparation Steps for Sideloading on Fire TV:</a></li>
+<li><a href="https://8kplayer.net/how-to-install-and-set-up-8k-vip-app-on-firestick-android/#h-installing-8k-player-vip-with-downloader" data-level="3">Installing 8K Player VIP with Downloader:</a></li>
+<li><a href="https://8kplayer.net/how-to-install-and-set-up-8k-vip-app-on-firestick-android/#h-setting-up-8k-player-vip-on-firestick" data-level="3">Setting Up 8K Player VIP on FireStick:</a></li>
+<li><a href="https://8kplayer.net/how-to-install-and-set-up-8k-vip-app-on-firestick-android/#h-conclusion" data-level="3">Conclusion:</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<p>In this guide, we’ll walk you through the process of installing and setting up the 8K Player VIP player on various devices including FireStick, Fire TV, Android TV Boxes, Smart Android TVs, and Android Mobiles.</p>
+<h1 class="wp-block-heading" id="h-what-is-8k-player-vip-app">What is 8K Player VIP App ?</h1>
+<p>8K Player VIP, also known as <strong>8K player</strong>, serves as an IPTV player allowing users to access IPTV channels and programs provided by IPTV service providers. is compatible with a wide range of devices including Android, Samsung, Fire TV, and more. 8K Player VIP is a free service equipped with an Electronic Program Guide (EPG).</p>
+<h2 class="wp-block-heading" id="h-how-to-install-8k-player-vip-on-firestick"><strong>How To Install 8K Player VIP On FireStick?</strong></h2>
+<p><strong>Learn how to install 8K Player VIP on FireStick easily with step-by-step instructions. Enjoy high-quality streaming on your device hassle-free.</strong></p>
+<p>As the official 8K Player VIP app isn’t available on the Amazon App Store, we’ll utilize the Downloader app to sideload it onto FireStick.</p>
+<h3 class="wp-block-heading" id="h-preparation-steps-for-sideloading-on-fire-tv" style="font-size:28px">Preparation Steps for Sideloading on Fire TV:</h3>
+<p><strong>1. Search for and install the Downloader app via the search bar on your FireStick device.</strong></p>
+<p><strong>2. Navigate to Settings &gt; My Fire TV &gt; Developer options, and enable “Install unknown apps” for the Downloader app.</strong></p>
+<p><strong>3. If Developer Options isn’t visible, access Settings &gt; My Fire TV &gt; About, and click on your Fire TV Stick device seven times to enable Developer Options.</strong></p>
+<h3 class="wp-block-heading" id="h-installing-8k-player-vip-with-downloader">Installing 8K Player VIP with Downloader:</h3>
+<p>1. Launch the Downloader app and dismiss any prompts.</p>
+<figure class="wp-block-image size-full"><img fetchpriority="high" decoding="async" width="960" height="540" src="./Install and Set up 8K VIP App IPTV on FireStick &amp; Android 2025_files/image.png" alt="downloeder " class="wp-image-3004" srcset="https://8kplayer.net/wp-content/uploads/2024/04/image.png 960w, https://8kplayer.net/wp-content/uploads/2024/04/image-300x169.png 300w, https://8kplayer.net/wp-content/uploads/2024/04/image-768x432.png 768w" sizes="(max-width: 960px) 100vw, 960px"></figure>
+<p class="has-medium-font-size">2. Enter the following code/URL into the popup window: <strong>439873</strong> and click OK or Click <a href="https://mega.nz/file/acA1zabK#jxoJUKexelpPDFHnV4DiZqh4loarj3SUMOvJ347rivY">Downlowd </a>if you in Android.</p>
+<div class="wp-block-buttons is-content-justification-center is-layout-flex wp-container-core-buttons-is-layout-16018d1d wp-block-buttons-is-layout-flex">
+<div class="wp-block-button has-custom-width wp-block-button__width-50 is-style-fill"><a class="wp-block-button__link has-white-color has-luminous-vivid-orange-background-color has-text-color has-background has-link-color has-custom-font-size wp-element-button" href="https://8kplayer.net/wp-content/uploads/2024/09/8kplayer_vip.apk" style="border-radius:31px;font-size:18px"><strong>Downlowd</strong></a></div>
+</div>
+<p>3. Wait for the 8K Player VIP APK to download onto your FireStick.</p>
+<figure class="wp-block-image size-full"><img loading="lazy" decoding="async" width="960" height="540" src="./Install and Set up 8K VIP App IPTV on FireStick &amp; Android 2025_files/image-1.png" alt="Wait for the 4K VIP APK to download" class="wp-image-3005" srcset="https://8kplayer.net/wp-content/uploads/2024/04/image-1.png 960w, https://8kplayer.net/wp-content/uploads/2024/04/image-1-300x169.png 300w, https://8kplayer.net/wp-content/uploads/2024/04/image-1-768x432.png 768w" sizes="(max-width: 960px) 100vw, 960px"></figure>
+<p>4. Once downloaded, the Downloader app will prompt you to install the 8K Player VIP app. Click Install and wait for the installation to complete.</p>
+<p>5. Upon successful installation, you’ll see a notification saying “App installed.”</p>
+<h3 class="wp-block-heading" id="h-setting-up-8k-player-vip-on-firestick">Setting Up 8K Player VIP on FireStick:</h3>
+<p>1. Launch the 8K Player VIP app from your FireStick home screen.</p>
+<figure class="wp-block-image size-large"><img loading="lazy" decoding="async" width="1024" height="461" src="./Install and Set up 8K VIP App IPTV on FireStick &amp; Android 2025_files/4K_VIP_1-1024x461.webp" alt="4K VIP plater iptv uk" class="wp-image-3006" srcset="https://8kplayer.net/wp-content/uploads/2024/04/4K_VIP_1-1024x461.webp 1024w, https://8kplayer.net/wp-content/uploads/2024/04/4K_VIP_1-300x135.webp 300w, https://8kplayer.net/wp-content/uploads/2024/04/4K_VIP_1-768x346.webp 768w, https://8kplayer.net/wp-content/uploads/2024/04/4K_VIP_1-1536x691.webp 1536w, https://8kplayer.net/wp-content/uploads/2024/04/4K_VIP_1.webp 1600w" sizes="(max-width: 1024px) 100vw, 1024px"></figure>
+<p>2. On the first run, you’ll see a window displaying your device’s MAC address and remote control functions as there’s no playlist loaded yet.</p>
+<p>3. To upload a playlist, navigate to 8K VIP-1, 8K VIP-VPN, or 8K VIP-2 and click “Edit” on the popup window.</p>
+<figure class="wp-block-image size-large"><img loading="lazy" decoding="async" width="1024" height="461" src="./Install and Set up 8K VIP App IPTV on FireStick &amp; Android 2025_files/4K_VIP_4-1024x461.jpg" alt="8K VIP IPTV player" class="wp-image-3010" title="8K VIP IPTV player" srcset="https://8kplayer.net/wp-content/uploads/2024/04/4K_VIP_4-1024x461.jpg 1024w, https://8kplayer.net/wp-content/uploads/2024/04/4K_VIP_4-300x135.jpg 300w, https://8kplayer.net/wp-content/uploads/2024/04/4K_VIP_4-768x346.jpg 768w, https://8kplayer.net/wp-content/uploads/2024/04/4K_VIP_4-1536x691.jpg 1536w, https://8kplayer.net/wp-content/uploads/2024/04/4K_VIP_4.jpg 1600w" sizes="(max-width: 1024px) 100vw, 1024px"></figure>
+<p>4. Enter the username and password or M3U URL provided by your <a href="https://8kplayer.net/multiroom/">IPTV service provider,</a> then click “Update playlist.” For get FREE Test</p>
+<div class="wp-block-buttons has-custom-font-size has-medium-font-size is-content-justification-center is-layout-flex wp-container-core-buttons-is-layout-16018d1d wp-block-buttons-is-layout-flex">
+<div class="wp-block-button has-custom-width wp-block-button__width-50 is-style-fill"><a class="wp-block-button__link has-white-color has-luminous-vivid-orange-background-color has-text-color has-background has-link-color has-custom-font-size wp-element-button" href="https://8kplayer.net/free-test/" style="border-radius:36px;font-size:18px" target="_blank" rel="noreferrer noopener"><strong><mark style="background-color:rgba(0, 0, 0, 0)" class="has-inline-color has-white-color">FREE TEST</mark></strong></a></div>
+</div>
+<figure class="wp-block-image size-large"><img loading="lazy" decoding="async" width="1024" height="461" src="./Install and Set up 8K VIP App IPTV on FireStick &amp; Android 2025_files/4K_VIP_2-1024x461.webp" alt="4K iptv player M3U url " class="wp-image-3007" srcset="https://8kplayer.net/wp-content/uploads/2024/04/4K_VIP_2-1024x461.webp 1024w, https://8kplayer.net/wp-content/uploads/2024/04/4K_VIP_2-300x135.webp 300w, https://8kplayer.net/wp-content/uploads/2024/04/4K_VIP_2-768x346.webp 768w, https://8kplayer.net/wp-content/uploads/2024/04/4K_VIP_2-1536x691.webp 1536w, https://8kplayer.net/wp-content/uploads/2024/04/4K_VIP_2.webp 1600w" sizes="(max-width: 1024px) 100vw, 1024px"></figure>
+<p>5. Once you’ve added a working playlist, the 8K Player VIP FireStick app will load channels automatically.</p>
+<figure class="wp-block-image size-large"><img loading="lazy" decoding="async" width="1024" height="461" src="./Install and Set up 8K VIP App IPTV on FireStick &amp; Android 2025_files/4K_VIP_3-1024x461.webp" alt="4K vip player" class="wp-image-3008" srcset="https://8kplayer.net/wp-content/uploads/2024/04/4K_VIP_3-1024x461.webp 1024w, https://8kplayer.net/wp-content/uploads/2024/04/4K_VIP_3-300x135.webp 300w, https://8kplayer.net/wp-content/uploads/2024/04/4K_VIP_3-768x346.webp 768w, https://8kplayer.net/wp-content/uploads/2024/04/4K_VIP_3-1536x691.webp 1536w, https://8kplayer.net/wp-content/uploads/2024/04/4K_VIP_3.webp 1600w" sizes="(max-width: 1024px) 100vw, 1024px"></figure>
+<p>6. To access the channel menu, click on “Playlist” and select Live TV, Movies, or Series.</p>
+<figure class="wp-block-image size-large"><img loading="lazy" decoding="async" width="1024" height="461" src="./Install and Set up 8K VIP App IPTV on FireStick &amp; Android 2025_files/4K_VIP_5-1024x461.jpg" alt="select Live TV, Movies, or Series 8K" class="wp-image-3009" srcset="https://8kplayer.net/wp-content/uploads/2024/04/4K_VIP_5-1024x461.jpg 1024w, https://8kplayer.net/wp-content/uploads/2024/04/4K_VIP_5-300x135.jpg 300w, https://8kplayer.net/wp-content/uploads/2024/04/4K_VIP_5-768x346.jpg 768w, https://8kplayer.net/wp-content/uploads/2024/04/4K_VIP_5-1536x691.jpg 1536w, https://8kplayer.net/wp-content/uploads/2024/04/4K_VIP_5.jpg 1600w" sizes="(max-width: 1024px) 100vw, 1024px"></figure>
+<h3 class="wp-block-heading" id="h-conclusion">Conclusion:</h3>
+<p>By following these steps, you can easily install and set up the 8K Player VIP player on your FireStick device, granting you access to a wide array of IPTV channels and programs. Enjoy streaming your favorite content hassle-free!</p>
+	</div>
+
+	<footer class="entry-footer news-details__bottom">
+		<span class="news-details__tags"><span>Posted in </span><a href="https://8kplayer.net/8k-iptv-uk/" rel="category tag">8K Player IPTV</a></span>	</footer><!-- .entry-footer -->
+</article><!-- #post-3079 -->
+<div id="comments" class="comments-area">
+
+			<h3 class="comment-one__title">
+			7 thoughts on “<span>How to Install and Set Up 8K Player VIP App on FireStick &amp; Android (2025)</span>”		</h3><!-- .comments-title -->
+
+
+
+		<ul class="comment-list">
+					<li id="comment-73" class="comment even thread-even depth-1 parent">
+			<article id="div-comment-73" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="" src="./Install and Set up 8K VIP App IPTV on FireStick &amp; Android 2025_files/48a7e7447a563319d11b259dae18bbe47e317eeddb342cab01062c6c0d063fa9.jpg" srcset="https://secure.gravatar.com/avatar/48a7e7447a563319d11b259dae18bbe47e317eeddb342cab01062c6c0d063fa9?s=180&amp;d=mm&amp;r=g 2x" class="avatar avatar-90 photo" height="90" width="90" decoding="async">						<b class="fn">boukhadia</b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="https://8kplayer.net/how-to-install-and-set-up-8k-vip-app-on-firestick-android/#comment-73"><time datetime="2024-08-18T15:48:16+00:00">August 18, 2024 at 3:48 pm</time></a>					</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>8k</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="https://8kplayer.net/how-to-install-and-set-up-8k-vip-app-on-firestick-android/#comment-73" data-commentid="73" data-postid="3079" data-belowelement="div-comment-73" data-respondelement="respond" data-replyto="Reply to boukhadia" aria-label="Reply to boukhadia">Reply</a></div>			</article><!-- .comment-body -->
+		<ul class="children">
+		<li id="comment-76" class="comment byuser comment-author-rachid bypostauthor odd alt depth-2 parent">
+			<article id="div-comment-76" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="" src="./Install and Set up 8K VIP App IPTV on FireStick &amp; Android 2025_files/6ad07b5e5cf0d2ca4d00879f47c47cbbc681fa208aaa20358a755c62e8a44a00.jpg" srcset="https://secure.gravatar.com/avatar/6ad07b5e5cf0d2ca4d00879f47c47cbbc681fa208aaa20358a755c62e8a44a00?s=180&amp;d=mm&amp;r=g 2x" class="avatar avatar-90 photo" height="90" width="90" decoding="async">						<b class="fn"><a href="https://8kplayer.net/" class="url" rel="ugc">Admin</a></b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="https://8kplayer.net/how-to-install-and-set-up-8k-vip-app-on-firestick-android/#comment-76"><time datetime="2024-08-20T18:01:57+00:00">August 20, 2024 at 6:01 pm</time></a>					</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p><a href="https://2u.pw/8kv" rel="nofollow ugc">https://2u.pw/8kv</a></p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="https://8kplayer.net/how-to-install-and-set-up-8k-vip-app-on-firestick-android/#comment-76" data-commentid="76" data-postid="3079" data-belowelement="div-comment-76" data-respondelement="respond" data-replyto="Reply to Admin" aria-label="Reply to Admin">Reply</a></div>			</article><!-- .comment-body -->
+		<ul class="children">
+		<li id="comment-92" class="comment even depth-3 parent">
+			<article id="div-comment-92" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="" src="./Install and Set up 8K VIP App IPTV on FireStick &amp; Android 2025_files/b175cb49746546541e18078f707f5e83e9bd3c7915e15f9e4eff041c8d9583f1.jpg" srcset="https://secure.gravatar.com/avatar/b175cb49746546541e18078f707f5e83e9bd3c7915e15f9e4eff041c8d9583f1?s=180&amp;d=mm&amp;r=g 2x" class="avatar avatar-90 photo" height="90" width="90" decoding="async">						<b class="fn">Kevin williams</b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="https://8kplayer.net/how-to-install-and-set-up-8k-vip-app-on-firestick-android/#comment-92"><time datetime="2024-10-19T10:21:52+00:00">October 19, 2024 at 10:21 am</time></a>					</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Hi I was recommended by my mate can I get a year of 8k please</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="https://8kplayer.net/how-to-install-and-set-up-8k-vip-app-on-firestick-android/#comment-92" data-commentid="92" data-postid="3079" data-belowelement="div-comment-92" data-respondelement="respond" data-replyto="Reply to Kevin williams" aria-label="Reply to Kevin williams">Reply</a></div>			</article><!-- .comment-body -->
+		<ul class="children">
+		<li id="comment-93" class="comment byuser comment-author-rachid bypostauthor odd alt depth-4">
+			<article id="div-comment-93" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="" src="./Install and Set up 8K VIP App IPTV on FireStick &amp; Android 2025_files/6ad07b5e5cf0d2ca4d00879f47c47cbbc681fa208aaa20358a755c62e8a44a00.jpg" srcset="https://secure.gravatar.com/avatar/6ad07b5e5cf0d2ca4d00879f47c47cbbc681fa208aaa20358a755c62e8a44a00?s=180&amp;d=mm&amp;r=g 2x" class="avatar avatar-90 photo" height="90" width="90" decoding="async">						<b class="fn"><a href="https://8kplayer.net/" class="url" rel="ugc">Admin</a></b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="https://8kplayer.net/how-to-install-and-set-up-8k-vip-app-on-firestick-android/#comment-93"><time datetime="2024-10-19T18:18:02+00:00">October 19, 2024 at 6:18 pm</time></a>					</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>yes contact us<br>
+<a href="https://8kplayer.net/contact/" rel="ugc">https://8kplayer.net/contact/</a><br>
+or<br>
+<a href="https://8kplayer.net/multiroom/" rel="ugc">https://8kplayer.net/multiroom/</a></p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="https://8kplayer.net/how-to-install-and-set-up-8k-vip-app-on-firestick-android/#comment-93" data-commentid="93" data-postid="3079" data-belowelement="div-comment-93" data-respondelement="respond" data-replyto="Reply to Admin" aria-label="Reply to Admin">Reply</a></div>			</article><!-- .comment-body -->
+		</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+		<li id="comment-74" class="comment even thread-odd thread-alt depth-1 parent">
+			<article id="div-comment-74" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="" src="./Install and Set up 8K VIP App IPTV on FireStick &amp; Android 2025_files/48a7e7447a563319d11b259dae18bbe47e317eeddb342cab01062c6c0d063fa9.jpg" srcset="https://secure.gravatar.com/avatar/48a7e7447a563319d11b259dae18bbe47e317eeddb342cab01062c6c0d063fa9?s=180&amp;d=mm&amp;r=g 2x" class="avatar avatar-90 photo" height="90" width="90" decoding="async">						<b class="fn">boukhadia</b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="https://8kplayer.net/how-to-install-and-set-up-8k-vip-app-on-firestick-android/#comment-74"><time datetime="2024-08-18T15:48:38+00:00">August 18, 2024 at 3:48 pm</time></a>					</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>8k apk</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="https://8kplayer.net/how-to-install-and-set-up-8k-vip-app-on-firestick-android/#comment-74" data-commentid="74" data-postid="3079" data-belowelement="div-comment-74" data-respondelement="respond" data-replyto="Reply to boukhadia" aria-label="Reply to boukhadia">Reply</a></div>			</article><!-- .comment-body -->
+		<ul class="children">
+		<li id="comment-75" class="comment byuser comment-author-rachid bypostauthor odd alt depth-2">
+			<article id="div-comment-75" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="" src="./Install and Set up 8K VIP App IPTV on FireStick &amp; Android 2025_files/6ad07b5e5cf0d2ca4d00879f47c47cbbc681fa208aaa20358a755c62e8a44a00.jpg" srcset="https://secure.gravatar.com/avatar/6ad07b5e5cf0d2ca4d00879f47c47cbbc681fa208aaa20358a755c62e8a44a00?s=180&amp;d=mm&amp;r=g 2x" class="avatar avatar-90 photo" height="90" width="90" decoding="async">						<b class="fn"><a href="https://8kplayer.net/" class="url" rel="ugc">Admin</a></b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="https://8kplayer.net/how-to-install-and-set-up-8k-vip-app-on-firestick-android/#comment-75"><time datetime="2024-08-20T18:01:38+00:00">August 20, 2024 at 6:01 pm</time></a>					</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p><a href="https://2u.pw/8kv" rel="nofollow ugc">https://2u.pw/8kv</a></p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="https://8kplayer.net/how-to-install-and-set-up-8k-vip-app-on-firestick-android/#comment-75" data-commentid="75" data-postid="3079" data-belowelement="div-comment-75" data-respondelement="respond" data-replyto="Reply to Admin" aria-label="Reply to Admin">Reply</a></div>			</article><!-- .comment-body -->
+		</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+		<li id="comment-79" class="comment byuser comment-author-rachid bypostauthor even thread-even depth-1">
+			<article id="div-comment-79" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="" src="./Install and Set up 8K VIP App IPTV on FireStick &amp; Android 2025_files/6ad07b5e5cf0d2ca4d00879f47c47cbbc681fa208aaa20358a755c62e8a44a00.jpg" srcset="https://secure.gravatar.com/avatar/6ad07b5e5cf0d2ca4d00879f47c47cbbc681fa208aaa20358a755c62e8a44a00?s=180&amp;d=mm&amp;r=g 2x" class="avatar avatar-90 photo" height="90" width="90" decoding="async">						<b class="fn"><a href="https://8kplayer.net/" class="url" rel="ugc">Admin</a></b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="https://8kplayer.net/how-to-install-and-set-up-8k-vip-app-on-firestick-android/#comment-79"><time datetime="2024-09-11T18:18:08+00:00">September 11, 2024 at 6:18 pm</time></a>					</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>free trail  <a href="https://8kplayer.net/free-test/" rel="ugc">https://8kplayer.net/free-test/</a><br>
+or contact us on<br>
+<a href="https://wa.me/13233707159" target="_blank" rel="noopener nofollow ugc">Whatsapp : +1 (323) 3707 159</a><br>
+<a href="https://t.me/okiptvuk" target="_blank" rel="noopener nofollow ugc">Telegram : @okiptvuk</a></p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="https://8kplayer.net/how-to-install-and-set-up-8k-vip-app-on-firestick-android/#comment-79" data-commentid="79" data-postid="3079" data-belowelement="div-comment-79" data-respondelement="respond" data-replyto="Reply to Admin" aria-label="Reply to Admin">Reply</a></div>			</article><!-- .comment-body -->
+		</li><!-- #comment-## -->
+		</ul><!-- .comment-list -->
+
+		<div class="blog-pagination">
+					</div><!-- /.blog-pagination -->
+
+			<div id="respond" class="comment-respond comment-one__form">
+		<h2 class="comment-form__title">Leave a comment <small><a rel="nofollow" id="cancel-comment-reply-link" href="https://8kplayer.net/how-to-install-and-set-up-8k-vip-app-on-firestick-android/#respond" style="display:none;">Cancel reply</a></small></h2><form action="https://8kplayer.net/wp-comments-post.php" method="post" id="commentform" class="reply-form row" novalidate=""><div class="col-xl-6">
+		<div class="comment-form__input-box">
+			<input type="text" name="author" id="name" value="" placeholder="Your name">
+		</div>
+	</div>
+<div class="col-xl-6">
+		<div class="comment-form__input-box">
+			<input type="email" name="email" id="email" value="" placeholder="Email address">
+		</div>
+	</div>
+<div class="col-xl-12">
+		<div class="comment-form__input-box">
+			<textarea name="comment" id="comment" placeholder="Write comment"></textarea>
+		</div>
+		</div><p class="form-submit"><button type="submit" class="thm-btn comment-form__btn">Submit comment</button> <input type="hidden" name="comment_post_ID" value="3079" id="comment_post_ID">
+<input type="hidden" name="comment_parent" id="comment_parent" value="0">
+</p></form>	</div><!-- #respond -->
+	
+</div><!-- #comments -->
+					</div><!-- #main -->
+				</div>
+			</div>
+							<div class="col-xl-4 col-lg-5">
+					<div class="sidebar">
+						
+<aside id="secondary" class="widget-area">
+	<section id="block-3" class="sidebar__single widget widget_block">
+<div class="wp-block-group is-vertical is-layout-flex wp-container-core-group-is-layout-8cf370e7 wp-block-group-is-layout-flex">
+<h2 class="wp-block-heading" id="h-recent-posts">Recent Posts</h2>
+
+
+
+<div class="wp-block-group"><div class="wp-block-group__inner-container is-layout-constrained wp-block-group-is-layout-constrained"><ul class="wp-block-latest-posts__list wp-block-latest-posts"><li><a class="wp-block-latest-posts__post-title" href="https://8kplayer.net/8k-iptv-player/">How to Install &amp; Set Up 8K IPTV Player VIP App on FireStick &amp; Android (2025 Guide)</a></li>
+<li><a class="wp-block-latest-posts__post-title" href="https://8kplayer.net/benefits-you-get-from-iptv/">What are the Benefits You Get from IPTV Streaming?</a></li>
+<li><a class="wp-block-latest-posts__post-title" href="https://8kplayer.net/install-and-setup-strong-4k-power-app-on-firestick-and-android/">Install and Set Up Strong 4K Power App on FireStick and Android (2025)</a></li>
+<li><a class="wp-block-latest-posts__post-title" href="https://8kplayer.net/iptv-4k-player-app/">How to Set Up IPTV 4K Player App on  FireStick &amp; Android (2025)</a></li>
+<li><a class="wp-block-latest-posts__post-title" href="https://8kplayer.net/application-8k-player-vip/">Comment installer et configurer l’application VIP 8K Player sur FireStick et Android (2025)</a></li>
+</ul></div></div>
+</div>
+</section></aside><!-- #secondary -->					</div>
+				</div>
+					</div>
+	</div>
+</section>
+<!--Blog Sidebar End-->
+
+
+
+
+
+
+
+
+	
+                    <!-- the loop -->
+                            		<div data-elementor-type="wp-post" data-elementor-id="515" class="elementor elementor-515" data-elementor-post-type="footer">
+						<footer class="elementor-section elementor-top-section elementor-element elementor-element-3d312c8 elementor-section-full_width site-footer elementor-section-height-default elementor-section-height-default" data-id="3d312c8" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-no">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-fa516a8" data-id="fa516a8" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-da23f04 elementor-widget elementor-widget-zeinet-shape" data-id="da23f04" data-element_type="widget" data-widget_type="zeinet-shape.default">
+				<div class="elementor-widget-container">
+										</div>
+				</div>
+				<footer class="elementor-section elementor-inner-section elementor-element elementor-element-fb3421b site-footer__top  elementor-section-full_width elementor-section-height-default elementor-section-height-default" data-id="fb3421b" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-25 elementor-inner-column elementor-element elementor-element-333dc48" data-id="333dc48" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-84140a1 elementor-widget__width-initial elementor-widget elementor-widget-footer-about" data-id="84140a1" data-element_type="widget" data-widget_type="footer-about.default">
+				<div class="elementor-widget-container">
+						<div class="footer-widget__column footer-widget__about">
+		<div class="footer-widget__about-text-box">
+							<p class="footer-widget__about-text">Social Media</p>
+					</div>
+					<div class="site-footer__social">
+									<a href="https://www.facebook.com/profile.php?viewas=100000686899395&amp;id=61557983821453" target="_blank">
+						<svg xmlns="http://www.w3.org/2000/svg" fill="#089fac" width="800px" height="800px" viewBox="0 0 32 32"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><title>facebook</title><path d="M30.996 16.091c-0.001-8.281-6.714-14.994-14.996-14.994s-14.996 6.714-14.996 14.996c0 7.455 5.44 13.639 12.566 14.8l0.086 0.012v-10.478h-3.808v-4.336h3.808v-3.302c-0.019-0.167-0.029-0.361-0.029-0.557 0-2.923 2.37-5.293 5.293-5.293 0.141 0 0.281 0.006 0.42 0.016l-0.018-0.001c1.199 0.017 2.359 0.123 3.491 0.312l-0.134-0.019v3.69h-1.892c-0.086-0.012-0.185-0.019-0.285-0.019-1.197 0-2.168 0.97-2.168 2.168 0 0.068 0.003 0.135 0.009 0.202l-0.001-0.009v2.812h4.159l-0.665 4.336h-3.494v10.478c7.213-1.174 12.653-7.359 12.654-14.814v-0z"></path></g></svg>					</a>
+									<a href="https://www.pinterest.co.uk/Iptv_uk/" target="_blank">
+						<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#089fac" height="800px" width="800px" id="Layer_1" viewBox="-143 145 512 512" xml:space="preserve" stroke="#089fac"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M113,145c-141.4,0-256,114.6-256,256s114.6,256,256,256s256-114.6,256-256S254.4,145,113,145z M113,528.3 c-12.6,0-24.8-1.9-36.3-5.3c4.9-7.7,10.2-17.6,12.9-27.4c1.6-5.7,9-35.2,9-35.2c4.4,8.5,17.4,15.9,31.3,15.9 c41.2,0,69.1-37.5,69.1-87.7c0-38-32.2-73.3-81-73.3c-60.8,0-91.5,43.6-91.5,80c0,22,8.3,41.6,26.2,48.9c2.9,1.2,5.5,0,6.4-3.2 c0.6-2.2,2-7.9,2.6-10.3c0.9-3.2,0.5-4.3-1.8-7.1c-5.1-6.1-8.4-13.9-8.4-25.1c0-32.3,24.2-61.3,63-61.3c34.4,0,53.3,21,53.3,49 c0,36.9-16.3,68-40.6,68c-13.4,0-23.4-11.1-20.2-24.6c3.8-16.2,11.3-33.7,11.3-45.4c0-10.5-5.6-19.2-17.3-19.2 c-13.7,0-24.7,14.2-24.7,33.1c0,12.1,4.1,20.2,4.1,20.2s-14,59.4-16.5,69.7c-2.3,9.7-2.6,20.5-2.2,29.4 C16.5,497.8-15,452.7-15,400.3c0-70.7,57.3-128,128-128s128,57.3,128,128S183.7,528.3,113,528.3z"></path> </g></svg>					</a>
+									<a href="https://twitter.com/OK_IPTV_UK" target="_blank">
+						<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="800px" width="800px" id="_x32_" viewBox="0 0 512 512" xml:space="preserve" fill="#089fac" stroke="#089fac"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <style type="text/css"> .st0{fill:089fac;} </style> <g> <path class="st0" d="M256,0C114.615,0,0,114.615,0,256s114.615,256,256,256s256-114.615,256-256S397.385,0,256,0z M260.926,217.391 c0.084,0.004,0.164,0.021,0.25,0.025c-0.875-3.752-1.328-7.664-1.328-11.682c0-28.307,22.951-51.258,51.262-51.258 c14.742,0,28.063,6.225,37.414,16.188c9.6-1.89,18.684-5.174,27.129-9.523c1.781-0.864,3.566-1.723,5.32-2.674 c-3.039,9.334-8.744,17.412-16.141,23.532c-2.004,1.576-4.062,3.098-6.326,4.344c0.154-0.018,0.304-0.052,0.457-0.071 c-0.15,0.093-0.275,0.22-0.428,0.312c8.402-1.005,16.459-3.051,24.111-5.942c1.715-0.592,3.428-1.191,5.127-1.852 c-6.842,10.159-15.453,19.095-25.375,26.259c0.098,2.197,0.148,4.406,0.148,6.631c0,67.736-51.558,145.842-145.844,145.842 c-28.947,0-55.891-8.484-78.576-23.028c4.01,0.473,8.092,0.715,12.229,0.715c19.136,0,37.014-5.269,52.383-14.34 c3.871-2.23,7.658-4.639,11.273-7.365c-0.098-0.002-0.187-0.026-0.285-0.028c0.094-0.073,0.196-0.136,0.289-0.209 c-19.422-0.358-36.184-11.539-44.574-27.747c-1.25-2.489-2.32-5.096-3.164-7.831c3.086,0.58,6.246,0.898,9.5,0.898 c3.391,0,6.666-0.436,9.871-1.063c1.197-0.168,2.406-0.308,3.586-0.502c-0.156-0.032-0.293-0.1-0.449-0.133 c0.162-0.042,0.336-0.056,0.496-0.1c-23.449-4.709-41.119-25.428-41.119-50.262c0-0.196,0.002-0.387,0.004-0.58l0.024-0.055 c5.521,3.064,11.693,5.092,18.23,5.94c1.609,0.269,3.221,0.516,4.832,0.657c-0.11-0.074-0.205-0.164-0.314-0.238 c0.152,0.006,0.297,0.036,0.447,0.041c-13.754-9.191-22.803-24.883-22.803-42.666c0-8.142,1.988-15.787,5.367-22.623 c0.539-1.028,1.018-2.078,1.637-3.074c22.711,27.822,55.516,46.971,92.801,52.15c4.16,0.605,8.332,1.144,12.553,1.388 C260.934,217.443,260.932,217.416,260.926,217.391z"></path> </g> </g></svg>					</a>
+									<a href="https://youtube.com/@iptv_uk?si=JIfO8k9Ikx-fRtoB" target="_blank">
+						<svg xmlns="http://www.w3.org/2000/svg" fill="#089fac" width="800px" height="800px" viewBox="0 0 32 32"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><title>youtube</title><path d="M12.932 20.459v-8.917l7.839 4.459zM30.368 8.735c-0.354-1.301-1.354-2.307-2.625-2.663l-0.027-0.006c-3.193-0.406-6.886-0.638-10.634-0.638-0.381 0-0.761 0.002-1.14 0.007l0.058-0.001c-0.322-0.004-0.701-0.007-1.082-0.007-3.748 0-7.443 0.232-11.070 0.681l0.434-0.044c-1.297 0.363-2.297 1.368-2.644 2.643l-0.006 0.026c-0.4 2.109-0.628 4.536-0.628 7.016 0 0.088 0 0.176 0.001 0.263l-0-0.014c-0 0.074-0.001 0.162-0.001 0.25 0 2.48 0.229 4.906 0.666 7.259l-0.038-0.244c0.354 1.301 1.354 2.307 2.625 2.663l0.027 0.006c3.193 0.406 6.886 0.638 10.634 0.638 0.38 0 0.76-0.002 1.14-0.007l-0.058 0.001c0.322 0.004 0.702 0.007 1.082 0.007 3.749 0 7.443-0.232 11.070-0.681l-0.434 0.044c1.298-0.362 2.298-1.368 2.646-2.643l0.006-0.026c0.399-2.109 0.627-4.536 0.627-7.015 0-0.088-0-0.176-0.001-0.263l0 0.013c0-0.074 0.001-0.162 0.001-0.25 0-2.48-0.229-4.906-0.666-7.259l0.038 0.244z"></path></g></svg>					</a>
+							</div>
+			</div>
+				</div>
+				</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-25 elementor-inner-column elementor-element elementor-element-aaf4fb6" data-id="aaf4fb6" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-71f8953 elementor-widget__width-initial elementor-widget elementor-widget-footer-nav-menu" data-id="71f8953" data-element_type="widget" data-widget_type="footer-nav-menu.default">
+				<div class="elementor-widget-container">
+					<div class="footer-widget__column footer-widget__links clearfix">
+			<h3 class="footer-widget__title">Links</h3>
+	
+			<ul id="menu-footer-links" class="footer-widget__links-list list-unstyled clearfix ml-0"><li id="menu-item-1868" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-1868"><a href="https://8kplayer.net/">Home</a></li>
+<li id="menu-item-524" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-524"><a href="https://8kplayer.net/about/">About Us</a></li>
+<li id="menu-item-525" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-525"><a href="https://8kplayer.net/contact/">Contact</a></li>
+</ul>	</div>				</div>
+				</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-25 elementor-inner-column elementor-element elementor-element-99cb49d" data-id="99cb49d" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-870b814 elementor-widget__width-initial elementor-widget elementor-widget-footer-nav-menu" data-id="870b814" data-element_type="widget" data-widget_type="footer-nav-menu.default">
+				<div class="elementor-widget-container">
+					<div class="footer-widget__column footer-widget__links clearfix">
+			<h3 class="footer-widget__title">Policy</h3>
+	
+			<ul id="menu-policy" class="footer-widget__links-list list-unstyled clearfix ml-0"><li id="menu-item-1969" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy menu-item-1969"><a rel="privacy-policy" href="https://8kplayer.net/privacy-policy/">Privacy Policy</a></li>
+<li id="menu-item-1967" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1967"><a href="https://8kplayer.net/refund-policy/">Refund Policy</a></li>
+<li id="menu-item-1980" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1980"><a href="https://8kplayer.net/team-conditions/">Terms &amp; Conditions</a></li>
+<li id="menu-item-1968" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1968"><a href="https://8kplayer.net/faq/">FAQ</a></li>
+</ul>	</div>				</div>
+				</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-25 elementor-inner-column elementor-element elementor-element-9a4dd85" data-id="9a4dd85" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-4858b14 elementor-widget elementor-widget-footer-contact" data-id="4858b14" data-element_type="widget" data-widget_type="footer-contact.default">
+				<div class="elementor-widget-container">
+					<div class="footer-widget__column footer-widget__contact">
+			<h3 class="footer-widget__title">Contact</h3>
+				<ul class="list-unstyled footer-widget__contact-list ml-0">
+							<li>
+					<div class="text">
+						<p><a href="mailto:support@8kplayer.net">Email :  Support@8kplayer.net</a></p>
+					</div>
+				</li>
+							<li>
+					<div class="text">
+						<p><a href="https://wa.me/13233707159"> Whatsapp : +1 (323) 3707 159</a></p>
+					</div>
+				</li>
+							<li>
+					<div class="text">
+						<p><a href="https://t.me/okiptvuk"> Telegram : @iptv_8kplayer </a></p>
+					</div>
+				</li>
+					</ul>
+	</div>				</div>
+				</div>
+					</div>
+		</div>
+					</div>
+		</footer>
+					</div>
+		</div>
+					</div>
+		</footer>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-cf8ae54 elementor-section-full_width elementor-section-height-default elementor-section-height-default" data-id="cf8ae54" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-no">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-a199707" data-id="a199707" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-8da659b elementor-widget elementor-widget-footer-copyright" data-id="8da659b" data-element_type="widget" data-widget_type="footer-copyright.default">
+				<div class="elementor-widget-container">
+					<div class="site-footer__bottom">
+	<div class="container">
+		<div class="row">
+			<div class="col-xl-12">
+				<div class="site-footer__bottom-inner">
+											<p class="site-footer__bottom-text">Copyright © 2025 8KPLAYER.NET ,All rights reserved</p>
+									</div>
+			</div>
+		</div>
+	</div>
+</div>				</div>
+				</div>
+					</div>
+		</div>
+					</div>
+		</section>
+				</div>
+		                        <!-- end of the loop -->
+
+            
+        
+</div><!-- #page -->
+
+<script type="speculationrules">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"\/*"},{"not":{"href_matches":["\/wp-*.php","\/wp-admin\/*","\/wp-content\/uploads\/*","\/wp-content\/*","\/wp-content\/plugins\/*","\/wp-content\/themes\/zeinet\/*","\/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+</script>
+<div class="gtranslate_wrapper gt_container-hyitrc" id="gt-wrapper-43418980"><!-- GTranslate: https://gtranslate.com --><div id="google_translate_element2"></div><div id="gt_float_wrapper" style="position:fixed;bottom:20px;left:20px;z-index:999999;"><div class="gt_float_switcher notranslate" style="opacity: 1;"><div class="gt_options" style="display:none"><a href="https://8kplayer.net/how-to-install-and-set-up-8k-vip-app-on-firestick-android/#" class="nturl" data-gt-lang="ar"><img data-gt-lazy-src="/wp-content/plugins/gtranslate/flags/svg/ar.svg" alt="ar"> Arabic</a><a href="https://8kplayer.net/how-to-install-and-set-up-8k-vip-app-on-firestick-android/#" class="nturl" data-gt-lang="nl"><img data-gt-lazy-src="/wp-content/plugins/gtranslate/flags/svg/nl.svg" alt="nl"> Dutch</a><a href="https://8kplayer.net/how-to-install-and-set-up-8k-vip-app-on-firestick-android/#" class="nturl gt-current" data-gt-lang="en"><img data-gt-lazy-src="/wp-content/plugins/gtranslate/flags/svg/en.svg" alt="en"> English</a><a href="https://8kplayer.net/how-to-install-and-set-up-8k-vip-app-on-firestick-android/#" class="nturl" data-gt-lang="fr"><img data-gt-lazy-src="/wp-content/plugins/gtranslate/flags/svg/fr.svg" alt="fr"> French</a><a href="https://8kplayer.net/how-to-install-and-set-up-8k-vip-app-on-firestick-android/#" class="nturl" data-gt-lang="de"><img data-gt-lazy-src="/wp-content/plugins/gtranslate/flags/svg/de.svg" alt="de"> German</a><a href="https://8kplayer.net/how-to-install-and-set-up-8k-vip-app-on-firestick-android/#" class="nturl" data-gt-lang="ga"><img data-gt-lazy-src="/wp-content/plugins/gtranslate/flags/svg/ga.svg" alt="ga"> Irish</a><a href="https://8kplayer.net/how-to-install-and-set-up-8k-vip-app-on-firestick-android/#" class="nturl" data-gt-lang="it"><img data-gt-lazy-src="/wp-content/plugins/gtranslate/flags/svg/it.svg" alt="it"> Italian</a><a href="https://8kplayer.net/how-to-install-and-set-up-8k-vip-app-on-firestick-android/#" class="nturl" data-gt-lang="pt"><img data-gt-lazy-src="/wp-content/plugins/gtranslate/flags/svg/pt.svg" alt="pt"> Portuguese</a><a href="https://8kplayer.net/how-to-install-and-set-up-8k-vip-app-on-firestick-android/#" class="nturl" data-gt-lang="ru"><img data-gt-lazy-src="/wp-content/plugins/gtranslate/flags/svg/ru.svg" alt="ru"> Russian</a><a href="https://8kplayer.net/how-to-install-and-set-up-8k-vip-app-on-firestick-android/#" class="nturl" data-gt-lang="es"><img data-gt-lazy-src="/wp-content/plugins/gtranslate/flags/svg/es.svg" alt="es"> Spanish</a><a href="https://8kplayer.net/how-to-install-and-set-up-8k-vip-app-on-firestick-android/#" class="nturl" data-gt-lang="tr"><img data-gt-lazy-src="/wp-content/plugins/gtranslate/flags/svg/tr.svg" alt="tr"> Turkish</a></div><div class="gt-selected"><div class="gt-current-lang"><img src="./Install and Set up 8K VIP App IPTV on FireStick &amp; Android 2025_files/en.svg" alt="en"> <span class="gt-lang-code">en</span> <span class="gt_float_switcher-arrow"></span></div></div></div></div></div>		<!-- Start of StatCounter Code -->
+		<script>
+			<!--
+			var sc_project=13135339;
+			var sc_security="b4f4d6ac";
+					</script>
+        <script type="text/javascript" src="./Install and Set up 8K VIP App IPTV on FireStick &amp; Android 2025_files/counter.js" async=""></script><span class="statcounter"><a id="sc_counter_13135339" class="statcounter" href="https://www.statcounter.com/" target="_blank"><img src="./Install and Set up 8K VIP App IPTV on FireStick &amp; Android 2025_files/t.php" alt="StatCounter - Free Web Tracker and Counter" border="0" undefined=""></a></span>
+		<noscript><div class="statcounter"><a title="web analytics" href="https://statcounter.com/"><img class="statcounter" src="https://c.statcounter.com/13135339/0/b4f4d6ac/0/" alt="web analytics" /></a></div></noscript>
+		<!-- End of StatCounter Code -->
+		
+<div class="joinchat joinchat--right joinchat--show joinchat--tooltip" data-settings="{&quot;telephone&quot;:&quot;13233707159&quot;,&quot;mobile_only&quot;:false,&quot;button_delay&quot;:3,&quot;whatsapp_web&quot;:false,&quot;qr&quot;:false,&quot;message_views&quot;:2,&quot;message_delay&quot;:10,&quot;message_badge&quot;:true,&quot;message_send&quot;:&quot;Hi , How are You&quot;,&quot;message_hash&quot;:&quot;3e00a321&quot;}" aria-hidden="false">
+	<div class="joinchat__button" role="button" tabindex="0">
+							</div>
+			<div class="joinchat__badge joinchat__badge--in">1</div>
+					<div class="joinchat__chatbox" role="dialog" aria-labelledby="joinchat__label" aria-modal="true">
+			<div class="joinchat__header">
+				<div id="joinchat__label">
+											<svg class="joinchat__wa" width="120" height="28" viewBox="0 0 120 28"><title>WhatsApp</title><path d="M117.2 17c0 .4-.2.7-.4 1-.1.3-.4.5-.7.7l-1 .2c-.5 0-.9 0-1.2-.2l-.7-.7a3 3 0 0 1-.4-1 5.4 5.4 0 0 1 0-2.3c0-.4.2-.7.4-1l.7-.7a2 2 0 0 1 1.1-.3 2 2 0 0 1 1.8 1l.4 1a5.3 5.3 0 0 1 0 2.3m2.5-3c-.1-.7-.4-1.3-.8-1.7a4 4 0 0 0-1.3-1.2c-.6-.3-1.3-.4-2-.4-.6 0-1.2.1-1.7.4a3 3 0 0 0-1.2 1.1V11H110v13h2.7v-4.5c.4.4.8.8 1.3 1 .5.3 1 .4 1.6.4a4 4 0 0 0 3.2-1.5c.4-.5.7-1 .8-1.6.2-.6.3-1.2.3-1.9s0-1.3-.3-2zm-13.1 3c0 .4-.2.7-.4 1l-.7.7-1.1.2c-.4 0-.8 0-1-.2-.4-.2-.6-.4-.8-.7a3 3 0 0 1-.4-1 5.4 5.4 0 0 1 0-2.3c0-.4.2-.7.4-1 .1-.3.4-.5.7-.7a2 2 0 0 1 1-.3 2 2 0 0 1 1.9 1l.4 1a5.4 5.4 0 0 1 0 2.3m1.7-4.7a4 4 0 0 0-3.3-1.6c-.6 0-1.2.1-1.7.4a3 3 0 0 0-1.2 1.1V11h-2.6v13h2.7v-4.5c.3.4.7.8 1.2 1 .6.3 1.1.4 1.7.4a4 4 0 0 0 3.2-1.5c.4-.5.6-1 .8-1.6s.3-1.2.3-1.9-.1-1.3-.3-2c-.2-.6-.4-1.2-.8-1.6m-17.5 3.2 1.7-5 1.7 5zm.2-8.2-5 13.4h3l1-3h5l1 3h3L94 7.3zm-5.3 9.1-.6-.8-1-.5a11.6 11.6 0 0 0-2.3-.5l-1-.3a2 2 0 0 1-.6-.3.7.7 0 0 1-.3-.6c0-.2 0-.4.2-.5l.3-.3h.5l.5-.1c.5 0 .9 0 1.2.3.4.1.6.5.6 1h2.5c0-.6-.2-1.1-.4-1.5a3 3 0 0 0-1-1 4 4 0 0 0-1.3-.5 7.7 7.7 0 0 0-3 0c-.6.1-1 .3-1.4.5l-1 1a3 3 0 0 0-.4 1.5 2 2 0 0 0 1 1.8l1 .5 1.1.3 2.2.6c.6.2.8.5.8 1l-.1.5-.4.4a2 2 0 0 1-.6.2 2.8 2.8 0 0 1-1.4 0 2 2 0 0 1-.6-.3l-.5-.5-.2-.8H77c0 .7.2 1.2.5 1.6.2.5.6.8 1 1 .4.3.9.5 1.4.6a8 8 0 0 0 3.3 0c.5 0 1-.2 1.4-.5a3 3 0 0 0 1-1c.3-.5.4-1 .4-1.6 0-.5 0-.9-.3-1.2M74.7 8h-2.6v3h-1.7v1.7h1.7v5.8c0 .5 0 .9.2 1.2l.7.7 1 .3a7.8 7.8 0 0 0 2 0h.7v-2.1a3.4 3.4 0 0 1-.8 0l-1-.1-.2-1v-4.8h2V11h-2zm-7.6 9v.5l-.3.8-.7.6c-.2.2-.7.2-1.2.2h-.6l-.5-.2a1 1 0 0 1-.4-.4l-.1-.6.1-.6.4-.4.5-.3a4.8 4.8 0 0 1 1.2-.2 8 8 0 0 0 1.2-.2l.4-.3v1zm2.6 1.5v-5c0-.6 0-1.1-.3-1.5l-1-.8-1.4-.4a10.9 10.9 0 0 0-3.1 0l-1.5.6c-.4.2-.7.6-1 1a3 3 0 0 0-.5 1.5h2.7c0-.5.2-.9.5-1a2 2 0 0 1 1.3-.4h.6l.6.2.3.4.2.7c0 .3 0 .5-.3.6-.1.2-.4.3-.7.4l-1 .1a22 22 0 0 0-2.4.4l-1 .5c-.3.2-.6.5-.8.9-.2.3-.3.8-.3 1.3s.1 1 .3 1.3c.1.4.4.7.7 1l1 .4c.4.2.9.2 1.3.2a6 6 0 0 0 1.8-.2c.6-.2 1-.5 1.5-1a4 4 0 0 0 .2 1H70l-.3-1zm-11-6.7c-.2-.4-.6-.6-1-.8-.5-.2-1-.3-1.8-.3-.5 0-1 .1-1.5.4a3 3 0 0 0-1.3 1.2v-5h-2.7v13.4H53v-5.1c0-1 .2-1.7.5-2.2.3-.4.9-.6 1.6-.6.6 0 1 .2 1.3.6s.4 1 .4 1.8v5.5h2.7v-6c0-.6 0-1.2-.2-1.6 0-.5-.3-1-.5-1.3zm-14 4.7-2.3-9.2h-2.8l-2.3 9-2.2-9h-3l3.6 13.4h3l2.2-9.2 2.3 9.2h3l3.6-13.4h-3zm-24.5.2L18 15.6c-.3-.1-.6-.2-.8.2A20 20 0 0 1 16 17c-.2.2-.4.3-.7.1-.4-.2-1.5-.5-2.8-1.7-1-1-1.7-2-2-2.4-.1-.4 0-.5.2-.7l.5-.6.4-.6v-.6L10.4 8c-.3-.6-.6-.5-.8-.6H9c-.2 0-.6.1-.9.5C7.8 8.2 7 9 7 10.7s1.3 3.4 1.4 3.6c.2.3 2.5 3.7 6 5.2l1.9.8c.8.2 1.6.2 2.2.1s2-.8 2.3-1.6c.3-.9.3-1.5.2-1.7l-.7-.4zM14 25.3c-2 0-4-.5-5.8-1.6l-.4-.2-4.4 1.1 1.2-4.2-.3-.5A11.5 11.5 0 0 1 22.1 5.7 11.5 11.5 0 0 1 14 25.3M14 0A13.8 13.8 0 0 0 2 20.7L0 28l7.3-2A13.8 13.8 0 1 0 14 0"></path></svg>
+									</div>
+				<div class="joinchat__close" role="button" tabindex="0" aria-label="Close"></div>
+			</div>
+			<div class="joinchat__scroll">
+				<div class="joinchat__content">
+					<div class="joinchat__chat"><div class="joinchat__bubble">Hello 👋 How we Can help you?</div></div>
+					<div class="joinchat__open" role="button" tabindex="0">
+													<div class="joinchat__open__text">Open chat</div>
+												<svg class="joinchat__open__icon" width="60" height="60" viewBox="0 0 400 400">
+							<path class="joinchat__pa" d="M168.83 200.504H79.218L33.04 44.284a1 1 0 0 1 1.386-1.188L365.083 199.04a1 1 0 0 1 .003 1.808L34.432 357.903a1 1 0 0 1-1.388-1.187l29.42-99.427"></path>
+							<path class="joinchat__pb" d="M318.087 318.087c-52.982 52.982-132.708 62.922-195.725 29.82l-80.449 10.18 10.358-80.112C18.956 214.905 28.836 134.99 81.913 81.913c65.218-65.217 170.956-65.217 236.174 0 42.661 42.661 57.416 102.661 44.265 157.316"></path>
+						</svg>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+			<script src="data:text/javascript;base64,CgkJCQljb25zdCBsYXp5bG9hZFJ1bk9ic2VydmVyID0gKCkgPT4gewoJCQkJCWNvbnN0IGxhenlsb2FkQmFja2dyb3VuZHMgPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yQWxsKCBgLmUtY29uLmUtcGFyZW50Om5vdCguZS1sYXp5bG9hZGVkKWAgKTsKCQkJCQljb25zdCBsYXp5bG9hZEJhY2tncm91bmRPYnNlcnZlciA9IG5ldyBJbnRlcnNlY3Rpb25PYnNlcnZlciggKCBlbnRyaWVzICkgPT4gewoJCQkJCQllbnRyaWVzLmZvckVhY2goICggZW50cnkgKSA9PiB7CgkJCQkJCQlpZiAoIGVudHJ5LmlzSW50ZXJzZWN0aW5nICkgewoJCQkJCQkJCWxldCBsYXp5bG9hZEJhY2tncm91bmQgPSBlbnRyeS50YXJnZXQ7CgkJCQkJCQkJaWYoIGxhenlsb2FkQmFja2dyb3VuZCApIHsKCQkJCQkJCQkJbGF6eWxvYWRCYWNrZ3JvdW5kLmNsYXNzTGlzdC5hZGQoICdlLWxhenlsb2FkZWQnICk7CgkJCQkJCQkJfQoJCQkJCQkJCWxhenlsb2FkQmFja2dyb3VuZE9ic2VydmVyLnVub2JzZXJ2ZSggZW50cnkudGFyZ2V0ICk7CgkJCQkJCQl9CgkJCQkJCX0pOwoJCQkJCX0sIHsgcm9vdE1hcmdpbjogJzIwMHB4IDBweCAyMDBweCAwcHgnIH0gKTsKCQkJCQlsYXp5bG9hZEJhY2tncm91bmRzLmZvckVhY2goICggbGF6eWxvYWRCYWNrZ3JvdW5kICkgPT4gewoJCQkJCQlsYXp5bG9hZEJhY2tncm91bmRPYnNlcnZlci5vYnNlcnZlKCBsYXp5bG9hZEJhY2tncm91bmQgKTsKCQkJCQl9ICk7CgkJCQl9OwoJCQkJY29uc3QgZXZlbnRzID0gWwoJCQkJCSdET01Db250ZW50TG9hZGVkJywKCQkJCQknZWxlbWVudG9yL2xhenlsb2FkL29ic2VydmUnLAoJCQkJXTsKCQkJCWV2ZW50cy5mb3JFYWNoKCAoIGV2ZW50ICkgPT4gewoJCQkJCWRvY3VtZW50LmFkZEV2ZW50TGlzdGVuZXIoIGV2ZW50LCBsYXp5bG9hZFJ1bk9ic2VydmVyICk7CgkJCQl9ICk7CgkJCQ==" data-rocket-status="executed">
+				const lazyloadRunObserver = () => {
+					const lazyloadBackgrounds = document.querySelectorAll( `.e-con.e-parent:not(.e-lazyloaded)` );
+					const lazyloadBackgroundObserver = new IntersectionObserver( ( entries ) => {
+						entries.forEach( ( entry ) => {
+							if ( entry.isIntersecting ) {
+								let lazyloadBackground = entry.target;
+								if( lazyloadBackground ) {
+									lazyloadBackground.classList.add( 'e-lazyloaded' );
+								}
+								lazyloadBackgroundObserver.unobserve( entry.target );
+							}
+						});
+					}, { rootMargin: '200px 0px 200px 0px' } );
+					lazyloadBackgrounds.forEach( ( lazyloadBackground ) => {
+						lazyloadBackgroundObserver.observe( lazyloadBackground );
+					} );
+				};
+				const events = [
+					'DOMContentLoaded',
+					'elementor/lazyload/observe',
+				];
+				events.forEach( ( event ) => {
+					document.addEventListener( event, lazyloadRunObserver );
+				} );
+			</script>
+			<link rel="stylesheet" id="elementor-frontend-css" href="./Install and Set up 8K VIP App IPTV on FireStick &amp; Android 2025_files/frontend.min.css" media="all">
+<link rel="stylesheet" id="elementor-post-505-css" href="./Install and Set up 8K VIP App IPTV on FireStick &amp; Android 2025_files/post-505.css" media="all">
+<link rel="stylesheet" id="elementor-post-515-css" href="./Install and Set up 8K VIP App IPTV on FireStick &amp; Android 2025_files/post-515.css" media="all">
+<style id="core-block-supports-inline-css">
+.wp-container-core-buttons-is-layout-16018d1d{justify-content:center;}.wp-container-core-group-is-layout-8cf370e7{flex-direction:column;align-items:flex-start;}
+</style>
+<link rel="stylesheet" id="joinchat-css" href="./Install and Set up 8K VIP App IPTV on FireStick &amp; Android 2025_files/joinchat.min.css" media="all">
+<style id="joinchat-inline-css">
+.joinchat{--ch:142;--cs:70%;--cl:49%;--bw:1}
+</style>
+<link rel="stylesheet" id="elementor-post-7-css" href="./Install and Set up 8K VIP App IPTV on FireStick &amp; Android 2025_files/post-7.css" media="all">
+<link rel="stylesheet" id="elementor-pro-css" href="./Install and Set up 8K VIP App IPTV on FireStick &amp; Android 2025_files/frontend(1).min.css" media="all">
+<link data-minify="1" rel="stylesheet" id="elementor-gf-local-roboto-css" href="./Install and Set up 8K VIP App IPTV on FireStick &amp; Android 2025_files/roboto.css" media="all">
+<link data-minify="1" rel="stylesheet" id="elementor-gf-local-robotoslab-css" href="./Install and Set up 8K VIP App IPTV on FireStick &amp; Android 2025_files/robotoslab.css" media="all">
+<script id="wp-hooks-js" src="./Install and Set up 8K VIP App IPTV on FireStick &amp; Android 2025_files/hooks.min.js" data-rocket-status="executed"></script>
+<script id="wp-i18n-js" src="./Install and Set up 8K VIP App IPTV on FireStick &amp; Android 2025_files/i18n.min.js" data-rocket-status="executed"></script>
+<script id="wp-i18n-js-after" src="data:text/javascript;base64,CndwLmkxOG4uc2V0TG9jYWxlRGF0YSggeyAndGV4dCBkaXJlY3Rpb25cdTAwMDRsdHInOiBbICdsdHInIF0gfSApOwo=" data-rocket-status="executed">
+wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
+</script>
+<script data-minify="1" id="swv-js" defer="" src="./Install and Set up 8K VIP App IPTV on FireStick &amp; Android 2025_files/index.js" data-rocket-status="executed"></script>
+<script id="contact-form-7-js-before" src="data:text/javascript;base64,CnZhciB3cGNmNyA9IHsKICAgICJhcGkiOiB7CiAgICAgICAgInJvb3QiOiAiaHR0cHM6XC9cLzhrcGxheWVyLm5ldFwvd3AtanNvblwvIiwKICAgICAgICAibmFtZXNwYWNlIjogImNvbnRhY3QtZm9ybS03XC92MSIKICAgIH0sCiAgICAiY2FjaGVkIjogMQp9Owo=" data-rocket-status="executed">
+var wpcf7 = {
+    "api": {
+        "root": "https:\/\/8kplayer.net\/wp-json\/",
+        "namespace": "contact-form-7\/v1"
+    },
+    "cached": 1
+};
+</script>
+<script data-minify="1" id="contact-form-7-js" defer="" src="./Install and Set up 8K VIP App IPTV on FireStick &amp; Android 2025_files/index(1).js" data-rocket-status="executed"></script>
+<script id="nbcpf-intlTelInput-script-js" defer="" src="./Install and Set up 8K VIP App IPTV on FireStick &amp; Android 2025_files/intlTelInput.min.js" data-rocket-status="executed"></script>
+<script id="nbcpf-countryFlag-script-js-extra">
+var nbcpf = {"ajaxurl":"https:\/\/8kplayer.net\/wp-admin\/admin-ajax.php"};
+</script>
+<script id="nbcpf-countryFlag-script-js" defer="" src="./Install and Set up 8K VIP App IPTV on FireStick &amp; Android 2025_files/countrySelect.min.js" data-rocket-status="executed"></script>
+<script id="nbcpf-countryFlag-script-js-after" src="data:text/javascript;base64,d2luZG93LmFkZEV2ZW50TGlzdGVuZXIoJ0RPTUNvbnRlbnRMb2FkZWQnLCBmdW5jdGlvbigpIHsKCQkoZnVuY3Rpb24oJCkgewoJCQkkKGZ1bmN0aW9uKCkgewoKCQkJCWZ1bmN0aW9uIHJlbmRlcl9jb3VudHJ5X2ZsYWdzKCl7CgoJCQkJCSQoIi53cGNmNy1jb3VudHJ5dGV4dCIpLmNvdW50cnlTZWxlY3QoewoJCQkJCQkKCQkJCQl9KTsKCQkJCQkkKCIud3BjZjctcGhvbmV0ZXh0IikuaW50bFRlbElucHV0KHsKCQkJCQkJYXV0b0hpZGVEaWFsQ29kZTogdHJ1ZSwKCQkJCQkJYXV0b1BsYWNlaG9sZGVyOiB0cnVlLAoJCQkJCQluYXRpb25hbE1vZGU6IGZhbHNlLAoJCQkJCQlzZXBhcmF0ZURpYWxDb2RlOiB0cnVlLAoJCQkJCQloaWRkZW5JbnB1dDogImZ1bGxfbnVtYmVyIiwKCQkJCQkJaW5pdGlhbENvdW50cnk6ICJnYiIsb25seUNvdW50cmllczogWyJzbCIsInNnIiwic3giLCJzayIsInNpIiwic2IiLCJzbyIsInphIiwiZ3MiLCJzcyIsImVzIiwibGsiLCJzZCIsInNyIiwic2oiLCJzeiIsInNlIiwiY2giLCJzeSIsInR3IiwidGoiLCJ0eiIsInRoIiwidGwiLCJ0ZyIsInRrIiwidG8iLCJ0dCIsInRuIiwidHIiLCJ0bSIsInRjIiwidHYiLCJ1ZyIsInVhIiwiYWUiLCJnYiIsInVzIiwidW0iLCJ1eSIsInV6IiwidnUiLCJ2ZSIsInZuIiwidmciLCJ2aSIsIndmIiwiZWgiLCJ5ZSIsInptIiwienciXSwJCgkJCQkJfSk7CgkKCQkJCQkkKCIud3BjZjctcGhvbmV0ZXh0IikuZWFjaChmdW5jdGlvbiAoKSB7CgoJCQkJCQl2YXIgZGlhbF9jb2RlID0gJCh0aGlzKS5zaWJsaW5ncygiLmZsYWctY29udGFpbmVyIikuZmluZCgiLnNlbGVjdGVkLWZsYWcgLnNlbGVjdGVkLWRpYWwtY29kZSIpLnRleHQoKTsKCgkJCQkJCXZhciBoaWRkZW5JbnB1dCA9ICQodGhpcykuYXR0cignbmFtZScpOwoJCQkJCQkvL2NvbnNvbGUubG9nKGhpZGRlbklucHV0KTsKCQkJCQkJJCgiaW5wdXRbbmFtZT0iK2hpZGRlbklucHV0KyItY291bnRyeS1jb2RlXSIpLnZhbChkaWFsX2NvZGUpOwoJCQkJCX0pOwoJCQkJCQoJCQkJCSQoIi53cGNmNy1waG9uZXRleHQiKS5vbigiY291bnRyeWNoYW5nZSIsIGZ1bmN0aW9uKCkgewoJCQkJCQkvLyBkbyBzb21ldGhpbmcgd2l0aCBpdGkuZ2V0U2VsZWN0ZWRDb3VudHJ5RGF0YSgpCgkJCQkJCS8vY29uc29sZS5sb2codGhpcy52YWx1ZSk7CgkJCQkJCXZhciBkaWFsX2NvZGUgPSAkKHRoaXMpLnNpYmxpbmdzKCIuZmxhZy1jb250YWluZXIiKS5maW5kKCIuc2VsZWN0ZWQtZmxhZyAuc2VsZWN0ZWQtZGlhbC1jb2RlIikudGV4dCgpOwoJCQkJCQl2YXIgaGlkZGVuSW5wdXQgPSAkKHRoaXMpLmF0dHIoIm5hbWUiKTsKCQkJCQkJJCgiaW5wdXRbbmFtZT0iK2hpZGRlbklucHV0KyItY291bnRyeS1jb2RlXSIpLnZhbChkaWFsX2NvZGUpOwoJCQkJCQkKCQkJCQl9KTsKCQkJCQkJJCgiLndwY2Y3LXBob25ldGV4dCIpLm9uKCJrZXl1cCIsIGZ1bmN0aW9uKCkgewoJCQkJCQkJdmFyIGRpYWxfY29kZSA9ICQodGhpcykuc2libGluZ3MoIi5mbGFnLWNvbnRhaW5lciIpLmZpbmQoIi5zZWxlY3RlZC1mbGFnIC5zZWxlY3RlZC1kaWFsLWNvZGUiKS50ZXh0KCk7CgkJCQkJCQkKCQkJCQkJCXZhciB2YWx1ZSAgID0gJCh0aGlzKS52YWwoKTsKCQkJCQkJCS8vY29uc29sZS5sb2coZGlhbF9jb2RlLCB2YWx1ZSk7CgkJCQkJCQlpZih2YWx1ZSA9PSAiKyIpCgkJCQkJCQkJJCh0aGlzKS52YWwoIiIpOwoJCQkJCQkJZWxzZSBpZih2YWx1ZS5pbmRleE9mKCIrIikgPT0gIi0xIikKCQkJCQkJCQkkKHRoaXMpLnZhbChkaWFsX2NvZGUgKyB2YWx1ZSk7CgkJCQkJCQllbHNlIGlmKHZhbHVlLmluZGV4T2YoIisiKSA+IDApCgkJCQkJCQkJJCh0aGlzKS52YWwoZGlhbF9jb2RlICsgdmFsdWUuc3Vic3RyaW5nKGRpYWxfY29kZS5sZW5ndGgpKTsKCQkJCQkJfSk7CgkJCQkJCSQoIi53cGNmNy1jb3VudHJ5dGV4dCIpLm9uKCJrZXl1cCIsIGZ1bmN0aW9uKCkgewoJCQkJCQl2YXIgY291bnRyeV9uYW1lID0gJCh0aGlzKS5zaWJsaW5ncygiLmZsYWctZHJvcGRvd24iKS5maW5kKCIuY291bnRyeS1saXN0IGxpLmFjdGl2ZSBzcGFuLmNvdW50cnktbmFtZSIpLnRleHQoKTsKCQkJCQkJaWYoY291bnRyeV9uYW1lID09ICIiKQoJCQkJCQl2YXIgY291bnRyeV9uYW1lID0gJCh0aGlzKS5zaWJsaW5ncygiLmZsYWctZHJvcGRvd24iKS5maW5kKCIuY291bnRyeS1saXN0IGxpLmhpZ2hsaWdodCBzcGFuLmNvdW50cnktbmFtZSIpLnRleHQoKTsKCQkJCQkJCgkJCQkJCXZhciB2YWx1ZSAgID0gJCh0aGlzKS52YWwoKTsKCQkJCQkJLy9jb25zb2xlLmxvZyhjb3VudHJ5X25hbWUsIHZhbHVlKTsKCQkJCQkJJCh0aGlzKS52YWwoY291bnRyeV9uYW1lICsgdmFsdWUuc3Vic3RyaW5nKGNvdW50cnlfbmFtZS5sZW5ndGgpKTsKCQkJCQl9KTsKCQkJCX0KCgkJCQl2YXIgaXBfYWRkcmVzcyA9ICIiOwoKCQkJCWpRdWVyeS5hamF4KHsKCQkJCQl1cmw6ICJodHRwczovL2lwYXBpLmNvL2pzb24vIiwKCQkJCQkvL3VybDogImh0dHBzOi8vcmVhbGx5ZnJlZWdlb2lwLm9yZy9qc29uLyIsCgkJCQkJc3VjY2VzczogZnVuY3Rpb24ocmVzcG9uc2UpewoJCQkJCQkKCQkJCQkJLy9jb25zb2xlLmxvZyhyZXNwb25zZSk7CgkJCQkJCS8vdmFyIGxvY2F0aW9uID0gSlNPTi5wYXJzZShyZXNwb25zZSk7CgkJCQkJCWNvbnNvbGUubG9nKHJlc3BvbnNlLmNvdW50cnlfY29kZSk7CgkJCQkJCWlmKCByZXNwb25zZS5jb3VudHJ5X2NvZGUgIT09IHVuZGVmaW5lZCl7CgkJCQkJCQkvL2NvbnNvbGUubG9nKCJoZXJlIik7CgkJCQkJCQkkKCIud3BjZjctY291bnRyeXRleHQiKS5jb3VudHJ5U2VsZWN0KHtkZWZhdWx0Q291bnRyeTogcmVzcG9uc2UuY291bnRyeV9jb2RlLnRvTG93ZXJDYXNlKCksCgkJCQkJCQl9KTsKCQkJCQkJCSQoIi53cGNmNy1waG9uZXRleHQiKS5pbnRsVGVsSW5wdXQoewoJCQkJCQkJCWF1dG9IaWRlRGlhbENvZGU6IHRydWUsCgkJCQkJCQkJYXV0b1BsYWNlaG9sZGVyOiB0cnVlLAoJCQkJCQkJCW5hdGlvbmFsTW9kZTogZmFsc2UsCgkJCQkJCQkJc2VwYXJhdGVEaWFsQ29kZTogdHJ1ZSwKCQkJCQkJCQloaWRkZW5JbnB1dDogImZ1bGxfbnVtYmVyIixpbml0aWFsQ291bnRyeTogcmVzcG9uc2UuY291bnRyeV9jb2RlLnRvTG93ZXJDYXNlKCksb25seUNvdW50cmllczogWyJzbCIsInNnIiwic3giLCJzayIsInNpIiwic2IiLCJzbyIsInphIiwiZ3MiLCJzcyIsImVzIiwibGsiLCJzZCIsInNyIiwic2oiLCJzeiIsInNlIiwiY2giLCJzeSIsInR3IiwidGoiLCJ0eiIsInRoIiwidGwiLCJ0ZyIsInRrIiwidG8iLCJ0dCIsInRuIiwidHIiLCJ0bSIsInRjIiwidHYiLCJ1ZyIsInVhIiwiYWUiLCJnYiIsInVzIiwidW0iLCJ1eSIsInV6IiwidnUiLCJ2ZSIsInZuIiwidmciLCJ2aSIsIndmIiwiZWgiLCJ5ZSIsInptIiwienciXSwJCgkJCQkJCQl9KTsKCQkJCQkJCQoJCQkJCQkJJCgiLndwY2Y3LXBob25ldGV4dCIpLmVhY2goZnVuY3Rpb24gKCkgewoJCQkJCQkJCXZhciBoaWRkZW5JbnB1dCA9ICQodGhpcykuYXR0cignbmFtZScpOwoJCQkJCQkJCS8vY29uc29sZS5sb2coaGlkZGVuSW5wdXQpOwoJCQkJCQkJCXZhciBkaWFsX2NvZGUgPSAkKHRoaXMpLnNpYmxpbmdzKCIuZmxhZy1jb250YWluZXIiKS5maW5kKCIuc2VsZWN0ZWQtZmxhZyAuc2VsZWN0ZWQtZGlhbC1jb2RlIikudGV4dCgpOwoJCQkJCQkJCSQoImlucHV0W25hbWU9IitoaWRkZW5JbnB1dCsiLWNvdW50cnktY29kZV0iKS52YWwoZGlhbF9jb2RlKTsKCQkJCQkJCX0pOwoJCQkJCQkJCgkJCQkJCQkkKCIud3BjZjctcGhvbmV0ZXh0Iikub24oImNvdW50cnljaGFuZ2UiLCBmdW5jdGlvbigpIHsKCQkJCQkJCQkvLyBkbyBzb21ldGhpbmcgd2l0aCBpdGkuZ2V0U2VsZWN0ZWRDb3VudHJ5RGF0YSgpCgkJCQkJCQkJLy9jb25zb2xlLmxvZyh0aGlzLnZhbHVlKTsKCQkJCQkJCQl2YXIgZGlhbF9jb2RlID0gJCh0aGlzKS5zaWJsaW5ncygiLmZsYWctY29udGFpbmVyIikuZmluZCgiLnNlbGVjdGVkLWZsYWcgLnNlbGVjdGVkLWRpYWwtY29kZSIpLnRleHQoKTsKCQkJCQkJCQl2YXIgaGlkZGVuSW5wdXQgPSAkKHRoaXMpLmF0dHIoIm5hbWUiKTsKCQkJCQkJCQkkKCJpbnB1dFtuYW1lPSIraGlkZGVuSW5wdXQrIi1jb3VudHJ5LWNvZGVdIikudmFsKGRpYWxfY29kZSk7CgkJCQkJCQkJCgkJCQkJCQl9KTsKCQkJCQkJCQkKCQkJCQkJCQkkKCIud3BjZjctcGhvbmV0ZXh0Iikub24oImtleXVwIiwgZnVuY3Rpb24oKSB7CgkJCQkJCQkJCXZhciBkaWFsX2NvZGUgPSAkKHRoaXMpLnNpYmxpbmdzKCIuZmxhZy1jb250YWluZXIiKS5maW5kKCIuc2VsZWN0ZWQtZmxhZyAuc2VsZWN0ZWQtZGlhbC1jb2RlIikudGV4dCgpOwoJCQkJCQkJCQkKCQkJCQkJCQkJdmFyIHZhbHVlICAgPSAkKHRoaXMpLnZhbCgpOwoJCQkJCQkJCQlpZih2YWx1ZSA9PSAiKyIpCgkJCQkJCQkJCQkkKHRoaXMpLnZhbCgiIik7CgkJCQkJCQkJCWVsc2UgaWYodmFsdWUuaW5kZXhPZigiKyIpID09ICItMSIpCgkJCQkJCQkJCQkkKHRoaXMpLnZhbChkaWFsX2NvZGUgKyB2YWx1ZSk7CgkJCQkJCQkJCWVsc2UgaWYodmFsdWUuaW5kZXhPZigiKyIpID4gMCkKCQkJCQkJCQkJCSQodGhpcykudmFsKGRpYWxfY29kZSArIHZhbHVlLnN1YnN0cmluZyhkaWFsX2NvZGUubGVuZ3RoKSk7CgkJCQkJCQkJCgkJCQkJCQkJfSk7JCgiLndwY2Y3LWNvdW50cnl0ZXh0Iikub24oImtleXVwIiwgZnVuY3Rpb24oKSB7CgkJCQkJCQkJdmFyIGNvdW50cnlfbmFtZSA9ICQodGhpcykuc2libGluZ3MoIi5mbGFnLWRyb3Bkb3duIikuZmluZCgiLmNvdW50cnktbGlzdCBsaS5hY3RpdmUgc3Bhbi5jb3VudHJ5LW5hbWUiKS50ZXh0KCk7CgkJCQkJCQkJaWYoY291bnRyeV9uYW1lID09ICIiKQoJCQkJCQkJCXZhciBjb3VudHJ5X25hbWUgPSAkKHRoaXMpLnNpYmxpbmdzKCIuZmxhZy1kcm9wZG93biIpLmZpbmQoIi5jb3VudHJ5LWxpc3QgbGkuaGlnaGxpZ2h0IHNwYW4uY291bnRyeS1uYW1lIikudGV4dCgpOwoJCQkJCQkJCQoJCQkJCQkJCXZhciB2YWx1ZSAgID0gJCh0aGlzKS52YWwoKTsKCQkJCQkJCQkvL2NvbnNvbGUubG9nKGNvdW50cnlfbmFtZSwgdmFsdWUpOwoJCQkJCQkJCSQodGhpcykudmFsKGNvdW50cnlfbmFtZSArIHZhbHVlLnN1YnN0cmluZyhjb3VudHJ5X25hbWUubGVuZ3RoKSk7CgkJCQkJCQl9KTsKCgkJCQkJCX0gZWxzZSB7CgoJCQkJCQkJcmVuZGVyX2NvdW50cnlfZmxhZ3MoKTsKCgkJCQkJCX0KCgkJCQkJfSwKCQkJCQllcnJvcjogZnVuY3Rpb24oKXsKCQkJCQkJcmVuZGVyX2NvdW50cnlfZmxhZ3MoKTsKCQkJCQl9CgkJCQl9KTsKCQkJfSk7CgkJfSkoalF1ZXJ5KTsKfSk7" data-rocket-status="executed">window.addEventListener('DOMContentLoaded', function() {
+		(function($) {
+			$(function() {
+
+				function render_country_flags(){
+
+					$(".wpcf7-countrytext").countrySelect({
+						
+					});
+					$(".wpcf7-phonetext").intlTelInput({
+						autoHideDialCode: true,
+						autoPlaceholder: true,
+						nationalMode: false,
+						separateDialCode: true,
+						hiddenInput: "full_number",
+						initialCountry: "gb",onlyCountries: ["sl","sg","sx","sk","si","sb","so","za","gs","ss","es","lk","sd","sr","sj","sz","se","ch","sy","tw","tj","tz","th","tl","tg","tk","to","tt","tn","tr","tm","tc","tv","ug","ua","ae","gb","us","um","uy","uz","vu","ve","vn","vg","vi","wf","eh","ye","zm","zw"],	
+					});
+	
+					$(".wpcf7-phonetext").each(function () {
+
+						var dial_code = $(this).siblings(".flag-container").find(".selected-flag .selected-dial-code").text();
+
+						var hiddenInput = $(this).attr('name');
+						//console.log(hiddenInput);
+						$("input[name="+hiddenInput+"-country-code]").val(dial_code);
+					});
+					
+					$(".wpcf7-phonetext").on("countrychange", function() {
+						// do something with iti.getSelectedCountryData()
+						//console.log(this.value);
+						var dial_code = $(this).siblings(".flag-container").find(".selected-flag .selected-dial-code").text();
+						var hiddenInput = $(this).attr("name");
+						$("input[name="+hiddenInput+"-country-code]").val(dial_code);
+						
+					});
+						$(".wpcf7-phonetext").on("keyup", function() {
+							var dial_code = $(this).siblings(".flag-container").find(".selected-flag .selected-dial-code").text();
+							
+							var value   = $(this).val();
+							//console.log(dial_code, value);
+							if(value == "+")
+								$(this).val("");
+							else if(value.indexOf("+") == "-1")
+								$(this).val(dial_code + value);
+							else if(value.indexOf("+") > 0)
+								$(this).val(dial_code + value.substring(dial_code.length));
+						});
+						$(".wpcf7-countrytext").on("keyup", function() {
+						var country_name = $(this).siblings(".flag-dropdown").find(".country-list li.active span.country-name").text();
+						if(country_name == "")
+						var country_name = $(this).siblings(".flag-dropdown").find(".country-list li.highlight span.country-name").text();
+						
+						var value   = $(this).val();
+						//console.log(country_name, value);
+						$(this).val(country_name + value.substring(country_name.length));
+					});
+				}
+
+				var ip_address = "";
+
+				jQuery.ajax({
+					url: "https://ipapi.co/json/",
+					//url: "https://reallyfreegeoip.org/json/",
+					success: function(response){
+						
+						//console.log(response);
+						//var location = JSON.parse(response);
+						console.log(response.country_code);
+						if( response.country_code !== undefined){
+							//console.log("here");
+							$(".wpcf7-countrytext").countrySelect({defaultCountry: response.country_code.toLowerCase(),
+							});
+							$(".wpcf7-phonetext").intlTelInput({
+								autoHideDialCode: true,
+								autoPlaceholder: true,
+								nationalMode: false,
+								separateDialCode: true,
+								hiddenInput: "full_number",initialCountry: response.country_code.toLowerCase(),onlyCountries: ["sl","sg","sx","sk","si","sb","so","za","gs","ss","es","lk","sd","sr","sj","sz","se","ch","sy","tw","tj","tz","th","tl","tg","tk","to","tt","tn","tr","tm","tc","tv","ug","ua","ae","gb","us","um","uy","uz","vu","ve","vn","vg","vi","wf","eh","ye","zm","zw"],	
+							});
+							
+							$(".wpcf7-phonetext").each(function () {
+								var hiddenInput = $(this).attr('name');
+								//console.log(hiddenInput);
+								var dial_code = $(this).siblings(".flag-container").find(".selected-flag .selected-dial-code").text();
+								$("input[name="+hiddenInput+"-country-code]").val(dial_code);
+							});
+							
+							$(".wpcf7-phonetext").on("countrychange", function() {
+								// do something with iti.getSelectedCountryData()
+								//console.log(this.value);
+								var dial_code = $(this).siblings(".flag-container").find(".selected-flag .selected-dial-code").text();
+								var hiddenInput = $(this).attr("name");
+								$("input[name="+hiddenInput+"-country-code]").val(dial_code);
+								
+							});
+								
+								$(".wpcf7-phonetext").on("keyup", function() {
+									var dial_code = $(this).siblings(".flag-container").find(".selected-flag .selected-dial-code").text();
+									
+									var value   = $(this).val();
+									if(value == "+")
+										$(this).val("");
+									else if(value.indexOf("+") == "-1")
+										$(this).val(dial_code + value);
+									else if(value.indexOf("+") > 0)
+										$(this).val(dial_code + value.substring(dial_code.length));
+								
+								});$(".wpcf7-countrytext").on("keyup", function() {
+								var country_name = $(this).siblings(".flag-dropdown").find(".country-list li.active span.country-name").text();
+								if(country_name == "")
+								var country_name = $(this).siblings(".flag-dropdown").find(".country-list li.highlight span.country-name").text();
+								
+								var value   = $(this).val();
+								//console.log(country_name, value);
+								$(this).val(country_name + value.substring(country_name.length));
+							});
+
+						} else {
+
+							render_country_flags();
+
+						}
+
+					},
+					error: function(){
+						render_country_flags();
+					}
+				});
+			});
+		})(jQuery);
+});</script>
+<script id="rocket-browser-checker-js-after" src="data:text/javascript;base64,CiJ1c2Ugc3RyaWN0Ijt2YXIgX2NyZWF0ZUNsYXNzPWZ1bmN0aW9uKCl7ZnVuY3Rpb24gZGVmaW5lUHJvcGVydGllcyh0YXJnZXQscHJvcHMpe2Zvcih2YXIgaT0wO2k8cHJvcHMubGVuZ3RoO2krKyl7dmFyIGRlc2NyaXB0b3I9cHJvcHNbaV07ZGVzY3JpcHRvci5lbnVtZXJhYmxlPWRlc2NyaXB0b3IuZW51bWVyYWJsZXx8ITEsZGVzY3JpcHRvci5jb25maWd1cmFibGU9ITAsInZhbHVlImluIGRlc2NyaXB0b3ImJihkZXNjcmlwdG9yLndyaXRhYmxlPSEwKSxPYmplY3QuZGVmaW5lUHJvcGVydHkodGFyZ2V0LGRlc2NyaXB0b3Iua2V5LGRlc2NyaXB0b3IpfX1yZXR1cm4gZnVuY3Rpb24oQ29uc3RydWN0b3IscHJvdG9Qcm9wcyxzdGF0aWNQcm9wcyl7cmV0dXJuIHByb3RvUHJvcHMmJmRlZmluZVByb3BlcnRpZXMoQ29uc3RydWN0b3IucHJvdG90eXBlLHByb3RvUHJvcHMpLHN0YXRpY1Byb3BzJiZkZWZpbmVQcm9wZXJ0aWVzKENvbnN0cnVjdG9yLHN0YXRpY1Byb3BzKSxDb25zdHJ1Y3Rvcn19KCk7ZnVuY3Rpb24gX2NsYXNzQ2FsbENoZWNrKGluc3RhbmNlLENvbnN0cnVjdG9yKXtpZighKGluc3RhbmNlIGluc3RhbmNlb2YgQ29uc3RydWN0b3IpKXRocm93IG5ldyBUeXBlRXJyb3IoIkNhbm5vdCBjYWxsIGEgY2xhc3MgYXMgYSBmdW5jdGlvbiIpfXZhciBSb2NrZXRCcm93c2VyQ29tcGF0aWJpbGl0eUNoZWNrZXI9ZnVuY3Rpb24oKXtmdW5jdGlvbiBSb2NrZXRCcm93c2VyQ29tcGF0aWJpbGl0eUNoZWNrZXIob3B0aW9ucyl7X2NsYXNzQ2FsbENoZWNrKHRoaXMsUm9ja2V0QnJvd3NlckNvbXBhdGliaWxpdHlDaGVja2VyKSx0aGlzLnBhc3NpdmVTdXBwb3J0ZWQ9ITEsdGhpcy5fY2hlY2tQYXNzaXZlT3B0aW9uKHRoaXMpLHRoaXMub3B0aW9ucz0hIXRoaXMucGFzc2l2ZVN1cHBvcnRlZCYmb3B0aW9uc31yZXR1cm4gX2NyZWF0ZUNsYXNzKFJvY2tldEJyb3dzZXJDb21wYXRpYmlsaXR5Q2hlY2tlcixbe2tleToiX2NoZWNrUGFzc2l2ZU9wdGlvbiIsdmFsdWU6ZnVuY3Rpb24oc2VsZil7dHJ5e3ZhciBvcHRpb25zPXtnZXQgcGFzc2l2ZSgpe3JldHVybiEoc2VsZi5wYXNzaXZlU3VwcG9ydGVkPSEwKX19O3dpbmRvdy5hZGRFdmVudExpc3RlbmVyKCJ0ZXN0IixudWxsLG9wdGlvbnMpLHdpbmRvdy5yZW1vdmVFdmVudExpc3RlbmVyKCJ0ZXN0IixudWxsLG9wdGlvbnMpfWNhdGNoKGVycil7c2VsZi5wYXNzaXZlU3VwcG9ydGVkPSExfX19LHtrZXk6ImluaXRSZXF1ZXN0SWRsZUNhbGxiYWNrIix2YWx1ZTpmdW5jdGlvbigpeyExIGluIHdpbmRvdyYmKHdpbmRvdy5yZXF1ZXN0SWRsZUNhbGxiYWNrPWZ1bmN0aW9uKGNiKXt2YXIgc3RhcnQ9RGF0ZS5ub3coKTtyZXR1cm4gc2V0VGltZW91dChmdW5jdGlvbigpe2NiKHtkaWRUaW1lb3V0OiExLHRpbWVSZW1haW5pbmc6ZnVuY3Rpb24oKXtyZXR1cm4gTWF0aC5tYXgoMCw1MC0oRGF0ZS5ub3coKS1zdGFydCkpfX0pfSwxKX0pLCExIGluIHdpbmRvdyYmKHdpbmRvdy5jYW5jZWxJZGxlQ2FsbGJhY2s9ZnVuY3Rpb24oaWQpe3JldHVybiBjbGVhclRpbWVvdXQoaWQpfSl9fSx7a2V5OiJpc0RhdGFTYXZlck1vZGVPbiIsdmFsdWU6ZnVuY3Rpb24oKXtyZXR1cm4iY29ubmVjdGlvbiJpbiBuYXZpZ2F0b3ImJiEwPT09bmF2aWdhdG9yLmNvbm5lY3Rpb24uc2F2ZURhdGF9fSx7a2V5OiJzdXBwb3J0c0xpbmtQcmVmZXRjaCIsdmFsdWU6ZnVuY3Rpb24oKXt2YXIgZWxlbT1kb2N1bWVudC5jcmVhdGVFbGVtZW50KCJsaW5rIik7cmV0dXJuIGVsZW0ucmVsTGlzdCYmZWxlbS5yZWxMaXN0LnN1cHBvcnRzJiZlbGVtLnJlbExpc3Quc3VwcG9ydHMoInByZWZldGNoIikmJndpbmRvdy5JbnRlcnNlY3Rpb25PYnNlcnZlciYmImlzSW50ZXJzZWN0aW5nImluIEludGVyc2VjdGlvbk9ic2VydmVyRW50cnkucHJvdG90eXBlfX0se2tleToiaXNTbG93Q29ubmVjdGlvbiIsdmFsdWU6ZnVuY3Rpb24oKXtyZXR1cm4iY29ubmVjdGlvbiJpbiBuYXZpZ2F0b3ImJiJlZmZlY3RpdmVUeXBlImluIG5hdmlnYXRvci5jb25uZWN0aW9uJiYoIjJnIj09PW5hdmlnYXRvci5jb25uZWN0aW9uLmVmZmVjdGl2ZVR5cGV8fCJzbG93LTJnIj09PW5hdmlnYXRvci5jb25uZWN0aW9uLmVmZmVjdGl2ZVR5cGUpfX1dKSxSb2NrZXRCcm93c2VyQ29tcGF0aWJpbGl0eUNoZWNrZXJ9KCk7Cg==" data-rocket-status="executed">
+"use strict";var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||!1,descriptor.configurable=!0,"value"in descriptor&&(descriptor.writable=!0),Object.defineProperty(target,descriptor.key,descriptor)}}return function(Constructor,protoProps,staticProps){return protoProps&&defineProperties(Constructor.prototype,protoProps),staticProps&&defineProperties(Constructor,staticProps),Constructor}}();function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor))throw new TypeError("Cannot call a class as a function")}var RocketBrowserCompatibilityChecker=function(){function RocketBrowserCompatibilityChecker(options){_classCallCheck(this,RocketBrowserCompatibilityChecker),this.passiveSupported=!1,this._checkPassiveOption(this),this.options=!!this.passiveSupported&&options}return _createClass(RocketBrowserCompatibilityChecker,[{key:"_checkPassiveOption",value:function(self){try{var options={get passive(){return!(self.passiveSupported=!0)}};window.addEventListener("test",null,options),window.removeEventListener("test",null,options)}catch(err){self.passiveSupported=!1}}},{key:"initRequestIdleCallback",value:function(){!1 in window&&(window.requestIdleCallback=function(cb){var start=Date.now();return setTimeout(function(){cb({didTimeout:!1,timeRemaining:function(){return Math.max(0,50-(Date.now()-start))}})},1)}),!1 in window&&(window.cancelIdleCallback=function(id){return clearTimeout(id)})}},{key:"isDataSaverModeOn",value:function(){return"connection"in navigator&&!0===navigator.connection.saveData}},{key:"supportsLinkPrefetch",value:function(){var elem=document.createElement("link");return elem.relList&&elem.relList.supports&&elem.relList.supports("prefetch")&&window.IntersectionObserver&&"isIntersecting"in IntersectionObserverEntry.prototype}},{key:"isSlowConnection",value:function(){return"connection"in navigator&&"effectiveType"in navigator.connection&&("2g"===navigator.connection.effectiveType||"slow-2g"===navigator.connection.effectiveType)}}]),RocketBrowserCompatibilityChecker}();
+</script>
+<script id="rocket-preload-links-js-extra">
+var RocketPreloadLinksConfig = {"excludeUris":"\/(?:.+\/)?feed(?:\/(?:.+\/?)?)?$|\/(?:.+\/)?embed\/|\/(index.php\/)?(.*)wp-json(\/.*|$)|\/refer\/|\/go\/|\/recommend\/|\/recommends\/","usesTrailingSlash":"1","imageExt":"jpg|jpeg|gif|png|tiff|bmp|webp|avif|pdf|doc|docx|xls|xlsx|php","fileExt":"jpg|jpeg|gif|png|tiff|bmp|webp|avif|pdf|doc|docx|xls|xlsx|php|html|htm","siteUrl":"https:\/\/8kplayer.net","onHoverDelay":"100","rateThrottle":"3"};
+</script>
+<script id="rocket-preload-links-js-after" src="data:text/javascript;base64,CihmdW5jdGlvbigpIHsKInVzZSBzdHJpY3QiO3ZhciByPSJmdW5jdGlvbiI9PXR5cGVvZiBTeW1ib2wmJiJzeW1ib2wiPT10eXBlb2YgU3ltYm9sLml0ZXJhdG9yP2Z1bmN0aW9uKGUpe3JldHVybiB0eXBlb2YgZX06ZnVuY3Rpb24oZSl7cmV0dXJuIGUmJiJmdW5jdGlvbiI9PXR5cGVvZiBTeW1ib2wmJmUuY29uc3RydWN0b3I9PT1TeW1ib2wmJmUhPT1TeW1ib2wucHJvdG90eXBlPyJzeW1ib2wiOnR5cGVvZiBlfSxlPWZ1bmN0aW9uKCl7ZnVuY3Rpb24gaShlLHQpe2Zvcih2YXIgbj0wO248dC5sZW5ndGg7bisrKXt2YXIgaT10W25dO2kuZW51bWVyYWJsZT1pLmVudW1lcmFibGV8fCExLGkuY29uZmlndXJhYmxlPSEwLCJ2YWx1ZSJpbiBpJiYoaS53cml0YWJsZT0hMCksT2JqZWN0LmRlZmluZVByb3BlcnR5KGUsaS5rZXksaSl9fXJldHVybiBmdW5jdGlvbihlLHQsbil7cmV0dXJuIHQmJmkoZS5wcm90b3R5cGUsdCksbiYmaShlLG4pLGV9fSgpO2Z1bmN0aW9uIGkoZSx0KXtpZighKGUgaW5zdGFuY2VvZiB0KSl0aHJvdyBuZXcgVHlwZUVycm9yKCJDYW5ub3QgY2FsbCBhIGNsYXNzIGFzIGEgZnVuY3Rpb24iKX12YXIgdD1mdW5jdGlvbigpe2Z1bmN0aW9uIG4oZSx0KXtpKHRoaXMsbiksdGhpcy5icm93c2VyPWUsdGhpcy5jb25maWc9dCx0aGlzLm9wdGlvbnM9dGhpcy5icm93c2VyLm9wdGlvbnMsdGhpcy5wcmVmZXRjaGVkPW5ldyBTZXQsdGhpcy5ldmVudFRpbWU9bnVsbCx0aGlzLnRocmVzaG9sZD0xMTExLHRoaXMubnVtT25Ib3Zlcj0wfXJldHVybiBlKG4sW3trZXk6ImluaXQiLHZhbHVlOmZ1bmN0aW9uKCl7IXRoaXMuYnJvd3Nlci5zdXBwb3J0c0xpbmtQcmVmZXRjaCgpfHx0aGlzLmJyb3dzZXIuaXNEYXRhU2F2ZXJNb2RlT24oKXx8dGhpcy5icm93c2VyLmlzU2xvd0Nvbm5lY3Rpb24oKXx8KHRoaXMucmVnZXg9e2V4Y2x1ZGVVcmlzOlJlZ0V4cCh0aGlzLmNvbmZpZy5leGNsdWRlVXJpcywiaSIpLGltYWdlczpSZWdFeHAoIi4oIit0aGlzLmNvbmZpZy5pbWFnZUV4dCsiKSQiLCJpIiksZmlsZUV4dDpSZWdFeHAoIi4oIit0aGlzLmNvbmZpZy5maWxlRXh0KyIpJCIsImkiKX0sdGhpcy5faW5pdExpc3RlbmVycyh0aGlzKSl9fSx7a2V5OiJfaW5pdExpc3RlbmVycyIsdmFsdWU6ZnVuY3Rpb24oZSl7LTE8dGhpcy5jb25maWcub25Ib3ZlckRlbGF5JiZkb2N1bWVudC5hZGRFdmVudExpc3RlbmVyKCJtb3VzZW92ZXIiLGUubGlzdGVuZXIuYmluZChlKSxlLmxpc3RlbmVyT3B0aW9ucyksZG9jdW1lbnQuYWRkRXZlbnRMaXN0ZW5lcigibW91c2Vkb3duIixlLmxpc3RlbmVyLmJpbmQoZSksZS5saXN0ZW5lck9wdGlvbnMpLGRvY3VtZW50LmFkZEV2ZW50TGlzdGVuZXIoInRvdWNoc3RhcnQiLGUubGlzdGVuZXIuYmluZChlKSxlLmxpc3RlbmVyT3B0aW9ucyl9fSx7a2V5OiJsaXN0ZW5lciIsdmFsdWU6ZnVuY3Rpb24oZSl7dmFyIHQ9ZS50YXJnZXQuY2xvc2VzdCgiYSIpLG49dGhpcy5fcHJlcGFyZVVybCh0KTtpZihudWxsIT09bilzd2l0Y2goZS50eXBlKXtjYXNlIm1vdXNlZG93biI6Y2FzZSJ0b3VjaHN0YXJ0Ijp0aGlzLl9hZGRQcmVmZXRjaExpbmsobik7YnJlYWs7Y2FzZSJtb3VzZW92ZXIiOnRoaXMuX2Vhcmx5UHJlZmV0Y2godCxuLCJtb3VzZW91dCIpfX19LHtrZXk6Il9lYXJseVByZWZldGNoIix2YWx1ZTpmdW5jdGlvbih0LGUsbil7dmFyIGk9dGhpcyxyPXNldFRpbWVvdXQoZnVuY3Rpb24oKXtpZihyPW51bGwsMD09PWkubnVtT25Ib3ZlcilzZXRUaW1lb3V0KGZ1bmN0aW9uKCl7cmV0dXJuIGkubnVtT25Ib3Zlcj0wfSwxZTMpO2Vsc2UgaWYoaS5udW1PbkhvdmVyPmkuY29uZmlnLnJhdGVUaHJvdHRsZSlyZXR1cm47aS5udW1PbkhvdmVyKyssaS5fYWRkUHJlZmV0Y2hMaW5rKGUpfSx0aGlzLmNvbmZpZy5vbkhvdmVyRGVsYXkpO3QuYWRkRXZlbnRMaXN0ZW5lcihuLGZ1bmN0aW9uIGUoKXt0LnJlbW92ZUV2ZW50TGlzdGVuZXIobixlLHtwYXNzaXZlOiEwfSksbnVsbCE9PXImJihjbGVhclRpbWVvdXQocikscj1udWxsKX0se3Bhc3NpdmU6ITB9KX19LHtrZXk6Il9hZGRQcmVmZXRjaExpbmsiLHZhbHVlOmZ1bmN0aW9uKGkpe3JldHVybiB0aGlzLnByZWZldGNoZWQuYWRkKGkuaHJlZiksbmV3IFByb21pc2UoZnVuY3Rpb24oZSx0KXt2YXIgbj1kb2N1bWVudC5jcmVhdGVFbGVtZW50KCJsaW5rIik7bi5yZWw9InByZWZldGNoIixuLmhyZWY9aS5ocmVmLG4ub25sb2FkPWUsbi5vbmVycm9yPXQsZG9jdW1lbnQuaGVhZC5hcHBlbmRDaGlsZChuKX0pLmNhdGNoKGZ1bmN0aW9uKCl7fSl9fSx7a2V5OiJfcHJlcGFyZVVybCIsdmFsdWU6ZnVuY3Rpb24oZSl7aWYobnVsbD09PWV8fCJvYmplY3QiIT09KHZvaWQgMD09PWU/InVuZGVmaW5lZCI6cihlKSl8fCExIGluIGV8fC0xPT09WyJodHRwOiIsImh0dHBzOiJdLmluZGV4T2YoZS5wcm90b2NvbCkpcmV0dXJuIG51bGw7dmFyIHQ9ZS5ocmVmLnN1YnN0cmluZygwLHRoaXMuY29uZmlnLnNpdGVVcmwubGVuZ3RoKSxuPXRoaXMuX2dldFBhdGhuYW1lKGUuaHJlZix0KSxpPXtvcmlnaW5hbDplLmhyZWYscHJvdG9jb2w6ZS5wcm90b2NvbCxvcmlnaW46dCxwYXRobmFtZTpuLGhyZWY6dCtufTtyZXR1cm4gdGhpcy5faXNMaW5rT2soaSk/aTpudWxsfX0se2tleToiX2dldFBhdGhuYW1lIix2YWx1ZTpmdW5jdGlvbihlLHQpe3ZhciBuPXQ/ZS5zdWJzdHJpbmcodGhpcy5jb25maWcuc2l0ZVVybC5sZW5ndGgpOmU7cmV0dXJuIG4uc3RhcnRzV2l0aCgiLyIpfHwobj0iLyIrbiksdGhpcy5fc2hvdWxkQWRkVHJhaWxpbmdTbGFzaChuKT9uKyIvIjpufX0se2tleToiX3Nob3VsZEFkZFRyYWlsaW5nU2xhc2giLHZhbHVlOmZ1bmN0aW9uKGUpe3JldHVybiB0aGlzLmNvbmZpZy51c2VzVHJhaWxpbmdTbGFzaCYmIWUuZW5kc1dpdGgoIi8iKSYmIXRoaXMucmVnZXguZmlsZUV4dC50ZXN0KGUpfX0se2tleToiX2lzTGlua09rIix2YWx1ZTpmdW5jdGlvbihlKXtyZXR1cm4gbnVsbCE9PWUmJiJvYmplY3QiPT09KHZvaWQgMD09PWU/InVuZGVmaW5lZCI6cihlKSkmJighdGhpcy5wcmVmZXRjaGVkLmhhcyhlLmhyZWYpJiZlLm9yaWdpbj09PXRoaXMuY29uZmlnLnNpdGVVcmwmJi0xPT09ZS5ocmVmLmluZGV4T2YoIj8iKSYmLTE9PT1lLmhyZWYuaW5kZXhPZigiIyIpJiYhdGhpcy5yZWdleC5leGNsdWRlVXJpcy50ZXN0KGUuaHJlZikmJiF0aGlzLnJlZ2V4LmltYWdlcy50ZXN0KGUuaHJlZikpfX1dLFt7a2V5OiJydW4iLHZhbHVlOmZ1bmN0aW9uKCl7InVuZGVmaW5lZCIhPXR5cGVvZiBSb2NrZXRQcmVsb2FkTGlua3NDb25maWcmJm5ldyBuKG5ldyBSb2NrZXRCcm93c2VyQ29tcGF0aWJpbGl0eUNoZWNrZXIoe2NhcHR1cmU6ITAscGFzc2l2ZTohMH0pLFJvY2tldFByZWxvYWRMaW5rc0NvbmZpZykuaW5pdCgpfX1dKSxufSgpO3QucnVuKCk7Cn0oKSk7Cg==" data-rocket-status="executed">
+(function() {
+"use strict";var r="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e},e=function(){function i(e,t){for(var n=0;n<t.length;n++){var i=t[n];i.enumerable=i.enumerable||!1,i.configurable=!0,"value"in i&&(i.writable=!0),Object.defineProperty(e,i.key,i)}}return function(e,t,n){return t&&i(e.prototype,t),n&&i(e,n),e}}();function i(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}var t=function(){function n(e,t){i(this,n),this.browser=e,this.config=t,this.options=this.browser.options,this.prefetched=new Set,this.eventTime=null,this.threshold=1111,this.numOnHover=0}return e(n,[{key:"init",value:function(){!this.browser.supportsLinkPrefetch()||this.browser.isDataSaverModeOn()||this.browser.isSlowConnection()||(this.regex={excludeUris:RegExp(this.config.excludeUris,"i"),images:RegExp(".("+this.config.imageExt+")$","i"),fileExt:RegExp(".("+this.config.fileExt+")$","i")},this._initListeners(this))}},{key:"_initListeners",value:function(e){-1<this.config.onHoverDelay&&document.addEventListener("mouseover",e.listener.bind(e),e.listenerOptions),document.addEventListener("mousedown",e.listener.bind(e),e.listenerOptions),document.addEventListener("touchstart",e.listener.bind(e),e.listenerOptions)}},{key:"listener",value:function(e){var t=e.target.closest("a"),n=this._prepareUrl(t);if(null!==n)switch(e.type){case"mousedown":case"touchstart":this._addPrefetchLink(n);break;case"mouseover":this._earlyPrefetch(t,n,"mouseout")}}},{key:"_earlyPrefetch",value:function(t,e,n){var i=this,r=setTimeout(function(){if(r=null,0===i.numOnHover)setTimeout(function(){return i.numOnHover=0},1e3);else if(i.numOnHover>i.config.rateThrottle)return;i.numOnHover++,i._addPrefetchLink(e)},this.config.onHoverDelay);t.addEventListener(n,function e(){t.removeEventListener(n,e,{passive:!0}),null!==r&&(clearTimeout(r),r=null)},{passive:!0})}},{key:"_addPrefetchLink",value:function(i){return this.prefetched.add(i.href),new Promise(function(e,t){var n=document.createElement("link");n.rel="prefetch",n.href=i.href,n.onload=e,n.onerror=t,document.head.appendChild(n)}).catch(function(){})}},{key:"_prepareUrl",value:function(e){if(null===e||"object"!==(void 0===e?"undefined":r(e))||!1 in e||-1===["http:","https:"].indexOf(e.protocol))return null;var t=e.href.substring(0,this.config.siteUrl.length),n=this._getPathname(e.href,t),i={original:e.href,protocol:e.protocol,origin:t,pathname:n,href:t+n};return this._isLinkOk(i)?i:null}},{key:"_getPathname",value:function(e,t){var n=t?e.substring(this.config.siteUrl.length):e;return n.startsWith("/")||(n="/"+n),this._shouldAddTrailingSlash(n)?n+"/":n}},{key:"_shouldAddTrailingSlash",value:function(e){return this.config.usesTrailingSlash&&!e.endsWith("/")&&!this.regex.fileExt.test(e)}},{key:"_isLinkOk",value:function(e){return null!==e&&"object"===(void 0===e?"undefined":r(e))&&(!this.prefetched.has(e.href)&&e.origin===this.config.siteUrl&&-1===e.href.indexOf("?")&&-1===e.href.indexOf("#")&&!this.regex.excludeUris.test(e.href)&&!this.regex.images.test(e.href))}}],[{key:"run",value:function(){"undefined"!=typeof RocketPreloadLinksConfig&&new n(new RocketBrowserCompatibilityChecker({capture:!0,passive:!0}),RocketPreloadLinksConfig).init()}}]),n}();t.run();
+}());
+</script>
+<script id="jquery-ui-core-js" defer="" src="./Install and Set up 8K VIP App IPTV on FireStick &amp; Android 2025_files/core.min.js" data-rocket-status="executed"></script>
+<script id="jquery-ui-datepicker-js" defer="" src="./Install and Set up 8K VIP App IPTV on FireStick &amp; Android 2025_files/datepicker.min.js" data-rocket-status="executed"></script>
+<script id="jquery-ui-datepicker-js-after" src="data:text/javascript;base64,d2luZG93LmFkZEV2ZW50TGlzdGVuZXIoJ0RPTUNvbnRlbnRMb2FkZWQnLCBmdW5jdGlvbigpIHsKalF1ZXJ5KGZ1bmN0aW9uKGpRdWVyeSl7alF1ZXJ5LmRhdGVwaWNrZXIuc2V0RGVmYXVsdHMoeyJjbG9zZVRleHQiOiJDbG9zZSIsImN1cnJlbnRUZXh0IjoiVG9kYXkiLCJtb250aE5hbWVzIjpbIkphbnVhcnkiLCJGZWJydWFyeSIsIk1hcmNoIiwiQXByaWwiLCJNYXkiLCJKdW5lIiwiSnVseSIsIkF1Z3VzdCIsIlNlcHRlbWJlciIsIk9jdG9iZXIiLCJOb3ZlbWJlciIsIkRlY2VtYmVyIl0sIm1vbnRoTmFtZXNTaG9ydCI6WyJKYW4iLCJGZWIiLCJNYXIiLCJBcHIiLCJNYXkiLCJKdW4iLCJKdWwiLCJBdWciLCJTZXAiLCJPY3QiLCJOb3YiLCJEZWMiXSwibmV4dFRleHQiOiJOZXh0IiwicHJldlRleHQiOiJQcmV2aW91cyIsImRheU5hbWVzIjpbIlN1bmRheSIsIk1vbmRheSIsIlR1ZXNkYXkiLCJXZWRuZXNkYXkiLCJUaHVyc2RheSIsIkZyaWRheSIsIlNhdHVyZGF5Il0sImRheU5hbWVzU2hvcnQiOlsiU3VuIiwiTW9uIiwiVHVlIiwiV2VkIiwiVGh1IiwiRnJpIiwiU2F0Il0sImRheU5hbWVzTWluIjpbIlMiLCJNIiwiVCIsIlciLCJUIiwiRiIsIlMiXSwiZGF0ZUZvcm1hdCI6Ik1NIGQsIHl5IiwiZmlyc3REYXkiOjEsImlzUlRMIjpmYWxzZX0pO30pOwp9KTs=" data-rocket-status="executed">window.addEventListener('DOMContentLoaded', function() {
+jQuery(function(jQuery){jQuery.datepicker.setDefaults({"closeText":"Close","currentText":"Today","monthNames":["January","February","March","April","May","June","July","August","September","October","November","December"],"monthNamesShort":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"nextText":"Next","prevText":"Previous","dayNames":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"dayNamesShort":["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],"dayNamesMin":["S","M","T","W","T","F","S"],"dateFormat":"MM d, yy","firstDay":1,"isRTL":false});});
+});</script>
+<script id="bootstrap-js" defer="" src="./Install and Set up 8K VIP App IPTV on FireStick &amp; Android 2025_files/bootstrap.min.js" data-rocket-status="executed"></script>
+<script id="bootstrap-select-js" defer="" src="./Install and Set up 8K VIP App IPTV on FireStick &amp; Android 2025_files/bootstrap-select.min.js" data-rocket-status="executed"></script>
+<script id="jquery-bxslider-js" defer="" src="./Install and Set up 8K VIP App IPTV on FireStick &amp; Android 2025_files/jquery.bxslider.min.js" data-rocket-status="executed"></script>
+<script id="countdown-js" defer="" src="./Install and Set up 8K VIP App IPTV on FireStick &amp; Android 2025_files/countdown.min.js" data-rocket-status="executed"></script>
+<script id="imagesloaded-js" defer="" src="./Install and Set up 8K VIP App IPTV on FireStick &amp; Android 2025_files/imagesloaded.min.js" data-rocket-status="executed"></script>
+<script data-minify="1" id="isotope-js" defer="" src="./Install and Set up 8K VIP App IPTV on FireStick &amp; Android 2025_files/isotope.js" data-rocket-status="executed"></script>
+<script id="jarallax-js" defer="" src="./Install and Set up 8K VIP App IPTV on FireStick &amp; Android 2025_files/jarallax.min.js" data-rocket-status="executed"></script>
+<script id="jquery-ajaxchimp-js" defer="" src="./Install and Set up 8K VIP App IPTV on FireStick &amp; Android 2025_files/jquery.ajaxchimp.min.js" data-rocket-status="executed"></script>
+<script id="jquery-appear-js" defer="" src="./Install and Set up 8K VIP App IPTV on FireStick &amp; Android 2025_files/jquery.appear.min.js" data-rocket-status="executed"></script>
+<script id="jquery-easing-js" defer="" src="./Install and Set up 8K VIP App IPTV on FireStick &amp; Android 2025_files/jquery.easing.min.js" data-rocket-status="executed"></script>
+<script id="jquery-magnific-popup-js" defer="" src="./Install and Set up 8K VIP App IPTV on FireStick &amp; Android 2025_files/jquery.magnific-popup.min.js" data-rocket-status="executed"></script>
+<script id="jquery-circle-progress-js" defer="" src="./Install and Set up 8K VIP App IPTV on FireStick &amp; Android 2025_files/jquery.circle-progress.min.js" data-rocket-status="executed"></script>
+<script data-minify="1" id="jquery-circletype-js" defer="" src="./Install and Set up 8K VIP App IPTV on FireStick &amp; Android 2025_files/jquery.circleType.js" data-rocket-status="executed"></script>
+<script id="jquery-lettering-js" defer="" src="./Install and Set up 8K VIP App IPTV on FireStick &amp; Android 2025_files/jquery.lettering.min.js" data-rocket-status="executed"></script>
+<script id="odometer-js" defer="" src="./Install and Set up 8K VIP App IPTV on FireStick &amp; Android 2025_files/odometer.min.js" data-rocket-status="executed"></script>
+<script id="owl-carousel-js" defer="" src="./Install and Set up 8K VIP App IPTV on FireStick &amp; Android 2025_files/owl.carousel.min.js" data-rocket-status="executed"></script>
+<script id="swiper-js" defer="" src="./Install and Set up 8K VIP App IPTV on FireStick &amp; Android 2025_files/swiper.min.js" data-rocket-status="executed"></script>
+<script data-minify="1" id="wow-js" defer="" src="./Install and Set up 8K VIP App IPTV on FireStick &amp; Android 2025_files/wow.js" data-rocket-status="executed"></script>
+<script id="sharer-js" defer="" src="./Install and Set up 8K VIP App IPTV on FireStick &amp; Android 2025_files/sharer.min.js" data-rocket-status="executed"></script>
+<script data-minify="1" id="timepicker-js" defer="" src="./Install and Set up 8K VIP App IPTV on FireStick &amp; Android 2025_files/timePicker.js" data-rocket-status="executed"></script>
+<script id="jquery-validate-js" defer="" src="./Install and Set up 8K VIP App IPTV on FireStick &amp; Android 2025_files/jquery.validate.min.js" data-rocket-status="executed"></script>
+<script data-minify="1" id="zeinet-addon-script-js" defer="" src="./Install and Set up 8K VIP App IPTV on FireStick &amp; Android 2025_files/zeinet-addon.js" data-rocket-status="executed"></script>
+<script data-minify="1" id="zeinet-theme-js" defer="" src="./Install and Set up 8K VIP App IPTV on FireStick &amp; Android 2025_files/zeinet-theme.js" data-rocket-status="executed"></script>
+<script id="comment-reply-js" async="" data-wp-strategy="async" src="./Install and Set up 8K VIP App IPTV on FireStick &amp; Android 2025_files/comment-reply.min.js" data-rocket-status="executed"></script>
+<script id="joinchat-js" defer="" data-wp-strategy="defer" src="./Install and Set up 8K VIP App IPTV on FireStick &amp; Android 2025_files/joinchat.min.js" data-rocket-status="executed"></script>
+<script id="elementor-webpack-runtime-js" defer="" src="./Install and Set up 8K VIP App IPTV on FireStick &amp; Android 2025_files/webpack.runtime.min.js" data-rocket-status="executed"></script>
+<script id="elementor-frontend-modules-js" defer="" src="./Install and Set up 8K VIP App IPTV on FireStick &amp; Android 2025_files/frontend-modules.min.js" data-rocket-status="executed"></script>
+<script id="elementor-frontend-js-before" src="data:text/javascript;base64,CnZhciBlbGVtZW50b3JGcm9udGVuZENvbmZpZyA9IHsiZW52aXJvbm1lbnRNb2RlIjp7ImVkaXQiOmZhbHNlLCJ3cFByZXZpZXciOmZhbHNlLCJpc1NjcmlwdERlYnVnIjpmYWxzZX0sImkxOG4iOnsic2hhcmVPbkZhY2Vib29rIjoiU2hhcmUgb24gRmFjZWJvb2siLCJzaGFyZU9uVHdpdHRlciI6IlNoYXJlIG9uIFR3aXR0ZXIiLCJwaW5JdCI6IlBpbiBpdCIsImRvd25sb2FkIjoiRG93bmxvYWQiLCJkb3dubG9hZEltYWdlIjoiRG93bmxvYWQgaW1hZ2UiLCJmdWxsc2NyZWVuIjoiRnVsbHNjcmVlbiIsInpvb20iOiJab29tIiwic2hhcmUiOiJTaGFyZSIsInBsYXlWaWRlbyI6IlBsYXkgVmlkZW8iLCJwcmV2aW91cyI6IlByZXZpb3VzIiwibmV4dCI6Ik5leHQiLCJjbG9zZSI6IkNsb3NlIiwiYTExeUNhcm91c2VsUHJldlNsaWRlTWVzc2FnZSI6IlByZXZpb3VzIHNsaWRlIiwiYTExeUNhcm91c2VsTmV4dFNsaWRlTWVzc2FnZSI6Ik5leHQgc2xpZGUiLCJhMTF5Q2Fyb3VzZWxGaXJzdFNsaWRlTWVzc2FnZSI6IlRoaXMgaXMgdGhlIGZpcnN0IHNsaWRlIiwiYTExeUNhcm91c2VsTGFzdFNsaWRlTWVzc2FnZSI6IlRoaXMgaXMgdGhlIGxhc3Qgc2xpZGUiLCJhMTF5Q2Fyb3VzZWxQYWdpbmF0aW9uQnVsbGV0TWVzc2FnZSI6IkdvIHRvIHNsaWRlIn0sImlzX3J0bCI6ZmFsc2UsImJyZWFrcG9pbnRzIjp7InhzIjowLCJzbSI6NDgwLCJtZCI6NzY4LCJsZyI6MTAyNSwieGwiOjE0NDAsInh4bCI6MTYwMH0sInJlc3BvbnNpdmUiOnsiYnJlYWtwb2ludHMiOnsibW9iaWxlIjp7ImxhYmVsIjoiTW9iaWxlIFBvcnRyYWl0IiwidmFsdWUiOjc2NywiZGVmYXVsdF92YWx1ZSI6NzY3LCJkaXJlY3Rpb24iOiJtYXgiLCJpc19lbmFibGVkIjp0cnVlfSwibW9iaWxlX2V4dHJhIjp7ImxhYmVsIjoiTW9iaWxlIExhbmRzY2FwZSIsInZhbHVlIjo4ODAsImRlZmF1bHRfdmFsdWUiOjg4MCwiZGlyZWN0aW9uIjoibWF4IiwiaXNfZW5hYmxlZCI6ZmFsc2V9LCJ0YWJsZXQiOnsibGFiZWwiOiJUYWJsZXQgUG9ydHJhaXQiLCJ2YWx1ZSI6MTAyNCwiZGVmYXVsdF92YWx1ZSI6MTAyNCwiZGlyZWN0aW9uIjoibWF4IiwiaXNfZW5hYmxlZCI6dHJ1ZX0sInRhYmxldF9leHRyYSI6eyJsYWJlbCI6IlRhYmxldCBMYW5kc2NhcGUiLCJ2YWx1ZSI6MTIwMCwiZGVmYXVsdF92YWx1ZSI6MTIwMCwiZGlyZWN0aW9uIjoibWF4IiwiaXNfZW5hYmxlZCI6ZmFsc2V9LCJsYXB0b3AiOnsibGFiZWwiOiJMYXB0b3AiLCJ2YWx1ZSI6MTM2NiwiZGVmYXVsdF92YWx1ZSI6MTM2NiwiZGlyZWN0aW9uIjoibWF4IiwiaXNfZW5hYmxlZCI6ZmFsc2V9LCJ3aWRlc2NyZWVuIjp7ImxhYmVsIjoiV2lkZXNjcmVlbiIsInZhbHVlIjoyNDAwLCJkZWZhdWx0X3ZhbHVlIjoyNDAwLCJkaXJlY3Rpb24iOiJtaW4iLCJpc19lbmFibGVkIjpmYWxzZX19LCJoYXNDdXN0b21CcmVha3BvaW50cyI6ZmFsc2V9LCJ2ZXJzaW9uIjoiMy4yOS4yIiwiaXNfc3RhdGljIjpmYWxzZSwiZXhwZXJpbWVudGFsRmVhdHVyZXMiOnsiZV9mb250X2ljb25fc3ZnIjp0cnVlLCJhZGRpdGlvbmFsX2N1c3RvbV9icmVha3BvaW50cyI6dHJ1ZSwiY29udGFpbmVyIjp0cnVlLCJlX2xvY2FsX2dvb2dsZV9mb250cyI6dHJ1ZSwidGhlbWVfYnVpbGRlcl92MiI6dHJ1ZSwibmVzdGVkLWVsZW1lbnRzIjp0cnVlLCJlZGl0b3JfdjIiOnRydWUsImhvbWVfc2NyZWVuIjp0cnVlLCJjbG91ZC1saWJyYXJ5Ijp0cnVlLCJlX29wdF9pbl92NF9wYWdlIjp0cnVlLCJwYWdlLXRyYW5zaXRpb25zIjp0cnVlLCJub3RlcyI6dHJ1ZSwiZm9ybS1zdWJtaXNzaW9ucyI6dHJ1ZSwiZV9zY3JvbGxfc25hcCI6dHJ1ZX0sInVybHMiOnsiYXNzZXRzIjoiaHR0cHM6XC9cLzhrcGxheWVyLm5ldFwvd3AtY29udGVudFwvcGx1Z2luc1wvZWxlbWVudG9yXC9hc3NldHNcLyIsImFqYXh1cmwiOiJodHRwczpcL1wvOGtwbGF5ZXIubmV0XC93cC1hZG1pblwvYWRtaW4tYWpheC5waHAiLCJ1cGxvYWRVcmwiOiJodHRwczpcL1wvOGtwbGF5ZXIubmV0XC93cC1jb250ZW50XC91cGxvYWRzIn0sIm5vbmNlcyI6eyJmbG9hdGluZ0J1dHRvbnNDbGlja1RyYWNraW5nIjoiMGQ3Mjk5Yjg1NyJ9LCJzd2lwZXJDbGFzcyI6InN3aXBlciIsInNldHRpbmdzIjp7InBhZ2UiOltdLCJlZGl0b3JQcmVmZXJlbmNlcyI6W119LCJraXQiOnsiYWN0aXZlX2JyZWFrcG9pbnRzIjpbInZpZXdwb3J0X21vYmlsZSIsInZpZXdwb3J0X3RhYmxldCJdLCJnbG9iYWxfaW1hZ2VfbGlnaHRib3giOiJ5ZXMiLCJsaWdodGJveF9lbmFibGVfY291bnRlciI6InllcyIsImxpZ2h0Ym94X2VuYWJsZV9mdWxsc2NyZWVuIjoieWVzIiwibGlnaHRib3hfZW5hYmxlX3pvb20iOiJ5ZXMiLCJsaWdodGJveF9lbmFibGVfc2hhcmUiOiJ5ZXMiLCJsaWdodGJveF90aXRsZV9zcmMiOiJ0aXRsZSIsImxpZ2h0Ym94X2Rlc2NyaXB0aW9uX3NyYyI6ImRlc2NyaXB0aW9uIn0sInBvc3QiOnsiaWQiOjMwNzksInRpdGxlIjoiSW5zdGFsbCUyMGFuZCUyMFNldCUyMHVwJTIwOEslMjBWSVAlMjBBcHAlMjBJUFRWJTIwb24lMjBGaXJlU3RpY2slMjAlMjYlMjBBbmRyb2lkJTIwMjAyNSIsImV4Y2VycHQiOiIiLCJmZWF0dXJlZEltYWdlIjoiaHR0cHM6XC9cLzhrcGxheWVyLm5ldFwvd3AtY29udGVudFwvdXBsb2Fkc1wvMjAyNFwvMDRcLzRLX1ZJUF81LTEwMjR4NDYxLmpwZyJ9fTsK" data-rocket-status="executed">
+var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false,"isScriptDebug":false},"i18n":{"shareOnFacebook":"Share on Facebook","shareOnTwitter":"Share on Twitter","pinIt":"Pin it","download":"Download","downloadImage":"Download image","fullscreen":"Fullscreen","zoom":"Zoom","share":"Share","playVideo":"Play Video","previous":"Previous","next":"Next","close":"Close","a11yCarouselPrevSlideMessage":"Previous slide","a11yCarouselNextSlideMessage":"Next slide","a11yCarouselFirstSlideMessage":"This is the first slide","a11yCarouselLastSlideMessage":"This is the last slide","a11yCarouselPaginationBulletMessage":"Go to slide"},"is_rtl":false,"breakpoints":{"xs":0,"sm":480,"md":768,"lg":1025,"xl":1440,"xxl":1600},"responsive":{"breakpoints":{"mobile":{"label":"Mobile Portrait","value":767,"default_value":767,"direction":"max","is_enabled":true},"mobile_extra":{"label":"Mobile Landscape","value":880,"default_value":880,"direction":"max","is_enabled":false},"tablet":{"label":"Tablet Portrait","value":1024,"default_value":1024,"direction":"max","is_enabled":true},"tablet_extra":{"label":"Tablet Landscape","value":1200,"default_value":1200,"direction":"max","is_enabled":false},"laptop":{"label":"Laptop","value":1366,"default_value":1366,"direction":"max","is_enabled":false},"widescreen":{"label":"Widescreen","value":2400,"default_value":2400,"direction":"min","is_enabled":false}},"hasCustomBreakpoints":false},"version":"3.29.2","is_static":false,"experimentalFeatures":{"e_font_icon_svg":true,"additional_custom_breakpoints":true,"container":true,"e_local_google_fonts":true,"theme_builder_v2":true,"nested-elements":true,"editor_v2":true,"home_screen":true,"cloud-library":true,"e_opt_in_v4_page":true,"page-transitions":true,"notes":true,"form-submissions":true,"e_scroll_snap":true},"urls":{"assets":"https:\/\/8kplayer.net\/wp-content\/plugins\/elementor\/assets\/","ajaxurl":"https:\/\/8kplayer.net\/wp-admin\/admin-ajax.php","uploadUrl":"https:\/\/8kplayer.net\/wp-content\/uploads"},"nonces":{"floatingButtonsClickTracking":"0d7299b857"},"swiperClass":"swiper","settings":{"page":[],"editorPreferences":[]},"kit":{"active_breakpoints":["viewport_mobile","viewport_tablet"],"global_image_lightbox":"yes","lightbox_enable_counter":"yes","lightbox_enable_fullscreen":"yes","lightbox_enable_zoom":"yes","lightbox_enable_share":"yes","lightbox_title_src":"title","lightbox_description_src":"description"},"post":{"id":3079,"title":"Install%20and%20Set%20up%208K%20VIP%20App%20IPTV%20on%20FireStick%20%26%20Android%202025","excerpt":"","featuredImage":"https:\/\/8kplayer.net\/wp-content\/uploads\/2024\/04\/4K_VIP_5-1024x461.jpg"}};
+</script>
+<script id="elementor-frontend-js" defer="" src="./Install and Set up 8K VIP App IPTV on FireStick &amp; Android 2025_files/frontend.min.js" data-rocket-status="executed"></script>
+<script id="gt_widget_script_43418980-js-before" src="data:text/javascript;base64,CndpbmRvdy5ndHJhbnNsYXRlU2V0dGluZ3MgPSAvKiBkb2N1bWVudC53cml0ZSAqLyB3aW5kb3cuZ3RyYW5zbGF0ZVNldHRpbmdzIHx8IHt9O3dpbmRvdy5ndHJhbnNsYXRlU2V0dGluZ3NbJzQzNDE4OTgwJ10gPSB7ImRlZmF1bHRfbGFuZ3VhZ2UiOiJlbiIsImxhbmd1YWdlcyI6WyJhciIsIm5sIiwiZW4iLCJmciIsImRlIiwiZ2EiLCJpdCIsInB0IiwicnUiLCJlcyIsInRyIl0sInVybF9zdHJ1Y3R1cmUiOiJub25lIiwiZmxhZ19zdHlsZSI6IjJkIiwid3JhcHBlcl9zZWxlY3RvciI6IiNndC13cmFwcGVyLTQzNDE4OTgwIiwiYWx0X2ZsYWdzIjpbXSwiZmxvYXRfc3dpdGNoZXJfb3Blbl9kaXJlY3Rpb24iOiJ0b3AiLCJzd2l0Y2hlcl9ob3Jpem9udGFsX3Bvc2l0aW9uIjoibGVmdCIsInN3aXRjaGVyX3ZlcnRpY2FsX3Bvc2l0aW9uIjoiYm90dG9tIiwiZmxhZ3NfbG9jYXRpb24iOiJcL3dwLWNvbnRlbnRcL3BsdWdpbnNcL2d0cmFuc2xhdGVcL2ZsYWdzXC8ifTsK" data-rocket-status="executed">
+window.gtranslateSettings = /* document.write */ window.gtranslateSettings || {};window.gtranslateSettings['43418980'] = {"default_language":"en","languages":["ar","nl","en","fr","de","ga","it","pt","ru","es","tr"],"url_structure":"none","flag_style":"2d","wrapper_selector":"#gt-wrapper-43418980","alt_flags":[],"float_switcher_open_direction":"top","switcher_horizontal_position":"left","switcher_vertical_position":"bottom","flags_location":"\/wp-content\/plugins\/gtranslate\/flags\/"};
+</script><script data-no-optimize="1" data-no-minify="1" data-gt-orig-url="/how-to-install-and-set-up-8k-vip-app-on-firestick-android/" data-gt-orig-domain="8kplayer.net" data-gt-widget-id="43418980" defer="" src="./Install and Set up 8K VIP App IPTV on FireStick &amp; Android 2025_files/float.js" data-rocket-status="executed"></script><script id="elementor-pro-webpack-runtime-js" defer="" src="./Install and Set up 8K VIP App IPTV on FireStick &amp; Android 2025_files/webpack-pro.runtime.min.js" data-rocket-status="executed"></script>
+<script id="elementor-pro-frontend-js-before" src="data:text/javascript;base64,CnZhciBFbGVtZW50b3JQcm9Gcm9udGVuZENvbmZpZyA9IHsiYWpheHVybCI6Imh0dHBzOlwvXC84a3BsYXllci5uZXRcL3dwLWFkbWluXC9hZG1pbi1hamF4LnBocCIsIm5vbmNlIjoiNDI1OWFmMzc5NiIsInVybHMiOnsiYXNzZXRzIjoiaHR0cHM6XC9cLzhrcGxheWVyLm5ldFwvd3AtY29udGVudFwvcGx1Z2luc1wvZWxlbWVudG9yLXByb1wvYXNzZXRzXC8iLCJyZXN0IjoiaHR0cHM6XC9cLzhrcGxheWVyLm5ldFwvd3AtanNvblwvIn0sInNoYXJlQnV0dG9uc05ldHdvcmtzIjp7ImZhY2Vib29rIjp7InRpdGxlIjoiRmFjZWJvb2siLCJoYXNfY291bnRlciI6dHJ1ZX0sInR3aXR0ZXIiOnsidGl0bGUiOiJUd2l0dGVyIn0sImxpbmtlZGluIjp7InRpdGxlIjoiTGlua2VkSW4iLCJoYXNfY291bnRlciI6dHJ1ZX0sInBpbnRlcmVzdCI6eyJ0aXRsZSI6IlBpbnRlcmVzdCIsImhhc19jb3VudGVyIjp0cnVlfSwicmVkZGl0Ijp7InRpdGxlIjoiUmVkZGl0IiwiaGFzX2NvdW50ZXIiOnRydWV9LCJ2ayI6eyJ0aXRsZSI6IlZLIiwiaGFzX2NvdW50ZXIiOnRydWV9LCJvZG5va2xhc3NuaWtpIjp7InRpdGxlIjoiT0siLCJoYXNfY291bnRlciI6dHJ1ZX0sInR1bWJsciI6eyJ0aXRsZSI6IlR1bWJsciJ9LCJkaWdnIjp7InRpdGxlIjoiRGlnZyJ9LCJza3lwZSI6eyJ0aXRsZSI6IlNreXBlIn0sInN0dW1ibGV1cG9uIjp7InRpdGxlIjoiU3R1bWJsZVVwb24iLCJoYXNfY291bnRlciI6dHJ1ZX0sIm1peCI6eyJ0aXRsZSI6Ik1peCJ9LCJ0ZWxlZ3JhbSI6eyJ0aXRsZSI6IlRlbGVncmFtIn0sInBvY2tldCI6eyJ0aXRsZSI6IlBvY2tldCIsImhhc19jb3VudGVyIjp0cnVlfSwieGluZyI6eyJ0aXRsZSI6IlhJTkciLCJoYXNfY291bnRlciI6dHJ1ZX0sIndoYXRzYXBwIjp7InRpdGxlIjoiV2hhdHNBcHAifSwiZW1haWwiOnsidGl0bGUiOiJFbWFpbCJ9LCJwcmludCI6eyJ0aXRsZSI6IlByaW50In19LCJmYWNlYm9va19zZGsiOnsibGFuZyI6ImVuX1VTIiwiYXBwX2lkIjoiIn0sImxvdHRpZSI6eyJkZWZhdWx0QW5pbWF0aW9uVXJsIjoiaHR0cHM6XC9cLzhrcGxheWVyLm5ldFwvd3AtY29udGVudFwvcGx1Z2luc1wvZWxlbWVudG9yLXByb1wvbW9kdWxlc1wvbG90dGllXC9hc3NldHNcL2FuaW1hdGlvbnNcL2RlZmF1bHQuanNvbiJ9fTsK" data-rocket-status="executed">
+var ElementorProFrontendConfig = {"ajaxurl":"https:\/\/8kplayer.net\/wp-admin\/admin-ajax.php","nonce":"4259af3796","urls":{"assets":"https:\/\/8kplayer.net\/wp-content\/plugins\/elementor-pro\/assets\/","rest":"https:\/\/8kplayer.net\/wp-json\/"},"shareButtonsNetworks":{"facebook":{"title":"Facebook","has_counter":true},"twitter":{"title":"Twitter"},"linkedin":{"title":"LinkedIn","has_counter":true},"pinterest":{"title":"Pinterest","has_counter":true},"reddit":{"title":"Reddit","has_counter":true},"vk":{"title":"VK","has_counter":true},"odnoklassniki":{"title":"OK","has_counter":true},"tumblr":{"title":"Tumblr"},"digg":{"title":"Digg"},"skype":{"title":"Skype"},"stumbleupon":{"title":"StumbleUpon","has_counter":true},"mix":{"title":"Mix"},"telegram":{"title":"Telegram"},"pocket":{"title":"Pocket","has_counter":true},"xing":{"title":"XING","has_counter":true},"whatsapp":{"title":"WhatsApp"},"email":{"title":"Email"},"print":{"title":"Print"}},"facebook_sdk":{"lang":"en_US","app_id":""},"lottie":{"defaultAnimationUrl":"https:\/\/8kplayer.net\/wp-content\/plugins\/elementor-pro\/modules\/lottie\/assets\/animations\/default.json"}};
+</script>
+<script id="elementor-pro-frontend-js" defer="" src="./Install and Set up 8K VIP App IPTV on FireStick &amp; Android 2025_files/frontend(2).min.js" data-rocket-status="executed"></script>
+<script id="pro-preloaded-elements-handlers-js" defer="" src="./Install and Set up 8K VIP App IPTV on FireStick &amp; Android 2025_files/preloaded-elements-handlers.min.js" data-rocket-status="executed"></script>
+
+<script>class RocketElementorAnimation{constructor(){this.deviceMode=document.createElement("span"),this.deviceMode.id="elementor-device-mode-wpr",this.deviceMode.setAttribute("class","elementor-screen-only"),document.body.appendChild(this.deviceMode)}_detectAnimations(){let t=getComputedStyle(this.deviceMode,":after").content.replace(/"/g,"");this.animationSettingKeys=this._listAnimationSettingsKeys(t),document.querySelectorAll(".elementor-invisible[data-settings]").forEach(t=>{const e=t.getBoundingClientRect();if(e.bottom>=0&&e.top<=window.innerHeight)try{this._animateElement(t)}catch(t){}})}_animateElement(t){const e=JSON.parse(t.dataset.settings),i=e._animation_delay||e.animation_delay||0,n=e[this.animationSettingKeys.find(t=>e[t])];if("none"===n)return void t.classList.remove("elementor-invisible");t.classList.remove(n),this.currentAnimation&&t.classList.remove(this.currentAnimation),this.currentAnimation=n;let s=setTimeout(()=>{t.classList.remove("elementor-invisible"),t.classList.add("animated",n),this._removeAnimationSettings(t,e)},i);window.addEventListener("rocket-startLoading",function(){clearTimeout(s)})}_listAnimationSettingsKeys(t="mobile"){const e=[""];switch(t){case"mobile":e.unshift("_mobile");case"tablet":e.unshift("_tablet");case"desktop":e.unshift("_desktop")}const i=[];return["animation","_animation"].forEach(t=>{e.forEach(e=>{i.push(t+e)})}),i}_removeAnimationSettings(t,e){this._listAnimationSettingsKeys().forEach(t=>delete e[t]),t.dataset.settings=JSON.stringify(e)}static run(){const t=new RocketElementorAnimation;requestAnimationFrame(t._detectAnimations.bind(t))}}document.addEventListener("DOMContentLoaded",RocketElementorAnimation.run);</script>
+
+
+<span id="elementor-device-mode-wpr" class="elementor-screen-only"></span><span id="elementor-device-mode" class="elementor-screen-only"></span><svg style="display: none;" class="e-font-icon-svg-symbols"></svg><div id="ptTimeSelectCntr" class="">        <div class="ui-widget ui-widget-content ui-corner-all">        <div class="ui-widget-header ui-corner-all">            <div id="ptTimeSelectCloseCntr" style="float: right;">                <a href="javascript: void(0);" onclick="jQuery.ptTimeSelect.closeCntr();" onmouseover="jQuery(this).removeClass(&#39;ui-state-default&#39;).addClass(&#39;ui-state-hover&#39;);" onmouseout="jQuery(this).removeClass(&#39;ui-state-hover&#39;).addClass(&#39;ui-state-default&#39;);" class="ui-corner-all ui-state-default">                    <span class="ui-icon ui-icon-circle-close">X</span>                </a>            </div>            <div id="ptTimeSelectUserTime" style="float: left;">                <span id="ptTimeSelectUserSelHr">1</span> :                 <span id="ptTimeSelectUserSelMin">00</span>                 <span id="ptTimeSelectUserSelAmPm">AM</span>            </div>            <br style="clear: both;"><div></div>        </div>        <div class="ui-widget-content ui-corner-all">            <div>                <div class="ptTimeSelectTimeLabelsCntr">                    <div class="ptTimeSelectLeftPane" style="width: 50%; text-align: center; float: left;">Hour</div>                    <div class="ptTimeSelectRightPane" style="width: 50%; text-align: center; float: left;">Minutes</div>                </div>                <div>                    <div style="float: left; width: 50%;">                        <div class="ui-widget-content ptTimeSelectLeftPane">                            <div class="ptTimeSelectHrAmPmCntr">                                <a class="ptTimeSelectHr ui-state-default" href="javascript: void(0);" style="display: block; width: 45%; float: left;">AM</a>                                <a class="ptTimeSelectHr ui-state-default" href="javascript: void(0);" style="display: block; width: 45%; float: left;">PM</a>                                <br style="clear: left;"><div></div>                            </div>                            <div class="ptTimeSelectHrCntr">                                <a class="ptTimeSelectHr ui-state-default" href="javascript: void(0);">1</a>                                <a class="ptTimeSelectHr ui-state-default" href="javascript: void(0);">2</a>                                <a class="ptTimeSelectHr ui-state-default" href="javascript: void(0);">3</a>                                <a class="ptTimeSelectHr ui-state-default" href="javascript: void(0);">4</a>                                <a class="ptTimeSelectHr ui-state-default" href="javascript: void(0);">5</a>                                <a class="ptTimeSelectHr ui-state-default" href="javascript: void(0);">6</a>                                <a class="ptTimeSelectHr ui-state-default" href="javascript: void(0);">7</a>                                <a class="ptTimeSelectHr ui-state-default" href="javascript: void(0);">8</a>                                <a class="ptTimeSelectHr ui-state-default" href="javascript: void(0);">9</a>                                <a class="ptTimeSelectHr ui-state-default" href="javascript: void(0);">10</a>                                <a class="ptTimeSelectHr ui-state-default" href="javascript: void(0);">11</a>                                <a class="ptTimeSelectHr ui-state-default" href="javascript: void(0);">12</a>                                <br style="clear: left;"><div></div>                            </div>                        </div>                    </div>                    <div style="width: 50%; float: left;">                        <div class="ui-widget-content ptTimeSelectRightPane">                            <div class="ptTimeSelectMinCntr">                                <a class="ptTimeSelectMin ui-state-default" href="javascript: void(0);">00</a>                                <a class="ptTimeSelectMin ui-state-default" href="javascript: void(0);">05</a>                                <a class="ptTimeSelectMin ui-state-default" href="javascript: void(0);">10</a>                                <a class="ptTimeSelectMin ui-state-default" href="javascript: void(0);">15</a>                                <a class="ptTimeSelectMin ui-state-default" href="javascript: void(0);">20</a>                                <a class="ptTimeSelectMin ui-state-default" href="javascript: void(0);">25</a>                                <a class="ptTimeSelectMin ui-state-default" href="javascript: void(0);">30</a>                                <a class="ptTimeSelectMin ui-state-default" href="javascript: void(0);">35</a>                                <a class="ptTimeSelectMin ui-state-default" href="javascript: void(0);">40</a>                                <a class="ptTimeSelectMin ui-state-default" href="javascript: void(0);">45</a>                                <a class="ptTimeSelectMin ui-state-default" href="javascript: void(0);">50</a>                                <a class="ptTimeSelectMin ui-state-default" href="javascript: void(0);">55</a>                                <br style="clear: left;"><div></div>                            </div>                        </div>                    </div>                </div>            </div>            <div style="clear: left;"></div>        </div>        <div id="ptTimeSelectSetButton">            <a href="javascript: void(0);" onclick="jQuery.ptTimeSelect.setTime()" onmouseover="jQuery(this).removeClass(&#39;ui-state-default&#39;).addClass(&#39;ui-state-hover&#39;);" onmouseout="jQuery(this).removeClass(&#39;ui-state-hover&#39;).addClass(&#39;ui-state-default&#39;);" class="ui-corner-all ui-state-default">                SET            </a>            <br style="clear: both;"><div></div>        </div>        <!--[if lte IE 6.5]>            <iframe style="display:block; position:absolute;top: 0;left:0;z-index:-1;                filter:Alpha(Opacity='0');width:3000px;height:3000px"></iframe>        <![endif]-->    </div></div></body></html>
